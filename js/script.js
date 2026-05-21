@@ -6,9 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const loginPage = document.getElementById('loginPage');
     const mainApp = document.getElementById('mainApp');
     const logoutBtnMain = document.getElementById('logoutBtnMain');
-    const homeNavLink = document.getElementById('homeNavLink');
-    const aboutUsNavLink = document.getElementById('aboutUsNavLink');
-    const pageContainer = document.querySelector('.page-container');
     
     // Function to transition from login to main app
     function loginToMainApp() {
@@ -39,22 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 600);
     }
     
-    // Function to slide to About Us page
-    function slideToAboutUs() {
-        pageContainer.classList.add('slide-to-about');
-        // Update active states
-        homeNavLink.classList.remove('active');
-        aboutUsNavLink.classList.add('active');
-    }
-    
-    // Function to slide to Home page
-    function slideToHome() {
-        pageContainer.classList.remove('slide-to-about');
-        // Update active states
-        aboutUsNavLink.classList.remove('active');
-        homeNavLink.classList.add('active');
-    }
-    
     // Handle login button click
     if (loginForm) {
         loginForm.addEventListener('submit', function(event) {
@@ -70,25 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
             mainAppToLogin();
         });
     }
-    
-    // Handle Home navigation click
-    if (homeNavLink) {
-        homeNavLink.addEventListener('click', function(event) {
-            event.preventDefault();
-            slideToHome();
-        });
-    }
-    
-    // Handle About Us navigation click
-    if (aboutUsNavLink) {
-        aboutUsNavLink.addEventListener('click', function(event) {
-            event.preventDefault();
-            slideToAboutUs();
-        });
-    }
-    
-    // Set initial active state
-    homeNavLink.classList.add('active');
     
     // Tab switching functionality with smooth crossfade
     const menuLinks = document.querySelectorAll('.menu-link');

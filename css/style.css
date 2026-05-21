@@ -197,7 +197,10 @@ body {
     animation: fadeInUp 0.6s ease forwards;
 }
 
-/* Fixed Navbar */
+.main-app.fade-out-up {
+    animation: fadeOutUp 0.6s ease forwards;
+}
+
 .navbar {
     position: fixed;
     top: 0;
@@ -245,22 +248,13 @@ body {
     border-bottom: 2px solid #CF9D7B;
 }
 
-/* Page Container - Holds both pages for sliding */
 .page-container {
-    display: flex;
-    width: 200%;
+    width: 100%;
     min-height: 100vh;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateX(0);
 }
 
-.page-container.slide-to-about {
-    transform: translateX(-50%);
-}
-
-/* Individual Pages */
 .page {
-    width: 50%;
+    width: 100%;
     min-height: 100vh;
     overflow-y: auto;
 }
@@ -275,7 +269,6 @@ body {
     padding: 120px 20px 0px 20px;
 }
 
-/* Gradient section - fixed with consistent background */
 .gradient-section {
     background: linear-gradient(to bottom, 
         rgba(22, 33, 39, 0) 0%,
@@ -293,7 +286,6 @@ body {
     z-index: 1;
 }
 
-/* Tab content container - fixed height to prevent gradient shift */
 .tab-content-container {
     position: relative;
     min-height: 500px;
@@ -327,21 +319,22 @@ body {
 .menu-box {
     background: #0C1519;
     border-radius: 15px;
-    padding: 25px 30px;
+    padding: 20px 30px;
     margin-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 60%;
+    max-width: 1100px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .search-container {
-    flex: 0.75;
-    min-width: 280px;
+    flex: 0.5;
+    min-width: 180px;
 }
 
 .search-input {
@@ -371,8 +364,10 @@ body {
 
 .menu-links {
     display: flex;
-    gap: 50px;
+    gap: 30px;
     align-items: center;
+    flex: 0.5;
+    justify-content: space-evenly;
 }
 
 .menu-link {
@@ -406,7 +401,6 @@ body {
     border-radius: 2px;
 }
 
-/* Tab content - smoother transitions with consistent positioning */
 .tab-content {
     display: none;
     opacity: 0;
@@ -476,58 +470,35 @@ body {
     justify-content: center;
 }
 
-/* Make all tab contents have consistent minimum height */
-#propertiesTab, #detailsTab, #listTab {
+#propertiesTab, #detailsTab, #listTab, #aboutTab {
     min-height: 450px;
 }
 
-/* ========== ABOUT US PAGE STYLES ========== */
-.about-us-page {
-    background-image: url('../images/modern.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+/* ========== ABOUT US TAB STYLES ========== */
+.about-us-section {
+    margin-top: 20px;
+    animation: fadeInContent 0.4s ease forwards;
 }
 
-.about-us-container {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-}
-
-/* Gradient overlay covering left part fading to the right - BLACK gradient */
-.about-us-gradient {
-    width: 60%;
-    min-height: 100vh;
-    background: linear-gradient(to right, 
-        rgba(0, 0, 0, 0.95) 0%,
-        rgba(0, 0, 0, 0.85) 30%,
-        rgba(0, 0, 0, 0.6) 60%,
-        rgba(0, 0, 0, 0.2) 85%,
-        rgba(0, 0, 0, 0) 100%
-    );
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 120px 60px 80px 80px;
-}
-
-.about-us-content {
-    max-width: 700px;
+.about-us-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 50px;
     color: #fff;
 }
 
-.about-us-title {
-    font-size: 3.5rem;
+.about-title {
+    font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 30px;
     position: relative;
     display: inline-block;
+    color: #fff;
 }
 
-.about-us-title::after {
+.about-title::after {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -538,37 +509,39 @@ body {
     border-radius: 2px;
 }
 
-.about-us-text {
+.about-content {
     margin-bottom: 40px;
 }
 
-.about-us-text p {
+.about-content p {
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 20px;
     color: rgba(255, 255, 255, 0.9);
 }
 
-.about-us-stats {
+.about-stats {
     display: flex;
     gap: 50px;
     margin-top: 40px;
     padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
+    justify-content: center;
 }
 
-.stat {
+.stat-item {
     text-align: center;
+    flex: 1;
 }
 
-.stat h3 {
+.stat-item h3 {
     font-size: 2rem;
     font-weight: 700;
     color: #CF9D7B;
     margin-bottom: 10px;
 }
 
-.stat p {
+.stat-item p {
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.8);
     letter-spacing: 1px;
@@ -576,13 +549,12 @@ body {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .about-us-gradient {
-        width: 75%;
-        padding: 120px 50px 80px 50px;
+    .about-title {
+        font-size: 2.2rem;
     }
     
-    .about-us-title {
-        font-size: 2.8rem;
+    .menu-box {
+        width: 85%;
     }
 }
 
@@ -615,21 +587,24 @@ body {
         padding: 20px 15px 60px 15px;
     }
     
+    /* Updated responsive menu box */
     .menu-box {
-        width: 85%;
+        width: 95%;
         flex-direction: column;
         align-items: stretch;
         padding: 20px;
-        gap: 15px;
+        gap: 20px;
     }
     
     .search-container {
         flex: 1;
+        min-width: auto;
     }
     
     .menu-links {
         justify-content: center;
         gap: 30px;
+        flex-wrap: wrap;
     }
     
     .menu-link {
@@ -651,36 +626,34 @@ body {
         font-size: 1.1rem;
     }
     
-    #propertiesTab, #detailsTab, #listTab {
+    #propertiesTab, #detailsTab, #listTab, #aboutTab {
         min-height: 350px;
     }
     
-    .about-us-gradient {
-        width: 100%;
-        padding: 100px 30px 60px 30px;
-        background: linear-gradient(to right, 
-            rgba(0, 0, 0, 0.95) 0%,
-            rgba(0, 0, 0, 0.9) 50%,
-            rgba(0, 0, 0, 0.7) 100%
-        );
+    /* About Us responsive */
+    .about-us-card {
+        padding: 30px 20px;
     }
     
-    .about-us-title {
-        font-size: 2.2rem;
+    .about-title {
+        font-size: 2rem;
     }
     
-    .about-us-text p {
+    .about-content p {
         font-size: 1rem;
         line-height: 1.6;
     }
     
-    .about-us-stats {
+    .about-stats {
         gap: 30px;
         flex-wrap: wrap;
-        justify-content: center;
     }
     
-    .stat h3 {
+    .stat-item {
+        min-width: 120px;
+    }
+    
+    .stat-item h3 {
         font-size: 1.5rem;
     }
 }
@@ -702,7 +675,8 @@ body {
     }
     
     .menu-box {
-        width: 95%;
+        width: 100%;
+        padding: 15px;
     }
     
     .menu-links {
@@ -719,31 +693,28 @@ body {
         min-height: 180px;
     }
     
-    #propertiesTab, #detailsTab, #listTab {
+    #propertiesTab, #detailsTab, #listTab, #aboutTab {
         min-height: 300px;
     }
     
-    .about-us-gradient {
-        padding: 100px 20px 50px 20px;
-    }
-    
-    .about-us-title {
+    /* About Us responsive */
+    .about-title {
         font-size: 1.8rem;
     }
     
-    .about-us-text p {
+    .about-content p {
         font-size: 0.9rem;
     }
     
-    .about-us-stats {
+    .about-stats {
         gap: 20px;
     }
     
-    .stat h3 {
+    .stat-item h3 {
         font-size: 1.3rem;
     }
     
-    .stat p {
+    .stat-item p {
         font-size: 0.8rem;
     }
 }
