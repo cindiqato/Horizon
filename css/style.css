@@ -7,7 +7,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     min-height: 100vh;
-    background-image: url('../images/villa.png');
+    background-image: url('../images/outdoor.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -184,46 +184,20 @@ body {
     border-bottom-color: #CF9D7B;
 }
 
-/* ========== HOME PAGE STYLES ========== */
-.home-page {
+/* ========== MAIN APP STYLES ========== */
+.main-app {
     position: relative;
     width: 100%;
     min-height: 100vh;
     display: none;
 }
 
-.home-page.fade-in-up {
+.main-app.fade-in-up {
     display: block;
     animation: fadeInUp 0.6s ease forwards;
 }
 
-.home-page.fade-out-up {
-    animation: fadeOutUp 0.6s ease forwards;
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeOutUp {
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(-100px);
-        visibility: hidden;
-    }
-}
-
+/* Fixed Navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -234,6 +208,7 @@ body {
     align-items: center;
     padding: 30px 50px;
     z-index: 100;
+    background: transparent;
 }
 
 .logo {
@@ -265,11 +240,42 @@ body {
     transform: translateY(-2px);
 }
 
+.nav-link.active {
+    color: #CF9D7B;
+    border-bottom: 2px solid #CF9D7B;
+}
+
+/* Page Container - Holds both pages for sliding */
+.page-container {
+    display: flex;
+    width: 200%;
+    min-height: 100vh;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(0);
+}
+
+.page-container.slide-to-about {
+    transform: translateX(-50%);
+}
+
+/* Individual Pages */
+.page {
+    width: 50%;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+/* ========== HOME PAGE STYLES ========== */
+.home-page {
+    background: transparent;
+}
+
 .top-section {
     min-height: auto;
     padding: 120px 20px 0px 20px;
 }
 
+/* Gradient section - fixed with consistent background */
 .gradient-section {
     background: linear-gradient(to bottom, 
         rgba(22, 33, 39, 0) 0%,
@@ -283,6 +289,14 @@ body {
     min-height: 100vh;
     padding: 20px 20px 80px 20px;
     margin-top: 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* Tab content container - fixed height to prevent gradient shift */
+.tab-content-container {
+    position: relative;
+    min-height: 500px;
 }
 
 .content-wrapper {
@@ -392,21 +406,24 @@ body {
     border-radius: 2px;
 }
 
+/* Tab content - smoother transitions with consistent positioning */
 .tab-content {
     display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .tab-content.active {
     display: block;
-    animation: fadeIn 0.5s ease;
+    animation: fadeInContent 0.4s ease forwards;
 }
 
-@keyframes fadeIn {
-    from {
+@keyframes fadeInContent {
+    0% {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(10px);
     }
-    to {
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
@@ -459,7 +476,116 @@ body {
     justify-content: center;
 }
 
+/* Make all tab contents have consistent minimum height */
+#propertiesTab, #detailsTab, #listTab {
+    min-height: 450px;
+}
+
+/* ========== ABOUT US PAGE STYLES ========== */
+.about-us-page {
+    background-image: url('../images/modern.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.about-us-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Gradient overlay covering left part fading to the right - BLACK gradient */
+.about-us-gradient {
+    width: 60%;
+    min-height: 100vh;
+    background: linear-gradient(to right, 
+        rgba(0, 0, 0, 0.95) 0%,
+        rgba(0, 0, 0, 0.85) 30%,
+        rgba(0, 0, 0, 0.6) 60%,
+        rgba(0, 0, 0, 0.2) 85%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 120px 60px 80px 80px;
+}
+
+.about-us-content {
+    max-width: 700px;
+    color: #fff;
+}
+
+.about-us-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.about-us-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: #CF9D7B;
+    border-radius: 2px;
+}
+
+.about-us-text {
+    margin-bottom: 40px;
+}
+
+.about-us-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.about-us-stats {
+    display: flex;
+    gap: 50px;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #CF9D7B;
+    margin-bottom: 10px;
+}
+
+.stat p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 1px;
+}
+
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .about-us-gradient {
+        width: 75%;
+        padding: 120px 50px 80px 50px;
+    }
+    
+    .about-us-title {
+        font-size: 2.8rem;
+    }
+}
+
 @media (max-width: 768px) {
     .navbar {
         padding: 20px 25px;
@@ -524,6 +650,39 @@ body {
         min-height: 220px;
         font-size: 1.1rem;
     }
+    
+    #propertiesTab, #detailsTab, #listTab {
+        min-height: 350px;
+    }
+    
+    .about-us-gradient {
+        width: 100%;
+        padding: 100px 30px 60px 30px;
+        background: linear-gradient(to right, 
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.9) 50%,
+            rgba(0, 0, 0, 0.7) 100%
+        );
+    }
+    
+    .about-us-title {
+        font-size: 2.2rem;
+    }
+    
+    .about-us-text p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .about-us-stats {
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .stat h3 {
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -558,5 +717,33 @@ body {
     .property-card {
         padding: 50px 20px;
         min-height: 180px;
+    }
+    
+    #propertiesTab, #detailsTab, #listTab {
+        min-height: 300px;
+    }
+    
+    .about-us-gradient {
+        padding: 100px 20px 50px 20px;
+    }
+    
+    .about-us-title {
+        font-size: 1.8rem;
+    }
+    
+    .about-us-text p {
+        font-size: 0.9rem;
+    }
+    
+    .about-us-stats {
+        gap: 20px;
+    }
+    
+    .stat h3 {
+        font-size: 1.3rem;
+    }
+    
+    .stat p {
+        font-size: 0.8rem;
     }
 }

@@ -4,102 +4,157 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get elements
     const loginForm = document.getElementById('loginForm');
     const loginPage = document.getElementById('loginPage');
-    const homePage = document.getElementById('homePage');
-    const logoutBtn = document.getElementById('logoutBtn');
+    const mainApp = document.getElementById('mainApp');
+    const logoutBtnMain = document.getElementById('logoutBtnMain');
+    const homeNavLink = document.getElementById('homeNavLink');
+    const aboutUsNavLink = document.getElementById('aboutUsNavLink');
+    const pageContainer = document.querySelector('.page-container');
     
-    // Function to transition from login to home
-    function loginToHome() {
-        // Add fade-out-up animation to login page
+    // Function to transition from login to main app
+    function loginToMainApp() {
         loginPage.classList.add('fade-out-up');
         
-        // Wait for animation to complete before showing home page
         setTimeout(function() {
             loginPage.style.display = 'none';
             loginPage.classList.remove('fade-out-up');
-            // Trigger home page fade-in-up animation
-            homePage.classList.add('fade-in-up');
-            homePage.style.display = 'block';
+            mainApp.classList.add('fade-in-up');
+            mainApp.style.display = 'block';
         }, 600);
     }
     
-    // Function to transition from home to login
-    function homeToLogin() {
-        // Add fade-out-up animation to home page
-        homePage.classList.add('fade-out-up');
+    // Function to transition from main app to login
+    function mainAppToLogin() {
+        mainApp.classList.add('fade-out-up');
         
-        // Wait for animation to complete before showing login page
         setTimeout(function() {
-            homePage.style.display = 'none';
-            homePage.classList.remove('fade-out-up');
-            homePage.classList.remove('fade-in-up');
-            // Show login page with fade-in-up animation
+            mainApp.style.display = 'none';
+            mainApp.classList.remove('fade-out-up');
+            mainApp.classList.remove('fade-in-up');
             loginPage.style.display = 'flex';
             loginPage.classList.add('fade-in-up');
             
-            // Remove the animation class after it completes
             setTimeout(function() {
                 loginPage.classList.remove('fade-in-up');
             }, 600);
         }, 600);
     }
     
+    // Function to slide to About Us page
+    function slideToAboutUs() {
+        pageContainer.classList.add('slide-to-about');
+        // Update active states
+        homeNavLink.classList.remove('active');
+        aboutUsNavLink.classList.add('active');
+    }
+    
+    // Function to slide to Home page
+    function slideToHome() {
+        pageContainer.classList.remove('slide-to-about');
+        // Update active states
+        aboutUsNavLink.classList.remove('active');
+        homeNavLink.classList.add('active');
+    }
+    
     // Handle login button click
     if (loginForm) {
         loginForm.addEventListener('submit', function(event) {
             event.preventDefault();
-            loginToHome();
+            loginToMainApp();
         });
     }
     
     // Handle logout button click
-    if (logoutBtn) {
-        logoutBtn.addEventListener('click', function(event) {
+    if (logoutBtnMain) {
+        logoutBtnMain.addEventListener('click', function(event) {
             event.preventDefault();
-            homeToLogin();
+            mainAppToLogin();
         });
     }
     
-    // Tab switching functionality for clickable text links
+    // Handle Home navigation click
+    if (homeNavLink) {
+        homeNavLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            slideToHome();
+        });
+    }
+    
+    // Handle About Us navigation click
+    if (aboutUsNavLink) {
+        aboutUsNavLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            slideToAboutUs();
+        });
+    }
+    
+    // Set initial active state
+    homeNavLink.classList.add('active');
+    
+    // Tab switching functionality with smooth crossfade
     const menuLinks = document.querySelectorAll('.menu-link');
     const tabContents = document.querySelectorAll('.tab-content');
+    let isTransitioning = false;
+    
+    function switchTab(tabName) {
+        if (isTransitioning) return;
+        
+        const targetTab = document.getElementById(`${tabName}Tab`);
+        if (!targetTab) return;
+        
+        const currentActiveTab = document.querySelector('.tab-content.active');
+        
+        if (currentActiveTab === targetTab) return;
+        
+        isTransitioning = true;
+        
+        if (currentActiveTab) {
+            currentActiveTab.style.opacity = '0';
+            currentActiveTab.style.transform = 'translateY(10px)';
+            
+            setTimeout(() => {
+                currentActiveTab.classList.remove('active');
+                currentActiveTab.style.opacity = '';
+                currentActiveTab.style.transform = '';
+                
+                targetTab.classList.add('active');
+                targetTab.style.opacity = '0';
+                targetTab.style.transform = 'translateY(10px)';
+                
+                targetTab.offsetHeight;
+                
+                targetTab.style.opacity = '1';
+                targetTab.style.transform = 'translateY(0)';
+                
+                setTimeout(() => {
+                    targetTab.style.opacity = '';
+                    targetTab.style.transform = '';
+                    isTransitioning = false;
+                }, 400);
+            }, 300);
+        } else {
+            targetTab.classList.add('active');
+            isTransitioning = false;
+        }
+    }
     
     menuLinks.forEach(link => {
         link.addEventListener('click', function(event) {
             event.preventDefault();
             
-            // Remove active class from all menu links
+            if (this.classList.contains('active') || isTransitioning) return;
+            
             menuLinks.forEach(l => l.classList.remove('active'));
-            // Add active class to clicked link
             this.classList.add('active');
             
-            // Get the tab name from data-tab attribute
             const tabName = this.getAttribute('data-tab');
-            
-            // Hide all tab contents
-            tabContents.forEach(content => content.classList.remove('active'));
-            
-            // Show the selected tab content
-            const activeTab = document.getElementById(`${tabName}Tab`);
-            if (activeTab) {
-                activeTab.classList.add('active');
-            }
+            switchTab(tabName);
         });
     });
     
-    // About Us click handler (functionless for now)
-    const aboutUs = document.getElementById('aboutUs');
-    if (aboutUs) {
-        aboutUs.addEventListener('click', function(event) {
-            event.preventDefault();
-            alert('About Us page coming soon!');
-        });
-    }
-    
-    // Search bar handler (functionless for now)
+    // Search bar handler
     const searchBar = document.getElementById('searchBar');
     if (searchBar) {
         searchBar.addEventListener('input', function() {
-            // Search functionality will be added later
             console.log('Search:', this.value);
         });
     }
