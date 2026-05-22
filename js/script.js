@@ -270,6 +270,108 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
+    // Property Card Click Handler - Show details in Details tab
+    const propertyCards = document.querySelectorAll('.property-card');
+    const maplewoodDetails = document.getElementById('maplewood-details');
+    const villaDetails = document.getElementById('villa-details');
+    const blancDetails = document.getElementById('blanc-details');
+    const maisonDetails = document.getElementById('maison-details');
+    const aureliaDetails = document.getElementById('aurelia-details');
+    const royaleDetails = document.getElementById('royale-details');
+    
+    function showPropertyDetails(propertyId) {
+        // Hide all property detail sections
+        if (maplewoodDetails) maplewoodDetails.style.display = 'none';
+        if (villaDetails) villaDetails.style.display = 'none';
+        if (blancDetails) blancDetails.style.display = 'none';
+        if (maisonDetails) maisonDetails.style.display = 'none';
+        if (aureliaDetails) aureliaDetails.style.display = 'none';
+        if (royaleDetails) royaleDetails.style.display = 'none';
+        
+        // Show the selected property details
+        switch(propertyId) {
+            case 'maplewood':
+                if (maplewoodDetails) maplewoodDetails.style.display = 'block';
+                break;
+            case 'villa':
+                if (villaDetails) villaDetails.style.display = 'block';
+                break;
+            case 'blanc':
+                if (blancDetails) blancDetails.style.display = 'block';
+                break;
+            case 'maison':
+                if (maisonDetails) maisonDetails.style.display = 'block';
+                break;
+            case 'aurelia':
+                if (aureliaDetails) aureliaDetails.style.display = 'block';
+                break;
+            case 'royale':
+                if (royaleDetails) royaleDetails.style.display = 'block';
+                break;
+            default:
+                // Show first property (Maplewood Crest) by default
+                if (maplewoodDetails) maplewoodDetails.style.display = 'block';
+        }
+    }
+    
+    if (propertyCards) {
+        propertyCards.forEach(card => {
+            card.addEventListener('click', function() {
+                const property = this.getAttribute('data-property');
+                
+                // Switch to details tab
+                const detailsTabLink = document.querySelector('.menu-link[data-tab="details"]');
+                if (detailsTabLink) {
+                    // Remove active class from all menu links
+                    menuLinks.forEach(l => l.classList.remove('active'));
+                    detailsTabLink.classList.add('active');
+                    
+                    // Switch to details tab
+                    switchTab('details');
+                }
+                
+                // Show the appropriate property details
+                showPropertyDetails(property);
+            });
+        });
+    }
+    
+    // Schedule Viewing Button Handler
+    const scheduleButtons = document.querySelectorAll('.schedule-viewing-btn');
+    
+    if (scheduleButtons) {
+        scheduleButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const propertyName = this.getAttribute('data-property');
+                
+                // Switch to viewing tab
+                const viewingTabLink = document.querySelector('.menu-link[data-tab="viewing"]');
+                if (viewingTabLink) {
+                    // Remove active class from all menu links
+                    menuLinks.forEach(l => l.classList.remove('active'));
+                    viewingTabLink.classList.add('active');
+                    
+                    // Switch to viewing tab
+                    switchTab('viewing');
+                }
+                
+                // Pre-fill the property name in the form
+                setTimeout(() => {
+                    const propertySelect = document.getElementById('propertyName');
+                    if (propertySelect && propertyName) {
+                        propertySelect.value = propertyName;
+                    }
+                    
+                    // Scroll to the appointment form
+                    const appointmentSection = document.querySelector('.appointment-section');
+                    if (appointmentSection) {
+                        appointmentSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }, 100);
+            });
+        });
+    }
+    
     // Check if main app is already visible (in case of direct access)
     if (mainApp.style.display === 'block' || mainApp.classList.contains('fade-in-up')) {
         initParallaxEffect();

@@ -82,7 +82,7 @@
                             <div id="propertiesTab" class="tab-content active">
                                 <div class="property-grid">
                                     <!-- Property 1 - Maplewood Crest -->
-                                    <div class="property-card">
+                                    <div class="property-card" data-property="maplewood">
                                         <div class="property-image-container">
                                             <img src="images/uno.png" alt="Maplewood Crest" class="property-image">
                                             <div class="property-info">
@@ -93,7 +93,7 @@
                                     </div>
                                     
                                     <!-- Property 2 - Villa Épure -->
-                                    <div class="property-card">
+                                    <div class="property-card" data-property="villa">
                                         <div class="property-image-container">
                                             <img src="images/dos.png" alt="Villa Épure" class="property-image">
                                             <div class="property-info">
@@ -104,7 +104,7 @@
                                     </div>
                                     
                                     <!-- Property 3 - Blanc Étage -->
-                                    <div class="property-card">
+                                    <div class="property-card" data-property="blanc">
                                         <div class="property-image-container">
                                             <img src="images/tres.png" alt="Blanc Étage" class="property-image">
                                             <div class="property-info">
@@ -115,7 +115,7 @@
                                     </div>
                                     
                                     <!-- Property 4 - Maison Velour -->
-                                    <div class="property-card">
+                                    <div class="property-card" data-property="maison">
                                         <div class="property-image-container">
                                             <img src="images/cuatro.png" alt="Maison Velour" class="property-image">
                                             <div class="property-info">
@@ -126,7 +126,7 @@
                                     </div>
                                     
                                     <!-- Property 5 - Aurelia Ridge -->
-                                    <div class="property-card">
+                                    <div class="property-card" data-property="aurelia">
                                         <div class="property-image-container">
                                             <img src="images/cinco.png" alt="Aurelia Ridge" class="property-image">
                                             <div class="property-info">
@@ -137,7 +137,7 @@
                                     </div>
                                     
                                     <!-- Property 6 - Royale Élite -->
-                                    <div class="property-card">
+                                    <div class="property-card" data-property="royale">
                                         <div class="property-image-container">
                                             <img src="images/sais.png" alt="Royale Élite" class="property-image">
                                             <div class="property-info">
@@ -151,8 +151,370 @@
 
                             <!-- Details Tab Content -->
                             <div id="detailsTab" class="tab-content">
-                                <div class="empty-box">
-                                    <p>Details Section Content Coming Soon</p>
+                                <!-- Property 1 - Maplewood Crest Details (shown by default) -->
+                                <div id="maplewood-details" class="property-details-section" style="display: block;">
+                                    <div class="property-details-container">
+                                        <div class="details-header">
+                                            <div class="details-image">
+                                                <img src="images/uno.png" alt="Maplewood Crest">
+                                            </div>
+                                            <div class="details-info">
+                                                <h1 class="details-title">Maplewood Crest</h1>
+                                                <p class="details-price">₱ 3,500,000</p>
+                                                <p class="details-location">📍 Bonifacio Global City, Taguig</p>
+                                                <p class="details-description">A serene haven where timeless elegance meets nature's embrace. This beautiful property features stunning views and modern amenities perfect for families seeking comfort and luxury.</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="details-features">
+                                            <h3>Full Details</h3>
+                                            <div class="full-details-layout">
+                                                <div class="details-paragraph">
+                                                    <p>This stunning property features spacious bedrooms with built-in wardrobes, premium bathroom fixtures, and a modern kitchen with granite countertops. The home comes fully furnished with designer pieces and includes a beautiful landscape garden with scenic views.</p>
+                                                </div>
+                                                <div class="details-bullets">
+                                                    <ul>
+                                                        <li>3 Bedrooms with built-in wardrobes</li>
+                                                        <li>2 Bathrooms with premium fixtures</li>
+                                                        <li>Modern kitchen with granite countertops</li>
+                                                        <li>Central air conditioning</li>
+                                                        <li>Smart home ready infrastructure</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="details-gallery">
+                                            <h3>Interior Gallery</h3>
+                                            <div class="gallery-grid">
+                                                <div class="gallery-item">
+                                                    <img src="images/LivingUno.jpg" alt="Living Room">
+                                                    <p>Living Area</p>
+                                                </div>
+                                                <div class="gallery-item">
+                                                    <img src="images/KitchenUno.jpg" alt="Kitchen">
+                                                    <p>Modern Kitchen</p>
+                                                </div>
+                                                <div class="gallery-item">
+                                                    <img src="images/BedUno.jpg" alt="Bedroom">
+                                                    <p>Master Bedroom</p>
+                                                </div>
+                                                <div class="gallery-item">
+                                                    <img src="images/BathUno.jpg" alt="Bathroom">
+                                                    <p>Luxury Bathroom</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="details-action">
+                                            <button class="schedule-viewing-btn" data-property="Maplewood Crest">Schedule Viewing</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Property 2 - Villa Épure Details -->
+                                <div id="villa-details" class="property-details-section" style="display: none;">
+                                    <div class="property-details-container">
+                                        <div class="details-header">
+                                            <div class="details-image">
+                                                <img src="images/dos.png" alt="Villa Épure">
+                                            </div>
+                                            <div class="details-info">
+                                                <h1 class="details-title">Villa Épure</h1>
+                                                <p class="details-price">₱ 7,500,000</p>
+                                                <p class="details-location">📍 Bonifacio Global City, Taguig</p>
+                                                <p class="details-description">Refined simplicity expressed through pure architectural grace. This stunning property offers minimalist luxury with premium finishes throughout.</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="details-features">
+                                            <h3>Full Details</h3>
+                                            <div class="full-details-layout">
+                                                <div class="details-paragraph">
+                                                    <p>This exquisite property features spacious bedrooms with elegant design, premium bathroom fixtures, and a modern kitchen with high-end appliances. The home showcases sophisticated finishes and includes beautiful outdoor spaces.</p>
+                                                </div>
+                                                <div class="details-bullets">
+                                                    <ul>
+                                                        <li>4 Bedrooms with elegant design</li>
+                                                        <li>3 Bathrooms with premium fixtures</li>
+                                                        <li>Modern kitchen with high-end appliances</li>
+                                                        <li>Home automation system</li>
+                                                        <li>Private elevator access</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="details-gallery">
+                                            <h3>Interior Gallery</h3>
+                                            <div class="gallery-grid">
+                                                <div class="gallery-item">
+                                                    <img src="images/LivingDos.jpg" alt="Living Room">
+                                                    <p>Living Area</p>
+                                                </div>
+                                                <div class="gallery-item">
+                                                    <img src="images/KitchenDos.jpg" alt="Kitchen">
+                                                    <p>Modern Kitchen</p>
+                                                </div>
+                                                <div class="gallery-item">
+                                                    <img src="images/BedDos.jpg" alt="Bedroom">
+                                                    <p>Master Bedroom</p>
+                                                </div>
+                                                <div class="gallery-item">
+                                                    <img src="images/BathDos.jpg" alt="Bathroom">
+                                                    <p>Luxury Bathroom</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="details-action">
+                                            <button class="schedule-viewing-btn" data-property="Villa Épure">Schedule Viewing</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Property 3 - Blanc Étage Details -->
+                                <div id="blanc-details" class="property-details-section" style="display: none;">
+                                    <div class="property-details-container">
+                                        <div class="details-header">
+                                            <div class="details-image">
+                                                <img src="images/tres.png" alt="Blanc Étage">
+                                            </div>
+                                            <div class="details-info">
+                                                <h1 class="details-title">Blanc Étage</h1>
+                                                <p class="details-price">₱ 4,500,000</p>
+                                                <p class="details-location">📍 Bonifacio Global City, Taguig</p>
+                                                <p class="details-description">An elevated sanctuary of pristine sophistication and light. This bright and airy property offers contemporary elegance at its finest.</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="details-features">
+                                            <h3>Full Details</h3>
+                                            <div class="full-details-layout">
+                                                <div class="details-paragraph">
+                                                    <p>This bright and airy property features well-appointed bedrooms with natural light, modern bathroom fixtures, and an open concept kitchen. The home boasts contemporary design elements and offers stunning views.</p>
+                                                </div>
+                                                <div class="details-bullets">
+                                                    <ul>
+                                                        <li>3 Bedrooms with natural light</li>
+                                                        <li>2 Bathrooms with modern fixtures</li>
+                                                        <li>Open concept kitchen and dining</li>
+                                                        <li>Smart lighting system</li>
+                                                        <li>Rooftop garden access</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="details-gallery">
+                                            <h3>Interior Gallery</h3>
+                                            <div class="gallery-grid">
+                                                <div class="gallery-item">
+                                                    <img src="images/LivingTres.jpg" alt="Living Room">
+                                                    <p>Living Area</p>
+                                                </div>
+                                                <div class="gallery-item">
+                                                    <img src="images/KitchenTres.jpg" alt="Kitchen">
+                                                    <p>Modern Kitchen</p>
+                                                </div>
+                                                <div class="gallery-item">
+                                                    <img src="images/BedTres.jpg" alt="Bedroom">
+                                                    <p>Master Bedroom</p>
+                                                </div>
+                                                <div class="gallery-item">
+                                                    <img src="images/BathTres.jpg" alt="Bathroom">
+                                                    <p>Luxury Bathroom</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="details-action">
+                                            <button class="schedule-viewing-btn" data-property="Blanc Étage">Schedule Viewing</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Property 4 - Maison Velour Details -->
+                                <div id="maison-details" class="property-details-section" style="display: none;">
+                                    <div class="property-details-container">
+                                        <div class="details-header">
+                                            <div class="details-image">
+                                                <img src="images/cuatro.png" alt="Maison Velour">
+                                            </div>
+                                            <div class="details-info">
+                                                <h1 class="details-title">Maison Velour</h1>
+                                                <p class="details-price">₱ 10,000,000</p>
+                                                <p class="details-location">📍 Bonifacio Global City, Taguig</p>
+                                                <p class="details-description">Soft grandeur woven into every luxurious detail. This masterpiece of design offers unparalleled comfort and sophistication.</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="details-features">
+                                            <h3>Full Details</h3>
+                                            <div class="full-details-layout">
+                                                <div class="details-paragraph">
+                                                    <p>This magnificent estate features luxurious bedrooms with ensuite bathrooms, elegant marble bathrooms, and a gourmet kitchen with butler's pantry. The home showcases opulent furnishings and includes private recreational facilities.</p>
+                                                </div>
+                                                <div class="details-bullets">
+                                                    <ul>
+                                                        <li>5 Bedrooms with ensuite bathrooms</li>
+                                                        <li>5 Bathrooms with marble finishes</li>
+                                                        <li>Gourmet kitchen with butler's pantry</li>
+                                                        <li>Spa and sauna facilities</li>
+                                                        <li>Private library and wine cellar</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="details-gallery">
+                                            <h3>Interior Gallery</h3>
+                                            <div class="gallery-grid">
+                                                <div class="gallery-item">
+                                                    <img src="images/LivingCuatro.jpg" alt="Living Room">
+                                                    <p>Living Area</p>
+                                                </div>
+                                                <div class="gallery-item">
+                                                    <img src="images/KitchenCuatro.jpg" alt="Kitchen">
+                                                    <p>Modern Kitchen</p>
+                                                </div>
+                                                <div class="gallery-item">
+                                                    <img src="images/BedCuatro.jpg" alt="Bedroom">
+                                                    <p>Master Bedroom</p>
+                                                </div>
+                                                <div class="gallery-item">
+                                                    <img src="images/BathCuatro.jpg" alt="Bathroom">
+                                                    <p>Luxury Bathroom</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="details-action">
+                                            <button class="schedule-viewing-btn" data-property="Maison Velour">Schedule Viewing</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Property 5 - Aurelia Ridge Details -->
+                                <div id="aurelia-details" class="property-details-section" style="display: none;">
+                                    <div class="property-details-container">
+                                        <div class="details-header">
+                                            <div class="details-image">
+                                                <img src="images/cinco.png" alt="Aurelia Ridge">
+                                            </div>
+                                            <div class="details-info">
+                                                <h1 class="details-title">Aurelia Ridge</h1>
+                                                <p class="details-price">₱ 2,600,000</p>
+                                                <p class="details-location">📍 Bonifacio Global City, Taguig</p>
+                                                <p class="details-description">Golden living redefined at the pinnacle of prestige. This exceptional property offers breathtaking views and contemporary design.</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="details-features">
+                                            <h3>Full Details</h3>
+                                            <div class="full-details-layout">
+                                                <div class="details-paragraph">
+                                                    <p>This contemporary property features comfortable bedrooms with panoramic views, modern bathroom fixtures, and a functional kitchen with breakfast bar. The home comes with premium finishes and includes a private terrace.</p>
+                                                </div>
+                                                <div class="details-bullets">
+                                                    <ul>
+                                                        <li>2 Bedrooms with panoramic views</li>
+                                                        <li>2 Bathrooms with modern fixtures</li>
+                                                        <li>Modern kitchen with breakfast bar</li>
+                                                        <li>Smart home features</li>
+                                                        <li>Pool and gym access</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="details-gallery">
+                                            <h3>Interior Gallery</h3>
+                                            <div class="gallery-grid">
+                                                <div class="gallery-item">
+                                                    <img src="images/LivingCinco.jpg" alt="Living Room">
+                                                    <p>Living Area</p>
+                                                </div>
+                                                <div class="gallery-item">
+                                                    <img src="images/KitchenCinco.jpg" alt="Kitchen">
+                                                    <p>Modern Kitchen</p>
+                                                </div>
+                                                <div class="gallery-item">
+                                                    <img src="images/BedCinco.jpg" alt="Bedroom">
+                                                    <p>Master Bedroom</p>
+                                                </div>
+                                                <div class="gallery-item">
+                                                    <img src="images/BathCinco.jpg" alt="Bathroom">
+                                                    <p>Luxury Bathroom</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="details-action">
+                                            <button class="schedule-viewing-btn" data-property="Aurelia Ridge">Schedule Viewing</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Property 6 - Royale Élite Details -->
+                                <div id="royale-details" class="property-details-section" style="display: none;">
+                                    <div class="property-details-container">
+                                        <div class="details-header">
+                                            <div class="details-image">
+                                                <img src="images/sais.png" alt="Royale Élite">
+                                            </div>
+                                            <div class="details-info">
+                                                <h1 class="details-title">Royale Élite</h1>
+                                                <p class="details-price">₱ 4,750,000</p>
+                                                <p class="details-location">📍 Bonifacio Global City, Taguig</p>
+                                                <p class="details-description">An exclusive residence where prestige and perfection converge. Experience the epitome of luxury living in this magnificent property.</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="details-features">
+                                            <h3>Full Details</h3>
+                                            <div class="full-details-layout">
+                                                <div class="details-paragraph">
+                                                    <p>This prestigious residence features elegant bedrooms with ensuite bathrooms, luxury bathroom finishes, and a designer kitchen with premium appliances. The home includes an exquisite collection and a private rooftop terrace.</p>
+                                                </div>
+                                                <div class="details-bullets">
+                                                    <ul>
+                                                        <li>4 Bedrooms with ensuite bathrooms</li>
+                                                        <li>4 Bathrooms with luxury finishes</li>
+                                                        <li>Designer kitchen with premium appliances</li>
+                                                        <li>Media room with surround sound</li>
+                                                        <li>Concierge service</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="details-gallery">
+                                            <h3>Interior Gallery</h3>
+                                            <div class="gallery-grid">
+                                                <div class="gallery-item">
+                                                    <img src="images/LivingSais.jpg" alt="Living Room">
+                                                    <p>Living Area</p>
+                                                </div>
+                                                <div class="gallery-item">
+                                                    <img src="images/KitchenSais.jpg" alt="Kitchen">
+                                                    <p>Modern Kitchen</p>
+                                                </div>
+                                                <div class="gallery-item">
+                                                    <img src="images/BedSais.jpg" alt="Bedroom">
+                                                    <p>Master Bedroom</p>
+                                                </div>
+                                                <div class="gallery-item">
+                                                    <img src="images/BathSais.jpg" alt="Bathroom">
+                                                    <p>Luxury Bathroom</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="details-action">
+                                            <button class="schedule-viewing-btn" data-property="Royale Élite">Schedule Viewing</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -181,7 +543,7 @@
                                                         <div class="agent-name">Claire De Guzman</div>
                                                         <div class="agent-position">Senior Real Estate Agent</div>
                                                         <div class="agent-license">License No: RE-2021-0042</div>
-                                                    </td>
+                                                    </div>
                                                     <td class="contact-cell">
                                                         <div class="contact-phone">📞 0945-872-5049</div>
                                                         <div class="contact-email">✉️ bekikang@gmail.com</div>
@@ -190,7 +552,7 @@
                                                             <a href="#">LinkedIn</a> | 
                                                             <a href="#">Instagram</a>
                                                         </div>
-                                                    </td>
+                                                    </div>
                                                     <td class="performance-cell">
                                                         <div class="rating">⭐⭐⭐⭐⭐ 5.0 (29 reviews)</div>
                                                         <div class="current-listings">
@@ -201,7 +563,7 @@
                                                             </ul>
                                                         </div>
                                                         <div class="awards">🏆 Top Producer 2023, 2024</div>
-                                                     </td>
+                                                     </div>
                                                 </tr>
                                                 
                                                 <!-- Agent 2 - Kimberly Jerusalem -->
@@ -210,7 +572,7 @@
                                                         <div class="agent-name">Kimberly Jerusalem</div>
                                                         <div class="agent-position">Luxury Property Specialist</div>
                                                         <div class="agent-license">License No: RE-2023-0031</div>
-                                                     </td>
+                                                     </div>
                                                     <td class="contact-cell">
                                                         <div class="contact-phone">📞 0969-652-5037</div>
                                                         <div class="contact-email">✉️ marijay@gmail.com</div>
@@ -219,7 +581,7 @@
                                                             <a href="#">LinkedIn</a> | 
                                                             <a href="#">Instagram</a>
                                                         </div>
-                                                     </td>
+                                                     </div>
                                                     <td class="performance-cell">
                                                         <div class="rating">⭐⭐⭐⭐⭐ 5.0 (16 reviews)</div>
                                                         <div class="current-listings">
@@ -230,7 +592,7 @@
                                                             </ul>
                                                         </div>
                                                         <div class="awards">🏆 Luxury Market Expert 2024</div>
-                                                     </td>
+                                                     </div>
                                                 </tr>
                                                 
                                                 <!-- Agent 3 - Carly Abordo -->
@@ -239,7 +601,7 @@
                                                         <div class="agent-name">Carly Abordo</div>
                                                         <div class="agent-position">Real Estate Broker</div>
                                                         <div class="agent-license">License No: RE-2024-0451</div>
-                                                     </td>
+                                                     </div>
                                                     <td class="contact-cell">
                                                         <div class="contact-phone">📞 0906-719-6345</div>
                                                         <div class="contact-email">✉️ devilla@gmail.com</div>
@@ -248,7 +610,7 @@
                                                             <a href="#">LinkedIn</a> | 
                                                             <a href="#">Instagram</a>
                                                         </div>
-                                                     </td>
+                                                     </div>
                                                     <td class="performance-cell">
                                                         <div class="rating">⭐⭐⭐⭐ 4.8 (9 reviews)</div>
                                                         <div class="current-listings">
@@ -258,7 +620,7 @@
                                                             </ul>
                                                         </div>
                                                         <div class="awards">🏆 Best for First-Time Buyers 2024</div>
-                                                     </td>
+                                                     </div>
                                                 </tr>
                                                 
                                                 <!-- Agent 4 - Patrick Jay -->
@@ -267,7 +629,7 @@
                                                         <div class="agent-name">Patrick Jay</div>
                                                         <div class="agent-position">Leasing Consultant</div>
                                                         <div class="agent-license">License No: RE-2023-0032</div>
-                                                     </td>
+                                                     </div>
                                                     <td class="contact-cell">
                                                         <div class="contact-phone">📞 0956-418-5068</div>
                                                         <div class="contact-email">✉️ mabangis@gmail.com</div>
@@ -276,7 +638,7 @@
                                                             <a href="#">LinkedIn</a> | 
                                                             <a href="#">Instagram</a>
                                                         </div>
-                                                     </td>
+                                                     </div>
                                                     <td class="performance-cell">
                                                         <div class="rating">⭐⭐⭐⭐ 4.8 (6 reviews)</div>
                                                         <div class="current-listings">
@@ -286,7 +648,7 @@
                                                             </ul>
                                                         </div>
                                                         <div class="awards">🏆 Commercial Deal of the Year 2024</div>
-                                                     </td>
+                                                     </div>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -378,13 +740,11 @@
                             <div id="aboutTab" class="tab-content">
                                 <div class="about-us-section">
                                     <div class="about-us-card">
-                                        <!-- Quote Section -->
                                         <div class="about-quote">
                                             <h2 class="about-title">About Us</h2>
                                             <p class="quote-text">"Elevated Living Starts Here."</p>
                                         </div>
                                         
-                                        <!-- Welcome Section -->
                                         <div class="about-content">
                                             <p>Welcome to Horizon Homes, a premier luxury real estate platform based in Bonifacio Global City, dedicated exclusively to showcasing exceptional luxury houses designed for refined and elevated living.</p>
                                             
@@ -393,7 +753,6 @@
                                             <p>Driven by professionalism, discretion, and personalized service, we are committed to helping clients discover prestigious homes that match their vision and standards. Whether you are searching for a contemporary estate or a timeless luxury residence, Horizon Homes delivers a seamless and elevated property journey.</p>
                                         </div>
                                         
-                                        <!-- Services Section -->
                                         <div class="services-section">
                                             <h3 class="section-title">Services</h3>
                                             <ul class="services-list">
@@ -404,7 +763,6 @@
                                             </ul>
                                         </div>
                                         
-                                        <!-- Mission & Vision Section -->
                                         <div class="mission-vision-grid">
                                             <div class="mission-box">
                                                 <h3 class="section-title">Mission</h3>
@@ -416,7 +774,6 @@
                                             </div>
                                         </div>
                                         
-                                        <!-- Contact Section -->
                                         <div class="contact-section">
                                             <h3 class="section-title">Contact Us</h3>
                                             <div class="contact-details">
