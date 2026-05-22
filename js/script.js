@@ -213,6 +213,63 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Appointment Form Handler - Clear form on submit
+    const appointmentForm = document.getElementById('appointmentForm');
+    
+    if (appointmentForm) {
+        appointmentForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Store the form container reference
+            const formContainer = document.querySelector('.appointment-form-container');
+            const originalContent = formContainer.innerHTML;
+            
+            // Create success message
+            const successMessage = document.createElement('div');
+            successMessage.className = 'success-message';
+            successMessage.innerHTML = `
+                <div class="success-icon">✓</div>
+                <h3>Appointment Request Submitted!</h3>
+                <p>Your viewing appointment has been scheduled. One of our agents will contact you shortly to confirm.</p>
+            `;
+            
+            // Replace form with success message
+            formContainer.innerHTML = '';
+            formContainer.appendChild(successMessage);
+            
+            // Reset the form fields
+            appointmentForm.reset();
+            
+            // Restore form after 3 seconds
+            setTimeout(() => {
+                formContainer.innerHTML = originalContent;
+                // Re-attach event listeners to the restored form
+                const restoredForm = document.getElementById('appointmentForm');
+                if (restoredForm) {
+                    // Re-attach submit event
+                    restoredForm.addEventListener('submit', arguments.callee);
+                    // Re-attach reset button event
+                    const newResetBtn = restoredForm.querySelector('.reset-btn');
+                    if (newResetBtn) {
+                        newResetBtn.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            restoredForm.reset();
+                        });
+                    }
+                }
+            }, 3000);
+        });
+        
+        // Add reset button functionality (clear all fields)
+        const resetBtn = document.querySelector('.reset-btn');
+        if (resetBtn) {
+            resetBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                appointmentForm.reset();
+            });
+        }
+    }
+    
     // Check if main app is already visible (in case of direct access)
     if (mainApp.style.display === 'block' || mainApp.classList.contains('fade-in-up')) {
         initParallaxEffect();

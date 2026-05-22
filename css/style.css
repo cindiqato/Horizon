@@ -608,6 +608,314 @@ body {
     letter-spacing: 1px;
 }
 
+/* ========== AGENTS TABLE STYLES ========== */
+.agents-section {
+    margin-top: 20px;
+    animation: fadeInContent 0.4s ease forwards;
+}
+
+.agents-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.agents-header h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.agents-header p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.agents-table-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    overflow-x: auto;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.agents-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+.agents-table thead {
+    background: rgba(12, 21, 25, 0.9);
+}
+
+.agents-table th {
+    padding: 18px 20px;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #CF9D7B;
+    border-bottom: 2px solid rgba(207, 157, 123, 0.5);
+}
+
+.agents-table td {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    vertical-align: top;
+    color: #fff;
+}
+
+.agents-table tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Agent Cell Styles */
+.agent-cell .agent-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #CF9D7B;
+    margin-bottom: 8px;
+}
+
+.agent-cell .agent-position {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 5px;
+}
+
+.agent-cell .agent-license {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: monospace;
+}
+
+/* Contact Cell Styles */
+.contact-cell .contact-phone,
+.contact-cell .contact-email {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.contact-cell .contact-email {
+    word-break: break-all;
+}
+
+.contact-cell .contact-social {
+    margin-top: 8px;
+    font-size: 0.85rem;
+}
+
+.contact-cell .contact-social a {
+    color: #CF9D7B;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-cell .contact-social a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Performance Cell Styles */
+.performance-cell .rating {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.performance-cell .current-listings {
+    margin-bottom: 12px;
+}
+
+.performance-cell .listings-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #CF9D7B;
+    margin-bottom: 5px;
+}
+
+.performance-cell .current-listings ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.performance-cell .current-listings li {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 3px;
+    line-height: 1.4;
+}
+
+.performance-cell .awards {
+    font-size: 0.85rem;
+    color: #CF9D7B;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* ========== APPOINTMENT FORM STYLES ========== */
+.appointment-section {
+    margin-top: 50px;
+    animation: fadeInContent 0.4s ease forwards;
+}
+
+.appointment-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.appointment-header h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.appointment-header p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.appointment-form-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.appointment-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    color: #CF9D7B;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    font-size: 0.95rem;
+    color: #fff;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.25);
+    border-color: #CF9D7B;
+    box-shadow: 0 0 0 2px rgba(207, 157, 123, 0.3);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group select option {
+    background: #0C1519;
+    color: #fff;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.submit-btn,
+.reset-btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn {
+    background: #724B39;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.submit-btn:hover {
+    background: #5a3b2e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.reset-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.reset-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.reset-btn:active {
+    transform: translateY(0);
+}
+
+.success-message {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.success-icon {
+    font-size: 4rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.success-message h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.success-message p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .about-title {
@@ -634,6 +942,19 @@ body {
     
     .property-info {
         padding: 70px 15px 25px 15px;
+    }
+
+    .agents-table th,
+    .agents-table td {
+        padding: 15px;
+    }
+    
+    .agent-cell .agent-name {
+        font-size: 1.1rem;
+    }
+    
+    .performance-cell .current-listings li {
+        font-size: 0.8rem;
     }
 }
 
@@ -745,6 +1066,60 @@ body {
     .stat-item h3 {
         font-size: 1.5rem;
     }
+
+    .agents-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .agents-table th {
+        font-size: 0.9rem;
+        padding: 12px 10px;
+    }
+    
+    .agents-table td {
+        padding: 12px 10px;
+    }
+    
+    .agent-cell .agent-name {
+        font-size: 1rem;
+    }
+    
+    .agent-cell .agent-position,
+    .agent-cell .agent-license {
+        font-size: 0.75rem;
+    }
+    
+    .contact-cell .contact-phone,
+    .contact-cell .contact-email,
+    .contact-cell .contact-social {
+        font-size: 0.8rem;
+    }
+    
+    .performance-cell .rating {
+        font-size: 0.85rem;
+    }
+    
+    .performance-cell .current-listings li {
+        font-size: 0.75rem;
+    }
+
+    .appointment-form-container {
+        padding: 25px;
+        max-width: 100%;
+    }
+    
+    .appointment-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .submit-btn,
+    .reset-btn {
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -817,5 +1192,20 @@ body {
     
     .stat-item p {
         font-size: 0.8rem;
+    }
+
+    .appointment-form-container {
+        padding: 20px;
+    }
+    
+    .form-group label {
+        font-size: 0.85rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px 12px;
+        font-size: 0.9rem;
     }
 }
