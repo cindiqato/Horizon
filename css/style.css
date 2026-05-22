@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     min-height: 100vh;
     background-image: url('../images/outdoor.png');
     background-size: cover;
@@ -73,17 +73,17 @@ body {
 }
 
 .login-box {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(8px);
-    border-radius: 20px;
+    background: rgba(47, 47, 46, 0.4);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
     padding: 45px 40px;
     width: 100%;
     max-width: 460px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(155, 139, 119, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     text-align: center;
-    color: #fff;
     transition: transform 0.3s ease;
+    color: #fff;
 }
 
 .login-box:hover {
@@ -91,71 +91,63 @@ body {
 }
 
 .login-box h2 {
-    font-size: 2rem;
+    font-size: 28px;
     font-weight: 600;
-    margin-bottom: 12px;
-    letter-spacing: 1px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    color: #F5EFE6;
 }
 
 .subtitle {
-    font-size: 1rem;
+    color: #9B8B77;
+    font-size: 12px;
+    letter-spacing: 3px;
     margin-bottom: 35px;
-    opacity: 0.95;
-    font-weight: 500;
-    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .input-group {
-    margin-bottom: 25px;
-    text-align: left;
+    margin-bottom: 20px;
 }
 
 .input-group input {
     width: 100%;
     padding: 14px 18px;
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 30px;
-    font-size: 1rem;
+    background: rgba(15, 13, 13, 0.7);
+    border: 1px solid rgba(155, 139, 119, 0.4);
+    border-radius: 12px;
+    font-size: 15px;
     outline: none;
-    transition: all 0.3s ease;
-    color: #fff;
+    transition: all 0.3s;
+    color: #F5EFE6;
 }
 
 .input-group input::placeholder {
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 400;
+    color: rgba(220, 211, 198, 0.6);
 }
 
 .input-group input:focus {
-    background: rgba(255, 255, 255, 0.35);
-    backdrop-filter: blur(16px);
-    border-color: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+    border-color: #9B8B77;
+    background: rgba(59, 39, 21, 0.5);
 }
 
 .login-btn {
     width: 100%;
+    background: #2F2F2E;
+    border: 1px solid #9B8B77;
     padding: 14px;
-    background: #724B39;
-    backdrop-filter: blur(4px);
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 30px;
-    font-size: 1.1rem;
-    font-weight: bold;
+    color: #F5EFE6;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 40px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
     margin-top: 10px;
-    margin-bottom: 5px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
 .login-btn:hover {
-    background: #5a3b2e;
-    border-color: rgba(255, 255, 255, 0.5);
+    background: #3B2715;
+    border-color: #C6B69E;
     transform: translateY(-2px);
 }
 
@@ -167,21 +159,18 @@ body {
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
-    font-size: 0.85rem;
     gap: 15px;
 }
 
 .extra-links a {
-    color: #f0f0f0;
+    color: #DCD3C6;
     text-decoration: none;
+    font-size: 13px;
     transition: color 0.3s ease;
-    border-bottom: 1px dotted transparent;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
 .extra-links a:hover {
-    color: #CF9D7B;
-    border-bottom-color: #CF9D7B;
+    color: #9B8B77;
 }
 
 /* ========== MAIN APP STYLES ========== */
@@ -209,17 +198,18 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 50px;
+    padding: 25px 50px;
     z-index: 100;
-    background: transparent;
+    background: rgba(47, 47, 46, 0.4);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(155, 139, 119, 0.3);
 }
 
 .logo {
     font-size: 1.5rem;
-    font-weight: bold;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    letter-spacing: 1px;
+    font-weight: 600;
+    color: #F5EFE6;
+    letter-spacing: 2px;
 }
 
 .nav-links {
@@ -228,24 +218,23 @@ body {
 }
 
 .nav-link {
-    color: #fff;
+    color: #DCD3C6;
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
     transition: all 0.3s ease;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     cursor: pointer;
     padding: 5px 0;
 }
 
 .nav-link:hover {
-    color: #CF9D7B;
+    color: #9B8B77;
     transform: translateY(-2px);
 }
 
 .nav-link.active {
-    color: #CF9D7B;
-    border-bottom: 2px solid #CF9D7B;
+    color: #9B8B77;
+    border-bottom: 2px solid #9B8B77;
 }
 
 .page-container {
@@ -269,15 +258,13 @@ body {
     padding: 120px 20px 0px 20px;
 }
 
+/* Updated gradient section - matching hotel reservation design */
 .gradient-section {
-    background: linear-gradient(to bottom, 
-        rgba(22, 33, 39, 0) 0%,
-        rgba(22, 33, 39, 0.1) 4%,
-        rgba(22, 33, 39, 0.35) 8%,
-        rgba(22, 33, 39, 0.6) 12%,
-        rgba(22, 33, 39, 0.85) 18%,
-        rgb(22, 33, 39) 25%,
-        rgb(22, 33, 39) 100%
+    background: linear-gradient(to top, 
+        #000000 0%, 
+        #000000 30%, 
+        rgba(0, 0, 0, 0.5) 60%, 
+        rgba(0, 0, 0, 0.15) 100%
     );
     min-height: 100vh;
     padding: 20px 20px 80px 20px;
@@ -301,93 +288,95 @@ body {
     text-align: center;
     margin-bottom: 40px;
     padding: 20px;
+    background: transparent;
 }
 
 .welcome-title {
     font-size: 3rem;
-    color: #fff;
+    font-weight: 600;
+    color: #F5EFE6;
     margin-bottom: 15px;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
 }
 
 .welcome-subtitle {
     font-size: 1.2rem;
-    color: #e0e0e0;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+    color: #DCD3C6;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
 }
 
+/* Menu box with stronger blur */
 .menu-box {
-    background: #0C1519;
-    border-radius: 15px;
-    padding: 20px 30px;
+    background: rgba(47, 47, 46, 0.5);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(155, 139, 119, 0.5);
+    border-radius: 60px;
+    padding: 18px 32px;
     margin-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 70%;
     max-width: 1100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .search-container {
     flex: 0.5;
-    min-width: 180px;
+    min-width: 200px;
 }
 
 .search-input {
     width: 100%;
     padding: 12px 18px;
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 30px;
-    font-size: 0.95rem;
+    background: rgba(15, 13, 13, 0.7);
+    border: 1px solid rgba(155, 139, 119, 0.4);
+    border-radius: 40px;
+    font-size: 14px;
     outline: none;
-    transition: all 0.3s ease;
-    color: #fff;
+    transition: all 0.3s;
+    color: #F5EFE6;
 }
 
 .search-input::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-    font-weight: 400;
+    color: rgba(220, 211, 198, 0.6);
 }
 
 .search-input:focus {
-    background: rgba(255, 255, 255, 0.35);
-    backdrop-filter: blur(16px);
-    border-color: #CF9D7B;
-    box-shadow: 0 0 0 2px rgba(207, 157, 123, 0.3);
+    border-color: #9B8B77;
+    background: rgba(59, 39, 21, 0.5);
 }
 
 .menu-links {
     display: flex;
-    gap: 30px;
+    gap: 40px;
     align-items: center;
     flex: 0.5;
     justify-content: space-evenly;
 }
 
 .menu-link {
-    color: #fff;
+    color: #DCD3C6;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
-    transition: all 0.3s ease;
-    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.3s;
     padding: 8px 0;
+    cursor: pointer;
     position: relative;
-    white-space: nowrap;
 }
 
 .menu-link:hover {
-    color: #CF9D7B;
+    color: #9B8B77;
+    transform: translateY(-2px);
 }
 
 .menu-link.active {
-    color: #CF9D7B;
+    color: #9B8B77;
 }
 
 .menu-link.active::after {
@@ -397,7 +386,7 @@ body {
     left: 0;
     right: 0;
     height: 2px;
-    background: #CF9D7B;
+    background: #9B8B77;
     border-radius: 2px;
 }
 
@@ -432,10 +421,10 @@ body {
 }
 
 .property-card {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(47, 47, 46, 0.6);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 15px;
+    border: 1px solid rgba(155, 139, 119, 0.4);
+    border-radius: 16px;
     overflow: hidden;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -444,8 +433,7 @@ body {
 
 .property-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    border-color: #CF9D7B;
+    border-color: #9B8B77;
 }
 
 .property-image-container {
@@ -472,7 +460,6 @@ body {
     transform: translateY(-50%) scale(1.05);
 }
 
-/* Gradient overlay - text positioned much higher */
 .property-info {
     position: absolute;
     bottom: 0;
@@ -481,12 +468,12 @@ body {
     width: 100%;
     background: linear-gradient(
         to top,
-        rgba(45, 38, 35, 0.95) 0%,
-        rgba(45, 38, 35, 0.9) 15%,
-        rgba(45, 38, 35, 0.8) 30%,
-        rgba(45, 38, 35, 0.6) 50%,
-        rgba(45, 38, 35, 0.3) 75%,
-        rgba(45, 38, 35, 0) 100%
+        rgba(47, 47, 46, 0.95) 0%,
+        rgba(47, 47, 46, 0.9) 15%,
+        rgba(47, 47, 46, 0.8) 30%,
+        rgba(47, 47, 46, 0.6) 50%,
+        rgba(47, 47, 46, 0.3) 75%,
+        rgba(47, 47, 46, 0) 100%
     );
     padding: 80px 20px 30px 20px;
     text-align: center;
@@ -498,41 +485,21 @@ body {
 
 .property-name {
     font-size: 1.7rem;
-    font-weight: 700;
-    color: #fff;
+    font-weight: 600;
+    color: #F5EFE6;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
     transform: translateY(-50px);
 }
 
 .property-description {
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.95);
+    color: #DCD3C6;
     line-height: 1.4;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
     max-width: 90%;
     margin: 0 auto;
     transform: translateY(-40px);
-}
-
-.empty-box {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 15px;
-    padding: 100px 40px;
-    text-align: center;
-    color: #fff;
-    font-size: 1.2rem;
-    min-height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#propertiesTab, #detailsTab, #viewingTab, #aboutTab {
-    min-height: 450px;
 }
 
 /* ========== PROPERTY DETAILS STYLES ========== */
@@ -542,12 +509,17 @@ body {
 }
 
 .property-details-container {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(47, 47, 46, 0.6);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 15px;
+    border: 1px solid rgba(155, 139, 119, 0.4);
+    border-radius: 16px;
     padding: 40px;
-    color: #fff;
+    transition: transform 0.3s;
+}
+
+.property-details-container:hover {
+    transform: translateY(-5px);
+    border-color: #9B8B77;
 }
 
 .details-header {
@@ -566,8 +538,8 @@ body {
     width: 100%;
     height: 400px;
     object-fit: cover;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    border: 1px solid rgba(155, 139, 119, 0.4);
 }
 
 .details-info {
@@ -580,31 +552,38 @@ body {
 
 .details-title {
     font-size: 2.5rem;
-    font-weight: 700;
-    color: #CF9D7B;
+    font-weight: 600;
+    color: #9B8B77;
     margin-bottom: 15px;
     text-align: left;
+    letter-spacing: 2px;
 }
 
 .details-price {
     font-size: 1.8rem;
     font-weight: 600;
-    color: #fff;
+    color: #F5EFE6;
     margin-bottom: 15px;
     text-align: left;
 }
 
 .details-location {
     font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: #DCD3C6;
     margin-bottom: 20px;
     text-align: left;
+}
+
+.details-location i {
+    color: #9B8B77;
+    margin-right: 8px;
+    width: 20px;
 }
 
 .details-description {
     font-size: 1rem;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.9);
+    color: #DCD3C6;
     text-align: left;
 }
 
@@ -615,7 +594,7 @@ body {
 .details-features h3 {
     font-size: 1.8rem;
     font-weight: 600;
-    color: #CF9D7B;
+    color: #9B8B77;
     margin-bottom: 20px;
     position: relative;
     display: inline-block;
@@ -627,8 +606,8 @@ body {
     bottom: -8px;
     left: 0;
     width: 50px;
-    height: 3px;
-    background: #CF9D7B;
+    height: 2px;
+    background: #9B8B77;
     border-radius: 2px;
 }
 
@@ -645,7 +624,7 @@ body {
 .details-paragraph p {
     font-size: 1rem;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.9);
+    color: #DCD3C6;
 }
 
 .details-bullets {
@@ -662,7 +641,7 @@ body {
     line-height: 1.8;
     padding-left: 25px;
     position: relative;
-    color: rgba(255, 255, 255, 0.9);
+    color: #DCD3C6;
     margin-bottom: 8px;
 }
 
@@ -670,9 +649,8 @@ body {
     content: '✓';
     position: absolute;
     left: 0;
-    color: #CF9D7B;
+    color: #9B8B77;
     font-weight: bold;
-    font-size: 1.1rem;
 }
 
 .details-gallery {
@@ -682,7 +660,7 @@ body {
 .details-gallery h3 {
     font-size: 1.8rem;
     font-weight: 600;
-    color: #CF9D7B;
+    color: #9B8B77;
     margin-bottom: 20px;
     position: relative;
     display: inline-block;
@@ -694,8 +672,8 @@ body {
     bottom: -8px;
     left: 0;
     width: 50px;
-    height: 3px;
-    background: #CF9D7B;
+    height: 2px;
+    background: #9B8B77;
     border-radius: 2px;
 }
 
@@ -720,48 +698,43 @@ body {
     width: 100%;
     aspect-ratio: 4 / 5;
     object-fit: cover;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    border: 1px solid rgba(155, 139, 119, 0.4);
     transition: all 0.3s ease;
 }
 
 .gallery-item:hover img {
-    border-color: #CF9D7B;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-color: #9B8B77;
 }
 
 .gallery-item p {
     margin-top: 8px;
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: #DCD3C6;
 }
 
 .details-action {
     text-align: center;
     padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(155, 139, 119, 0.3);
 }
 
 .schedule-viewing-btn {
+    background: #2F2F2E;
+    border: 1px solid #9B8B77;
     padding: 14px 40px;
-    font-size: 1.1rem;
+    color: #F5EFE6;
+    font-size: 16px;
     font-weight: 600;
-    background: #724B39;
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 30px;
+    border-radius: 40px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
 }
 
 .schedule-viewing-btn:hover {
-    background: #5a3b2e;
+    background: #3B2715;
+    border-color: #C6B69E;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.schedule-viewing-btn:active {
-    transform: translateY(0);
 }
 
 /* ========== ABOUT US TAB STYLES ========== */
@@ -771,21 +744,27 @@ body {
 }
 
 .about-us-card {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(47, 47, 46, 0.6);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 15px;
+    border: 1px solid rgba(155, 139, 119, 0.4);
+    border-radius: 16px;
     padding: 50px;
-    color: #fff;
+    transition: transform 0.3s;
+}
+
+.about-us-card:hover {
+    transform: translateY(-5px);
+    border-color: #9B8B77;
 }
 
 .about-title {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 20px;
     position: relative;
     display: inline-block;
-    color: #fff;
+    color: #F5EFE6;
+    letter-spacing: 2px;
 }
 
 .about-title::after {
@@ -794,9 +773,8 @@ body {
     bottom: -10px;
     left: 0;
     width: 60px;
-    height: 4px;
-    background: #CF9D7B;
-    border-radius: 2px;
+    height: 2px;
+    background: #9B8B77;
 }
 
 .about-quote {
@@ -807,7 +785,7 @@ body {
 .quote-text {
     font-size: 1.8rem;
     font-style: italic;
-    color: #CF9D7B;
+    color: #9B8B77;
     margin-top: 10px;
     font-weight: 500;
     letter-spacing: 1px;
@@ -818,16 +796,16 @@ body {
 }
 
 .about-content p {
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 1rem;
+    line-height: 1.7;
     margin-bottom: 20px;
-    color: rgba(255, 255, 255, 0.9);
+    color: #DCD3C6;
 }
 
 .section-title {
     font-size: 1.8rem;
     font-weight: 600;
-    color: #CF9D7B;
+    color: #9B8B77;
     margin-bottom: 20px;
     position: relative;
     display: inline-block;
@@ -839,9 +817,8 @@ body {
     bottom: -8px;
     left: 0;
     width: 50px;
-    height: 3px;
-    background: #CF9D7B;
-    border-radius: 2px;
+    height: 2px;
+    background: #9B8B77;
 }
 
 .services-section {
@@ -859,14 +836,14 @@ body {
     margin-bottom: 12px;
     padding-left: 25px;
     position: relative;
-    color: rgba(255, 255, 255, 0.9);
+    color: #DCD3C6;
 }
 
 .services-list li::before {
     content: '✓';
     position: absolute;
     left: 0;
-    color: #CF9D7B;
+    color: #9B8B77;
     font-weight: bold;
 }
 
@@ -879,23 +856,24 @@ body {
 
 .mission-box,
 .vision-box {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.05);
     padding: 25px;
     border-radius: 12px;
+    border: 1px solid rgba(155, 139, 119, 0.2);
 }
 
 .mission-box p,
 .vision-box p {
     font-size: 1rem;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.9);
+    color: #DCD3C6;
     margin: 0;
 }
 
 .contact-section {
     margin-top: 20px;
     padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(155, 139, 119, 0.3);
 }
 
 .contact-details {
@@ -913,25 +891,31 @@ body {
 .contact-info p {
     margin-bottom: 10px;
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: #DCD3C6;
     line-height: 1.6;
 }
 
+.contact-info i {
+    color: #9B8B77;
+    margin-right: 10px;
+    width: 20px;
+}
+
 .contact-info strong {
-    color: #CF9D7B;
+    color: #9B8B77;
     font-size: 1.1rem;
 }
 
 .contact-note {
     flex: 1;
-    background: rgba(207, 157, 123, 0.15);
+    background: rgba(155, 139, 119, 0.1);
     padding: 15px 20px;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .contact-note p {
     font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: #DCD3C6;
     margin: 0;
     font-style: italic;
 }
@@ -949,22 +933,23 @@ body {
 
 .agents-header h2 {
     font-size: 2rem;
-    color: #fff;
+    font-weight: 600;
+    color: #F5EFE6;
     margin-bottom: 10px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    letter-spacing: 2px;
 }
 
 .agents-header p {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: #DCD3C6;
 }
 
 .agents-table-container {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(47, 47, 46, 0.6);
     backdrop-filter: blur(8px);
-    border-radius: 15px;
+    border-radius: 16px;
     overflow-x: auto;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(155, 139, 119, 0.4);
 }
 
 .agents-table {
@@ -974,58 +959,59 @@ body {
 }
 
 .agents-table thead {
-    background: rgba(12, 21, 25, 0.9);
+    background: rgba(47, 47, 46, 0.8);
 }
 
 .agents-table th {
     padding: 18px 20px;
     text-align: left;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
-    color: #CF9D7B;
-    border-bottom: 2px solid rgba(207, 157, 123, 0.5);
+    color: #9B8B77;
+    border-bottom: 1px solid rgba(155, 139, 119, 0.3);
 }
 
 .agents-table td {
     padding: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(155, 139, 119, 0.1);
     vertical-align: top;
-    color: #fff;
+    color: #DCD3C6;
 }
 
 .agents-table tr:hover {
     background: rgba(255, 255, 255, 0.05);
 }
 
-/* Agent Cell Styles */
 .agent-cell .agent-name {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    color: #CF9D7B;
+    color: #9B8B77;
     margin-bottom: 8px;
 }
 
 .agent-cell .agent-position {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.85rem;
+    color: #DCD3C6;
     margin-bottom: 5px;
 }
 
 .agent-cell .agent-license {
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.75rem;
+    color: rgba(220, 211, 198, 0.6);
     font-family: monospace;
 }
 
-/* Contact Cell Styles */
 .contact-cell .contact-phone,
 .contact-cell .contact-email {
     margin-bottom: 8px;
     font-size: 0.9rem;
 }
 
-.contact-cell .contact-email {
-    word-break: break-all;
+.contact-cell .contact-phone i,
+.contact-cell .contact-email i {
+    color: #9B8B77;
+    margin-right: 8px;
+    width: 16px;
 }
 
 .contact-cell .contact-social {
@@ -1033,22 +1019,29 @@ body {
     font-size: 0.85rem;
 }
 
+.contact-cell .contact-social i {
+    color: #9B8B77;
+    margin-right: 5px;
+}
+
 .contact-cell .contact-social a {
-    color: #CF9D7B;
+    color: #9B8B77;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 }
 
 .contact-cell .contact-social a:hover {
-    color: #fff;
-    text-decoration: underline;
+    color: #C6B69E;
 }
 
-/* Performance Cell Styles */
 .performance-cell .rating {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     margin-bottom: 12px;
-    font-weight: 500;
+}
+
+.performance-cell .rating i {
+    color: #9B8B77;
+    margin-right: 2px;
 }
 
 .performance-cell .current-listings {
@@ -1056,9 +1049,9 @@ body {
 }
 
 .performance-cell .listings-title {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 600;
-    color: #CF9D7B;
+    color: #9B8B77;
     margin-bottom: 5px;
 }
 
@@ -1068,17 +1061,20 @@ body {
 }
 
 .performance-cell .current-listings li {
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.8rem;
+    color: #DCD3C6;
     margin-bottom: 3px;
-    line-height: 1.4;
 }
 
 .performance-cell .awards {
-    font-size: 0.85rem;
-    color: #CF9D7B;
+    font-size: 0.8rem;
+    color: #9B8B77;
     margin-top: 10px;
     font-style: italic;
+}
+
+.performance-cell .awards i {
+    margin-right: 5px;
 }
 
 /* ========== APPOINTMENT FORM STYLES ========== */
@@ -1094,24 +1090,31 @@ body {
 
 .appointment-header h2 {
     font-size: 2rem;
-    color: #fff;
+    font-weight: 600;
+    color: #F5EFE6;
     margin-bottom: 10px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    letter-spacing: 2px;
 }
 
 .appointment-header p {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: #DCD3C6;
 }
 
 .appointment-form-container {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(47, 47, 46, 0.6);
     backdrop-filter: blur(8px);
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    border: 1px solid rgba(155, 139, 119, 0.4);
     padding: 40px;
     max-width: 800px;
     margin: 0 auto;
+    transition: transform 0.3s;
+}
+
+.appointment-form-container:hover {
+    transform: translateY(-5px);
+    border-color: #9B8B77;
 }
 
 .appointment-form {
@@ -1124,10 +1127,14 @@ body {
 
 .form-group label {
     display: block;
-    color: #CF9D7B;
+    color: #9B8B77;
     font-size: 0.9rem;
     font-weight: 600;
     margin-bottom: 8px;
+}
+
+.form-group label i {
+    margin-right: 8px;
 }
 
 .form-group input,
@@ -1135,12 +1142,12 @@ body {
 .form-group textarea {
     width: 100%;
     padding: 12px 15px;
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    font-size: 0.95rem;
-    color: #fff;
-    transition: all 0.3s ease;
+    background: rgba(15, 13, 13, 0.7);
+    border: 1px solid rgba(155, 139, 119, 0.4);
+    border-radius: 12px;
+    font-size: 14px;
+    color: #F5EFE6;
+    transition: all 0.3s;
     font-family: inherit;
 }
 
@@ -1148,14 +1155,13 @@ body {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    background: rgba(255, 255, 255, 0.25);
-    border-color: #CF9D7B;
-    box-shadow: 0 0 0 2px rgba(207, 157, 123, 0.3);
+    border-color: #9B8B77;
+    background: rgba(59, 39, 21, 0.5);
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(220, 211, 198, 0.5);
 }
 
 .form-group select {
@@ -1163,8 +1169,8 @@ body {
 }
 
 .form-group select option {
-    background: #0C1519;
-    color: #fff;
+    background: #2F2F2E;
+    color: #DCD3C6;
 }
 
 .form-group textarea {
@@ -1185,41 +1191,33 @@ body {
     padding: 12px 30px;
     font-size: 1rem;
     font-weight: 600;
-    border: none;
-    border-radius: 30px;
+    border-radius: 40px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
 }
 
 .submit-btn {
-    background: #724B39;
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: #2F2F2E;
+    border: 1px solid #9B8B77;
+    color: #F5EFE6;
 }
 
 .submit-btn:hover {
-    background: #5a3b2e;
+    background: #3B2715;
+    border-color: #C6B69E;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.submit-btn:active {
-    transform: translateY(0);
 }
 
 .reset-btn {
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(47, 47, 46, 0.6);
+    border: 1px solid rgba(155, 139, 119, 0.4);
+    color: #DCD3C6;
 }
 
 .reset-btn:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(59, 39, 21, 0.5);
+    border-color: #9B8B77;
     transform: translateY(-2px);
-}
-
-.reset-btn:active {
-    transform: translateY(0);
 }
 
 .success-message {
@@ -1229,111 +1227,42 @@ body {
 
 .success-icon {
     font-size: 4rem;
-    color: #4CAF50;
+    color: #9B8B77;
     margin-bottom: 20px;
 }
 
 .success-message h3 {
     font-size: 1.5rem;
-    color: #fff;
+    color: #F5EFE6;
     margin-bottom: 10px;
 }
 
 .success-message p {
-    color: rgba(255, 255, 255, 0.9);
+    color: #DCD3C6;
     font-size: 1rem;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .about-title {
-        font-size: 2.2rem;
-    }
-    
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 1100px) {
     .menu-box {
         width: 85%;
     }
     
-    .property-name {
-        font-size: 1.5rem;
-        transform: translateY(-40px);
-    }
-    
-    .property-description {
-        font-size: 0.85rem;
-        transform: translateY(-30px);
-    }
-    
-    .property-card {
-        height: 350px;
-    }
-    
-    .property-info {
-        padding: 70px 15px 25px 15px;
-    }
-
-    .agents-table th,
-    .agents-table td {
-        padding: 15px;
-    }
-    
-    .agent-cell .agent-name {
-        font-size: 1.1rem;
-    }
-    
-    .performance-cell .current-listings li {
-        font-size: 0.8rem;
-    }
-    
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-    
-    .full-details-layout {
-        gap: 30px;
     }
 }
 
-@media (max-width: 768px) {
-    .navbar {
-        padding: 20px 25px;
-    }
-    
-    .logo {
-        font-size: 1.2rem;
-    }
-    
-    .nav-links {
-        gap: 20px;
-    }
-    
-    .nav-link {
-        font-size: 0.9rem;
-    }
-    
-    .content-wrapper {
-        padding: 0 15px;
-    }
-    
-    .top-section {
-        padding: 100px 15px 0px 15px;
-    }
-    
-    .gradient-section {
-        padding: 20px 15px 60px 15px;
-    }
-    
+@media (max-width: 900px) {
     .menu-box {
         width: 95%;
         flex-direction: column;
         align-items: stretch;
-        padding: 20px;
-        gap: 20px;
+        padding: 20px 25px;
+        border-radius: 30px;
     }
     
     .search-container {
-        flex: 1;
         min-width: auto;
     }
     
@@ -1343,60 +1272,39 @@ body {
         flex-wrap: wrap;
     }
     
-    .menu-link {
-        white-space: normal;
-    }
-    
     .property-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .welcome-title {
-        font-size: 2rem;
+        gap: 25px;
     }
     
     .property-name {
-        font-size: 1.4rem;
-        transform: translateY(-35px);
+        transform: translateY(-40px);
     }
     
     .property-description {
-        font-size: 0.85rem;
-        transform: translateY(-25px);
+        transform: translateY(-30px);
     }
     
-    .property-info {
-        padding: 60px 15px 20px 15px;
+    .details-header {
+        flex-direction: column;
+        gap: 25px;
     }
     
-    .property-card {
-        height: 350px;
+    .details-image {
+        min-width: auto;
     }
     
-    #propertiesTab, #detailsTab, #viewingTab, #aboutTab {
-        min-height: 350px;
+    .details-image img {
+        height: 300px;
     }
     
-    .about-us-card {
-        padding: 30px 20px;
+    .full-details-layout {
+        flex-direction: column;
+        gap: 20px;
     }
     
-    .about-title {
-        font-size: 2rem;
-    }
-    
-    .quote-text {
-        font-size: 1.3rem;
-    }
-    
-    .about-content p {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-    
-    .section-title {
-        font-size: 1.5rem;
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .mission-vision-grid {
@@ -1408,54 +1316,75 @@ body {
         flex-direction: column;
         gap: 20px;
     }
-    
-    .contact-note {
-        width: 100%;
-    }
+}
 
-    .agents-header h2 {
-        font-size: 1.6rem;
+@media (max-width: 768px) {
+    .navbar {
+        padding: 18px 25px;
+        flex-direction: column;
+        gap: 12px;
     }
     
-    .agents-table th {
+    .logo {
+        font-size: 1.3rem;
+    }
+    
+    .nav-links {
+        gap: 25px;
+    }
+    
+    .nav-link {
         font-size: 0.9rem;
-        padding: 12px 10px;
     }
     
-    .agents-table td {
-        padding: 12px 10px;
+    .welcome-title {
+        font-size: 2.2rem;
     }
     
-    .agent-cell .agent-name {
+    .welcome-subtitle {
         font-size: 1rem;
     }
     
-    .agent-cell .agent-position,
-    .agent-cell .agent-license {
-        font-size: 0.75rem;
+    .menu-links {
+        gap: 20px;
     }
     
-    .contact-cell .contact-phone,
-    .contact-cell .contact-email,
-    .contact-cell .contact-social {
+    .menu-link {
+        font-size: 14px;
+    }
+    
+    .property-name {
+        font-size: 1.4rem;
+        transform: translateY(-35px);
+    }
+    
+    .property-description {
         font-size: 0.8rem;
+        transform: translateY(-25px);
     }
     
-    .performance-cell .rating {
-        font-size: 0.85rem;
+    .property-card {
+        height: 350px;
     }
     
-    .performance-cell .current-listings li {
-        font-size: 0.75rem;
+    .details-title {
+        font-size: 2rem;
     }
-
+    
+    .details-price {
+        font-size: 1.5rem;
+    }
+    
+    .about-title {
+        font-size: 2rem;
+    }
+    
+    .quote-text {
+        font-size: 1.3rem;
+    }
+    
     .appointment-form-container {
         padding: 25px;
-        max-width: 100%;
-    }
-    
-    .appointment-header h2 {
-        font-size: 1.6rem;
     }
     
     .form-actions {
@@ -1467,75 +1396,57 @@ body {
         width: 100%;
     }
     
-    .property-details-container {
-        padding: 25px;
+    .agents-table th,
+    .agents-table td {
+        padding: 12px 10px;
     }
     
-    .details-header {
-        gap: 25px;
-        flex-direction: column;
-    }
-    
-    .details-image {
-        min-width: auto;
-    }
-    
-    .details-image img {
-        height: 300px;
-    }
-    
-    .details-title {
-        font-size: 2rem;
-    }
-    
-    .details-price {
-        font-size: 1.5rem;
-    }
-    
-    .details-features h3,
-    .details-gallery h3 {
-        font-size: 1.5rem;
-    }
-    
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-    
-    .full-details-layout {
-        flex-direction: column;
-        gap: 20px;
+    .agent-cell .agent-name {
+        font-size: 1rem;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 550px) {
     .login-box {
         padding: 35px 25px;
-        max-width: 90%;
+        margin: 0 15px;
     }
     
     .navbar {
         padding: 15px 20px;
-        flex-direction: column;
-        gap: 15px;
     }
     
     .nav-links {
-        gap: 25px;
+        gap: 20px;
+    }
+    
+    .nav-link {
+        font-size: 0.85rem;
+    }
+    
+    .welcome-title {
+        font-size: 1.8rem;
+    }
+    
+    .top-section {
+        padding: 100px 15px 0px 15px;
+    }
+    
+    .gradient-section {
+        padding: 20px 15px 60px 15px;
     }
     
     .menu-box {
-        width: 100%;
-        padding: 15px;
+        padding: 15px 18px;
+        border-radius: 25px;
     }
     
     .menu-links {
-        gap: 20px;
-        flex-wrap: wrap;
+        gap: 15px;
     }
     
     .menu-link {
-        font-size: 0.9rem;
+        font-size: 12px;
     }
     
     .property-name {
@@ -1544,72 +1455,20 @@ body {
     }
     
     .property-description {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         transform: translateY(-15px);
-    }
-    
-    .property-info {
-        padding: 50px 12px 15px 12px;
     }
     
     .property-card {
         height: 280px;
     }
     
-    #propertiesTab, #detailsTab, #viewingTab, #aboutTab {
-        min-height: 300px;
-    }
-    
-    .about-title {
-        font-size: 1.8rem;
-    }
-    
-    .quote-text {
-        font-size: 1.1rem;
-    }
-    
-    .about-content p {
-        font-size: 0.9rem;
-    }
-    
-    .section-title {
-        font-size: 1.3rem;
-    }
-    
-    .services-list li {
-        font-size: 0.9rem;
-    }
-    
-    .mission-box p,
-    .vision-box p {
-        font-size: 0.9rem;
-    }
-    
-    .contact-info p {
-        font-size: 0.9rem;
-    }
-
-    .appointment-form-container {
-        padding: 20px;
-    }
-    
-    .form-group label {
-        font-size: 0.85rem;
-    }
-    
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-        padding: 10px 12px;
-        font-size: 0.9rem;
-    }
-    
-    .property-details-container {
-        padding: 20px;
+    .property-info {
+        padding: 60px 12px 20px 12px;
     }
     
     .details-image img {
-        height: 250px;
+        height: 220px;
     }
     
     .details-title {
@@ -1628,6 +1487,12 @@ body {
         font-size: 0.9rem;
     }
     
+    .details-features h3,
+    .details-gallery h3,
+    .section-title {
+        font-size: 1.4rem;
+    }
+    
     .details-bullets li {
         font-size: 0.85rem;
         padding-left: 20px;
@@ -1636,6 +1501,35 @@ body {
     .gallery-grid {
         grid-template-columns: 1fr;
         gap: 15px;
+    }
+    
+    .about-us-card {
+        padding: 25px 20px;
+    }
+    
+    .about-title {
+        font-size: 1.6rem;
+    }
+    
+    .quote-text {
+        font-size: 1.1rem;
+    }
+    
+    .about-content p,
+    .services-list li,
+    .mission-box p,
+    .vision-box p,
+    .contact-info p {
+        font-size: 0.9rem;
+    }
+    
+    .appointment-header h2,
+    .agents-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .appointment-form-container {
+        padding: 20px;
     }
     
     .schedule-viewing-btn {
