@@ -882,7 +882,6 @@ body {
     background: rgba(255, 255, 255, 0.08);
     padding: 25px;
     border-radius: 12px;
-    border-left: 4px solid #CF9D7B;
 }
 
 .mission-box p,
@@ -928,7 +927,6 @@ body {
     background: rgba(207, 157, 123, 0.15);
     padding: 15px 20px;
     border-radius: 10px;
-    border-left: 3px solid #CF9D7B;
 }
 
 .contact-note p {
