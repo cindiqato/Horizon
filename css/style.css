@@ -15,9 +15,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ============================================ */
 /* LOGIN PAGE STYLES */
-/* ============================================ */
 .login-page {
     position: fixed;
     top: 0;
@@ -175,9 +173,7 @@ body {
     color: #9B8B77;
 }
 
-/* ============================================ */
 /* MAIN APP CONTAINER */
-/* ============================================ */
 .main-app {
     position: relative;
     width: 100%;
@@ -194,9 +190,7 @@ body {
     animation: fadeOutUp 0.6s ease forwards;
 }
 
-/* ============================================ */
 /* SECTION 1: HERO SECTION */
-/* ============================================ */
 .hero-section {
     min-height: auto;
     padding: 0px 20px 40px 20px;
@@ -263,9 +257,7 @@ body {
     text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* ============================================ */
 /* SECTION 2: BOTTOM SECTION */
-/* ============================================ */
 .bottom-section {
     background: linear-gradient(to top, 
         #000000 0%, 
@@ -285,9 +277,7 @@ body {
     padding: 0 20px;
 }
 
-/* ============================================ */
 /* MENU BOX STYLES */
-/* ============================================ */
 .menu-box {
     background: rgba(47, 47, 46, 0.5);
     backdrop-filter: blur(16px);
@@ -371,9 +361,7 @@ body {
     border-radius: 2px;
 }
 
-/* ============================================ */
 /* TAB CONTENT TRANSITION */
-/* ============================================ */
 .tab-content-container {
     position: relative;
     min-height: 500px;
@@ -401,9 +389,7 @@ body {
     }
 }
 
-/* ============================================ */
 /* TAB 1: PROPERTIES SECTION */
-/* ============================================ */
 .property-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -493,9 +479,7 @@ body {
     transform: translateY(-40px);
 }
 
-/* ============================================ */
 /* TAB 2: DETAILS SECTION */
-/* ============================================ */
 .property-details-section {
     margin-top: 20px;
     animation: fadeInContent 0.4s ease forwards;
@@ -730,9 +714,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* ============================================ */
 /* TAB 3: VIEWING SECTION */
-/* ============================================ */
 .agents-section {
     margin-top: 20px;
     animation: fadeInContent 0.4s ease forwards;
@@ -1052,9 +1034,7 @@ body {
     font-size: 1rem;
 }
 
-/* ============================================ */
 /* TAB 4: ABOUT US SECTION */
-/* ============================================ */
 .about-us-section {
     margin-top: 20px;
     animation: fadeInContent 0.4s ease forwards;
@@ -1237,9 +1217,7 @@ body {
     font-style: italic;
 }
 
-/* ============================================ */
 /* RESPONSIVE DESIGN */
-/* ============================================ */
 @media (max-width: 1100px) {
     .menu-box {
         width: 85%;
