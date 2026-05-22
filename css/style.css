@@ -535,7 +535,7 @@ body {
     min-height: 450px;
 }
 
-/* ========== ABOUT US TAB STYLES ========== */
+/* ========== ABOUT US TAB STYLES - UPDATED ========== */
 .about-us-section {
     margin-top: 20px;
     animation: fadeInContent 0.4s ease forwards;
@@ -553,7 +553,7 @@ body {
 .about-title {
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     position: relative;
     display: inline-block;
     color: #fff;
@@ -570,6 +570,20 @@ body {
     border-radius: 2px;
 }
 
+.about-quote {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.quote-text {
+    font-size: 1.8rem;
+    font-style: italic;
+    color: #CF9D7B;
+    margin-top: 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
 .about-content {
     margin-bottom: 40px;
 }
@@ -581,31 +595,118 @@ body {
     color: rgba(255, 255, 255, 0.9);
 }
 
-.about-stats {
-    display: flex;
-    gap: 50px;
-    margin-top: 40px;
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #CF9D7B;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: #CF9D7B;
+    border-radius: 2px;
+}
+
+.services-section {
+    margin-bottom: 40px;
+}
+
+.services-list {
+    list-style: none;
+    padding: 0;
+}
+
+.services-list li {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.services-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #CF9D7B;
+    font-weight: bold;
+}
+
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.mission-box,
+.vision-box {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 4px solid #CF9D7B;
+}
+
+.mission-box p,
+.vision-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+.contact-section {
+    margin-top: 20px;
     padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
-    justify-content: center;
 }
 
-.stat-item {
-    text-align: center;
-    flex: 1;
+.contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-.stat-item h3 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #CF9D7B;
+.contact-info {
+    flex: 2;
+}
+
+.contact-info p {
     margin-bottom: 10px;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
 }
 
-.stat-item p {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8);
-    letter-spacing: 1px;
+.contact-info strong {
+    color: #CF9D7B;
+    font-size: 1.1rem;
+}
+
+.contact-note {
+    flex: 1;
+    background: rgba(207, 157, 123, 0.15);
+    padding: 15px 20px;
+    border-radius: 10px;
+    border-left: 3px solid #CF9D7B;
+}
+
+.contact-note p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    font-style: italic;
 }
 
 /* ========== AGENTS TABLE STYLES ========== */
@@ -1049,22 +1150,31 @@ body {
         font-size: 2rem;
     }
     
+    .quote-text {
+        font-size: 1.3rem;
+    }
+    
     .about-content p {
         font-size: 1rem;
         line-height: 1.6;
     }
     
-    .about-stats {
-        gap: 30px;
-        flex-wrap: wrap;
-    }
-    
-    .stat-item {
-        min-width: 120px;
-    }
-    
-    .stat-item h3 {
+    .section-title {
         font-size: 1.5rem;
+    }
+    
+    .mission-vision-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .contact-details {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .contact-note {
+        width: 100%;
     }
 
     .agents-header h2 {
@@ -1178,20 +1288,29 @@ body {
         font-size: 1.8rem;
     }
     
+    .quote-text {
+        font-size: 1.1rem;
+    }
+    
     .about-content p {
         font-size: 0.9rem;
     }
     
-    .about-stats {
-        gap: 20px;
-    }
-    
-    .stat-item h3 {
+    .section-title {
         font-size: 1.3rem;
     }
     
-    .stat-item p {
-        font-size: 0.8rem;
+    .services-list li {
+        font-size: 0.9rem;
+    }
+    
+    .mission-box p,
+    .vision-box p {
+        font-size: 0.9rem;
+    }
+    
+    .contact-info p {
+        font-size: 0.9rem;
     }
 
     .appointment-form-container {
