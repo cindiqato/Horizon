@@ -16,7 +16,7 @@ body {
 }
 
 /* ============================================ */
-/* LOGIN PAGE STYLES (Unaffected) */
+/* LOGIN PAGE STYLES */
 /* ============================================ */
 .login-page {
     position: fixed;
@@ -195,11 +195,11 @@ body {
 }
 
 /* ============================================ */
-/* SECTION 1: HERO SECTION (Top Part) */
+/* SECTION 1: HERO SECTION */
 /* ============================================ */
 .hero-section {
     min-height: auto;
-    padding: 0px 20px 40px 20px;  /* Changed from 120px to 0px on top */
+    padding: 0px 20px 40px 20px;
     background: transparent;
 }
 
@@ -213,8 +213,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 60px;  /* Reduced from 80px */
-    padding-top: 25px;     /* Added small padding for breathing room */
+    margin-bottom: 60px;
+    padding-top: 25px;
 }
 
 .logo {
@@ -240,7 +240,7 @@ body {
 }
 
 .nav-link:hover {
-    color: #9B8B77;
+    color: #C6B69E;
     transform: translateY(-2px);
 }
 
@@ -264,7 +264,7 @@ body {
 }
 
 /* ============================================ */
-/* SECTION 2: BOTTOM SECTION (Gradient Background) */
+/* SECTION 2: BOTTOM SECTION */
 /* ============================================ */
 .bottom-section {
     background: linear-gradient(to top, 
@@ -286,7 +286,7 @@ body {
 }
 
 /* ============================================ */
-/* MENU BOX STYLES (Independent Section) */
+/* MENU BOX STYLES */
 /* ============================================ */
 .menu-box {
     background: rgba(47, 47, 46, 0.5);
@@ -352,12 +352,12 @@ body {
 }
 
 .menu-link:hover {
-    color: #9B8B77;
+    color: #C6B69E;
     transform: translateY(-2px);
 }
 
 .menu-link.active {
-    color: #9B8B77;
+    color: #C6B69E;
 }
 
 .menu-link.active::after {
@@ -367,12 +367,12 @@ body {
     left: 0;
     right: 0;
     height: 2px;
-    background: #9B8B77;
+    background: #C6B69E;
     border-radius: 2px;
 }
 
 /* ============================================ */
-/* TAB CONTENT TRANSITION (Shared) */
+/* TAB CONTENT TRANSITION */
 /* ============================================ */
 .tab-content-container {
     position: relative;
@@ -402,12 +402,8 @@ body {
 }
 
 /* ============================================ */
-/* TAB 1: PROPERTIES SECTION STYLES (Independent) */
+/* TAB 1: PROPERTIES SECTION */
 /* ============================================ */
-#propertiesTab {
-    /* Properties tab specific styles */
-}
-
 .property-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -498,12 +494,8 @@ body {
 }
 
 /* ============================================ */
-/* TAB 2: DETAILS SECTION STYLES (Independent) */
+/* TAB 2: DETAILS SECTION */
 /* ============================================ */
-#detailsTab {
-    /* Details tab specific styles */
-}
-
 .property-details-section {
     margin-top: 20px;
     animation: fadeInContent 0.4s ease forwards;
@@ -554,7 +546,7 @@ body {
 .details-title {
     font-size: 2.5rem;
     font-weight: 600;
-    color: #9B8B77;
+    color: #C6B69E;
     margin-bottom: 15px;
     text-align: left;
     letter-spacing: 2px;
@@ -595,7 +587,7 @@ body {
 .details-features h3 {
     font-size: 1.8rem;
     font-weight: 600;
-    color: #9B8B77;
+    color: #C6B69E;
     margin-bottom: 20px;
     position: relative;
     display: inline-block;
@@ -608,7 +600,7 @@ body {
     left: 0;
     width: 50px;
     height: 2px;
-    background: #9B8B77;
+    background: #C6B69E;
     border-radius: 2px;
 }
 
@@ -661,7 +653,7 @@ body {
 .details-gallery h3 {
     font-size: 1.8rem;
     font-weight: 600;
-    color: #9B8B77;
+    color: #C6B69E;
     margin-bottom: 20px;
     position: relative;
     display: inline-block;
@@ -674,7 +666,7 @@ body {
     left: 0;
     width: 50px;
     height: 2px;
-    background: #9B8B77;
+    background: #C6B69E;
     border-radius: 2px;
 }
 
@@ -739,13 +731,8 @@ body {
 }
 
 /* ============================================ */
-/* TAB 3: VIEWING SECTION STYLES (Independent) */
+/* TAB 3: VIEWING SECTION */
 /* ============================================ */
-#viewingTab {
-    /* Viewing tab specific styles */
-}
-
-/* Agents Table Styles */
 .agents-section {
     margin-top: 20px;
     animation: fadeInContent 0.4s ease forwards;
@@ -792,7 +779,7 @@ body {
     text-align: left;
     font-size: 1rem;
     font-weight: 600;
-    color: #9B8B77;
+    color: #C6B69E;
     border-bottom: 1px solid rgba(155, 139, 119, 0.3);
 }
 
@@ -810,7 +797,7 @@ body {
 .agent-cell .agent-name {
     font-size: 1.1rem;
     font-weight: 700;
-    color: #9B8B77;
+    color: #C6B69E;
     margin-bottom: 8px;
 }
 
@@ -830,6 +817,7 @@ body {
 .contact-cell .contact-email {
     margin-bottom: 8px;
     font-size: 0.9rem;
+    color: #DCD3C6;
 }
 
 .contact-cell .contact-phone i,
@@ -862,6 +850,7 @@ body {
 .performance-cell .rating {
     font-size: 0.9rem;
     margin-bottom: 12px;
+    color: #DCD3C6;
 }
 
 .performance-cell .rating i {
@@ -902,7 +891,7 @@ body {
     margin-right: 5px;
 }
 
-/* Appointment Form Styles */
+/* Appointment Form */
 .appointment-section {
     margin-top: 50px;
     animation: fadeInContent 0.4s ease forwards;
@@ -956,10 +945,6 @@ body {
     font-size: 0.9rem;
     font-weight: 600;
     margin-bottom: 8px;
-}
-
-.form-group label i {
-    margin-right: 8px;
 }
 
 .form-group input,
@@ -1068,12 +1053,8 @@ body {
 }
 
 /* ============================================ */
-/* TAB 4: ABOUT US SECTION STYLES (Independent) */
+/* TAB 4: ABOUT US SECTION */
 /* ============================================ */
-#aboutTab {
-    /* About Us tab specific styles */
-}
-
 .about-us-section {
     margin-top: 20px;
     animation: fadeInContent 0.4s ease forwards;
@@ -1121,7 +1102,7 @@ body {
 .quote-text {
     font-size: 1.8rem;
     font-style: italic;
-    color: #9B8B77;
+    color: #C6B69E;
     margin-top: 10px;
     font-weight: 500;
     letter-spacing: 1px;
@@ -1141,7 +1122,7 @@ body {
 .section-title {
     font-size: 1.8rem;
     font-weight: 600;
-    color: #9B8B77;
+    color: #C6B69E;
     margin-bottom: 20px;
     position: relative;
     display: inline-block;
@@ -1154,7 +1135,7 @@ body {
     left: 0;
     width: 50px;
     height: 2px;
-    background: #9B8B77;
+    background: #C6B69E;
 }
 
 .services-section {
@@ -1238,7 +1219,7 @@ body {
 }
 
 .contact-info strong {
-    color: #9B8B77;
+    color: #C6B69E;
     font-size: 1.1rem;
 }
 
@@ -1257,17 +1238,31 @@ body {
 }
 
 /* ============================================ */
-/* RESPONSIVE DESIGN (Independent by Section) */
+/* RESPONSIVE DESIGN */
 /* ============================================ */
-
-/* Menu Box Responsive */
 @media (max-width: 1100px) {
     .menu-box {
         width: 85%;
     }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 900px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-navbar {
+        margin-bottom: 50px;
+    }
+    
     .menu-box {
         width: 95%;
         flex-direction: column;
@@ -1285,45 +1280,50 @@ body {
         gap: 30px;
         flex-wrap: wrap;
     }
-}
-
-@media (max-width: 768px) {
-    .menu-links {
+    
+    .property-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .property-name {
+        transform: translateY(-40px);
+    }
+    
+    .property-description {
+        transform: translateY(-30px);
+    }
+    
+    .details-header {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .details-image {
+        min-width: auto;
+    }
+    
+    .details-image img {
+        height: 300px;
+    }
+    
+    .full-details-layout {
+        flex-direction: column;
         gap: 20px;
     }
     
-    .menu-link {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 550px) {
-    .menu-box {
-        padding: 15px 18px;
-        border-radius: 25px;
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
     
-    .menu-links {
-        gap: 15px;
+    .mission-vision-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
     
-    .menu-link {
-        font-size: 12px;
-    }
-}
-
-/* Hero Section Responsive */
-@media (max-width: 900px) {
-    .hero-title {
-        font-size: 2.2rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-    
-    .hero-navbar {
-        margin-bottom: 50px;
+    .contact-details {
+        flex-direction: column;
+        gap: 20px;
     }
 }
 
@@ -1358,9 +1358,78 @@ body {
     .hero-subtitle {
         font-size: 0.9rem;
     }
+    
+    .bottom-section {
+        padding: 20px 15px 60px 15px;
+    }
+    
+    .menu-links {
+        gap: 20px;
+    }
+    
+    .menu-link {
+        font-size: 14px;
+    }
+    
+    .property-name {
+        font-size: 1.4rem;
+        transform: translateY(-35px);
+    }
+    
+    .property-description {
+        font-size: 0.8rem;
+        transform: translateY(-25px);
+    }
+    
+    .property-card {
+        height: 350px;
+    }
+    
+    .details-title {
+        font-size: 2rem;
+    }
+    
+    .details-price {
+        font-size: 1.5rem;
+    }
+    
+    .about-title {
+        font-size: 2rem;
+    }
+    
+    .quote-text {
+        font-size: 1.3rem;
+    }
+    
+    .appointment-form-container {
+        padding: 25px;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .submit-btn,
+    .reset-btn {
+        width: 100%;
+    }
+    
+    .agents-table th,
+    .agents-table td {
+        padding: 12px 10px;
+    }
+    
+    .agent-cell .agent-name {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 550px) {
+    .login-box {
+        padding: 35px 25px;
+        margin: 0 15px;
+    }
+    
     .hero-section {
         padding: 0px 15px 30px 15px;
     }
@@ -1385,54 +1454,24 @@ body {
     .hero-subtitle {
         font-size: 0.85rem;
     }
-}
-
-/* Bottom Section Responsive */
-@media (max-width: 768px) {
-    .bottom-section {
-        padding: 20px 15px 60px 15px;
-    }
-}
-
-@media (max-width: 550px) {
+    
     .bottom-section {
         padding: 20px 15px 50px 15px;
     }
-}
-
-/* Properties Tab Responsive */
-@media (max-width: 900px) {
-    .property-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
+    
+    .menu-box {
+        padding: 15px 18px;
+        border-radius: 25px;
     }
     
-    .property-name {
-        transform: translateY(-40px);
+    .menu-links {
+        gap: 15px;
     }
     
-    .property-description {
-        transform: translateY(-30px);
-    }
-}
-
-@media (max-width: 768px) {
-    .property-name {
-        font-size: 1.4rem;
-        transform: translateY(-35px);
+    .menu-link {
+        font-size: 12px;
     }
     
-    .property-description {
-        font-size: 0.8rem;
-        transform: translateY(-25px);
-    }
-    
-    .property-card {
-        height: 350px;
-    }
-}
-
-@media (max-width: 550px) {
     .property-name {
         font-size: 1.3rem;
         transform: translateY(-25px);
@@ -1450,44 +1489,7 @@ body {
     .property-info {
         padding: 60px 12px 20px 12px;
     }
-}
-
-/* Details Tab Responsive */
-@media (max-width: 900px) {
-    .details-header {
-        flex-direction: column;
-        gap: 25px;
-    }
     
-    .details-image {
-        min-width: auto;
-    }
-    
-    .details-image img {
-        height: 300px;
-    }
-    
-    .full-details-layout {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .details-title {
-        font-size: 2rem;
-    }
-    
-    .details-price {
-        font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 550px) {
     .details-image img {
         height: 220px;
     }
@@ -1524,72 +1526,6 @@ body {
         gap: 15px;
     }
     
-    .schedule-viewing-btn {
-        width: 100%;
-        padding: 12px 20px;
-    }
-}
-
-/* Viewing Tab Responsive */
-@media (max-width: 768px) {
-    .appointment-form-container {
-        padding: 25px;
-    }
-    
-    .form-actions {
-        flex-direction: column;
-    }
-    
-    .submit-btn,
-    .reset-btn {
-        width: 100%;
-    }
-    
-    .agents-table th,
-    .agents-table td {
-        padding: 12px 10px;
-    }
-    
-    .agent-cell .agent-name {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 550px) {
-    .appointment-header h2,
-    .agents-header h2 {
-        font-size: 1.5rem;
-    }
-    
-    .appointment-form-container {
-        padding: 20px;
-    }
-}
-
-/* About Us Tab Responsive */
-@media (max-width: 900px) {
-    .mission-vision-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .contact-details {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .about-title {
-        font-size: 2rem;
-    }
-    
-    .quote-text {
-        font-size: 1.3rem;
-    }
-}
-
-@media (max-width: 550px) {
     .about-us-card {
         padding: 25px 20px;
     }
@@ -1608,5 +1544,19 @@ body {
     .vision-box p,
     .contact-info p {
         font-size: 0.9rem;
+    }
+    
+    .appointment-header h2,
+    .agents-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .appointment-form-container {
+        padding: 20px;
+    }
+    
+    .schedule-viewing-btn {
+        width: 100%;
+        padding: 12px 20px;
     }
 }
