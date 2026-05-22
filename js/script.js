@@ -270,6 +270,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
+    // Function to scroll to the top of the details section
+    function scrollToDetailsTop() {
+        // Find the gradient section which contains the details
+        const gradientSection = document.querySelector('.gradient-section');
+        if (gradientSection) {
+            // Get the position of the gradient section
+            const gradientRect = gradientSection.getBoundingClientRect();
+            const absoluteGradientTop = gradientRect.top + window.pageYOffset;
+            
+            // Scroll to the gradient section with an offset to show the top
+            window.scrollTo({
+                top: absoluteGradientTop - 80,
+                behavior: 'smooth'
+            });
+        }
+    }
+    
     // Property Card Click Handler - Show details in Details tab
     const propertyCards = document.querySelectorAll('.property-card');
     const maplewoodDetails = document.getElementById('maplewood-details');
@@ -332,6 +349,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Show the appropriate property details
                 showPropertyDetails(property);
+                
+                // Scroll to the top of the details section after a longer delay
+                // to ensure the tab content is fully rendered
+                setTimeout(() => {
+                    scrollToDetailsTop();
+                }, 500);
             });
         });
     }
