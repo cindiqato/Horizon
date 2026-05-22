@@ -11,7 +11,9 @@
 </head>
 <body>
 
+    <!-- ============================================ -->
     <!-- LOGIN PAGE SECTION -->
+    <!-- ============================================ -->
     <div id="loginPage" class="login-page">
         <div class="login-container">
             <div class="login-box">
@@ -38,758 +40,777 @@
         </div>
     </div>
 
+    <!-- ============================================ -->
     <!-- MAIN APP CONTAINER (Hidden until login) -->
+    <!-- ============================================ -->
     <div id="mainApp" class="main-app">
-        <!-- FIXED NAVBAR - Always visible -->
-        <div class="navbar">
-            <div class="logo">Horizon Homes</div>
-            <div class="nav-links">
-                <a href="#" id="logoutBtnMain" class="nav-link">Logout</a>
+        
+        <!-- ============================================ -->
+        <!-- SECTION 1: HERO SECTION (Top Part) -->
+        <!-- Contains: Branding (Horizon Homes), Logout button, Welcome message -->
+        <!-- ============================================ -->
+        <div class="hero-section">
+            <div class="hero-content-wrapper">
+                <!-- Navbar / Branding and Logout -->
+                <div class="hero-navbar">
+                    <div class="logo">Horizon Homes</div>
+                    <div class="nav-links">
+                        <a href="#" id="logoutBtnMain" class="nav-link">Logout</a>
+                    </div>
+                </div>
+                
+                <!-- Welcome Message -->
+                <div class="hero-welcome">
+                    <h1 class="hero-title">Welcome to Horizon Homes</h1>
+                    <p class="hero-subtitle">Your journey to finding the perfect property starts here</p>
+                </div>
             </div>
         </div>
 
-        <!-- PAGE CONTAINER - Home page only now -->
-        <div class="page-container">
-            <!-- HOME PAGE -->
-            <div id="homePage" class="page home-page">
-                <!-- TOP SECTION (no gradient, no colored box) -->
-                <div class="top-section">
-                    <div class="content-wrapper">
-                        <div class="welcome-section">
-                            <h1 class="welcome-title">Welcome to Horizon Homes</h1>
-                            <p class="welcome-subtitle">Your journey to finding the perfect property starts here</p>
-                        </div>
+        <!-- ============================================ -->
+        <!-- SECTION 2: BOTTOM SECTION -->
+        <!-- Contains: Menu box with search + tabs, and all tab content -->
+        <!-- This section has the gradient background -->
+        <!-- ============================================ -->
+        <div class="bottom-section">
+            <div class="bottom-content-wrapper">
+                
+                <!-- ============================================ -->
+                <!-- MENU BOX (Search + Navigation Links) -->
+                <!-- ============================================ -->
+                <div class="menu-box">
+                    <div class="search-container">
+                        <input type="text" id="searchBar" class="search-input" placeholder="Search properties...">
+                    </div>
+                    <div class="menu-links">
+                        <a href="#" class="menu-link active" data-tab="properties">Properties</a>
+                        <a href="#" class="menu-link" data-tab="details">Details</a>
+                        <a href="#" class="menu-link" data-tab="viewing">Viewing</a>
+                        <a href="#" class="menu-link" data-tab="about">About Us</a>
                     </div>
                 </div>
 
-                <!-- GRADIENT SECTION -->
-                <div class="gradient-section">
-                    <div class="content-wrapper">
-                        <!-- Menu Box -->
-                        <div class="menu-box">
-                            <div class="search-container">
-                                <input type="text" id="searchBar" class="search-input" placeholder="Search properties...">
+                <!-- ============================================ -->
+                <!-- TAB CONTENT CONTAINER (4 Sections) -->
+                <!-- ============================================ -->
+                <div id="tabContentContainer" class="tab-content-container">
+                    
+                    <!-- ============================================ -->
+                    <!-- TAB 1: PROPERTIES SECTION -->
+                    <!-- ============================================ -->
+                    <div id="propertiesTab" class="tab-content active">
+                        <div class="property-grid">
+                            <!-- Property 1 - Maplewood Crest -->
+                            <div class="property-card" data-property="maplewood">
+                                <div class="property-image-container">
+                                    <img src="images/uno.png" alt="Maplewood Crest" class="property-image">
+                                    <div class="property-info">
+                                        <h3 class="property-name">Maplewood Crest</h3>
+                                        <p class="property-description">A serene haven where timeless elegance meets nature's embrace</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="menu-links">
-                                <a href="#" class="menu-link active" data-tab="properties">Properties</a>
-                                <a href="#" class="menu-link" data-tab="details">Details</a>
-                                <a href="#" class="menu-link" data-tab="viewing">Viewing</a>
-                                <a href="#" class="menu-link" data-tab="about">About Us</a>
+                            
+                            <!-- Property 2 - Villa Épure -->
+                            <div class="property-card" data-property="villa">
+                                <div class="property-image-container">
+                                    <img src="images/dos.png" alt="Villa Épure" class="property-image">
+                                    <div class="property-info">
+                                        <h3 class="property-name">Villa Épure</h3>
+                                        <p class="property-description">Refined simplicity expressed through pure architectural grace</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Property 3 - Blanc Étage -->
+                            <div class="property-card" data-property="blanc">
+                                <div class="property-image-container">
+                                    <img src="images/tres.png" alt="Blanc Étage" class="property-image">
+                                    <div class="property-info">
+                                        <h3 class="property-name">Blanc Étage</h3>
+                                        <p class="property-description">An elevated sanctuary of pristine sophistication and light</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Property 4 - Maison Velour -->
+                            <div class="property-card" data-property="maison">
+                                <div class="property-image-container">
+                                    <img src="images/cuatro.png" alt="Maison Velour" class="property-image">
+                                    <div class="property-info">
+                                        <h3 class="property-name">Maison Velour</h3>
+                                        <p class="property-description">Soft grandeur woven into every luxurious detail</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Property 5 - Aurelia Ridge -->
+                            <div class="property-card" data-property="aurelia">
+                                <div class="property-image-container">
+                                    <img src="images/cinco.png" alt="Aurelia Ridge" class="property-image">
+                                    <div class="property-info">
+                                        <h3 class="property-name">Aurelia Ridge</h3>
+                                        <p class="property-description">Golden living redefined at the pinnacle of prestige</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Property 6 - Royale Élite -->
+                            <div class="property-card" data-property="royale">
+                                <div class="property-image-container">
+                                    <img src="images/sais.png" alt="Royale Élite" class="property-image">
+                                    <div class="property-info">
+                                        <h3 class="property-name">Royale Élite</h3>
+                                        <p class="property-description">An exclusive residence where prestige and perfection converge</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ============================================ -->
+                    <!-- TAB 2: DETAILS SECTION -->
+                    <!-- ============================================ -->
+                    <div id="detailsTab" class="tab-content">
+                        <!-- Property 1 - Maplewood Crest Details (shown by default) -->
+                        <div id="maplewood-details" class="property-details-section" style="display: block;">
+                            <div class="property-details-container">
+                                <div class="details-header">
+                                    <div class="details-image">
+                                        <img src="images/uno.png" alt="Maplewood Crest">
+                                    </div>
+                                    <div class="details-info">
+                                        <h1 class="details-title">Maplewood Crest</h1>
+                                        <p class="details-price">₱ 3,500,000</p>
+                                        <p class="details-location"><i class="fas fa-map-marker-alt"></i> 18 Alder Grove, Silverpine Heights Subdivision, Quezon City</p>
+                                        <p class="details-description">Embraces a calming contemporary design centered around rich wooden panels, ambient warm lighting, and soft earth-tone interiors that create a relaxing atmosphere throughout the home. The balance of natural textures and elegant finishes gives the property a cozy yet refined character perfect for peaceful everyday living.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="details-features">
+                                    <h3>Full Details</h3>
+                                    <div class="full-details-layout">
+                                        <div class="details-paragraph">
+                                            <p>This residence offers a warm and welcoming ambiance with open living spaces, large windows for natural light, and carefully crafted wood accents that enhance the home's sophisticated charm. Every corner is designed to feel comforting, intimate, and effortlessly stylish.</p>
+                                        </div>
+                                        <div class="details-bullets">
+                                            <ul>
+                                                <li>3 bedrooms with 2 designer bathrooms</li>
+                                                <li>Modern kitchen with wood-grain cabinetry and marble countertops</li>
+                                                <li>Cozy open-concept living and dining area with warm cove lighting</li>
+                                                <li>Landscaped front lawn and private outdoor sitting space</li>
+                                                <li>Premium hardwood-inspired finishes and ambient interior lighting</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="details-gallery">
+                                    <h3>Interior Gallery</h3>
+                                    <div class="gallery-grid">
+                                        <div class="gallery-item">
+                                            <img src="images/LivingUno.jpg" alt="Living Room">
+                                            <p>Living Area</p>
+                                        </div>
+                                        <div class="gallery-item">
+                                            <img src="images/KitchenUno.jpg" alt="Kitchen">
+                                            <p>Modern Kitchen</p>
+                                        </div>
+                                        <div class="gallery-item">
+                                            <img src="images/BedUno.jpg" alt="Bedroom">
+                                            <p>Master Bedroom</p>
+                                        </div>
+                                        <div class="gallery-item">
+                                            <img src="images/BathUno.jpg" alt="Bathroom">
+                                            <p>Luxury Bathroom</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="details-action">
+                                    <button class="schedule-viewing-btn" data-property="Maplewood Crest">Schedule Viewing</button>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Tab Content Container -->
-                        <div id="tabContentContainer" class="tab-content-container">
-                            <!-- Properties Tab Content -->
-                            <div id="propertiesTab" class="tab-content active">
-                                <div class="property-grid">
-                                    <!-- Property 1 - Maplewood Crest -->
-                                    <div class="property-card" data-property="maplewood">
-                                        <div class="property-image-container">
-                                            <img src="images/uno.png" alt="Maplewood Crest" class="property-image">
-                                            <div class="property-info">
-                                                <h3 class="property-name">Maplewood Crest</h3>
-                                                <p class="property-description">A serene haven where timeless elegance meets nature's embrace</p>
-                                            </div>
-                                        </div>
+                        <!-- Property 2 - Villa Épure Details -->
+                        <div id="villa-details" class="property-details-section" style="display: none;">
+                            <div class="property-details-container">
+                                <div class="details-header">
+                                    <div class="details-image">
+                                        <img src="images/dos.png" alt="Villa Épure">
                                     </div>
-                                    
-                                    <!-- Property 2 - Villa Épure -->
-                                    <div class="property-card" data-property="villa">
-                                        <div class="property-image-container">
-                                            <img src="images/dos.png" alt="Villa Épure" class="property-image">
-                                            <div class="property-info">
-                                                <h3 class="property-name">Villa Épure</h3>
-                                                <p class="property-description">Refined simplicity expressed through pure architectural grace</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Property 3 - Blanc Étage -->
-                                    <div class="property-card" data-property="blanc">
-                                        <div class="property-image-container">
-                                            <img src="images/tres.png" alt="Blanc Étage" class="property-image">
-                                            <div class="property-info">
-                                                <h3 class="property-name">Blanc Étage</h3>
-                                                <p class="property-description">An elevated sanctuary of pristine sophistication and light</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Property 4 - Maison Velour -->
-                                    <div class="property-card" data-property="maison">
-                                        <div class="property-image-container">
-                                            <img src="images/cuatro.png" alt="Maison Velour" class="property-image">
-                                            <div class="property-info">
-                                                <h3 class="property-name">Maison Velour</h3>
-                                                <p class="property-description">Soft grandeur woven into every luxurious detail</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Property 5 - Aurelia Ridge -->
-                                    <div class="property-card" data-property="aurelia">
-                                        <div class="property-image-container">
-                                            <img src="images/cinco.png" alt="Aurelia Ridge" class="property-image">
-                                            <div class="property-info">
-                                                <h3 class="property-name">Aurelia Ridge</h3>
-                                                <p class="property-description">Golden living redefined at the pinnacle of prestige</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Property 6 - Royale Élite -->
-                                    <div class="property-card" data-property="royale">
-                                        <div class="property-image-container">
-                                            <img src="images/sais.png" alt="Royale Élite" class="property-image">
-                                            <div class="property-info">
-                                                <h3 class="property-name">Royale Élite</h3>
-                                                <p class="property-description">An exclusive residence where prestige and perfection converge</p>
-                                            </div>
-                                        </div>
+                                    <div class="details-info">
+                                        <h1 class="details-title">Villa Épure</h1>
+                                        <p class="details-price">₱ 7,500,000</p>
+                                        <p class="details-location"><i class="fas fa-map-marker-alt"></i> 7 Verdant Lane, Jardin Royale Estates, Taguig City</p>
+                                        <p class="details-description">Presents a fresh modern aesthetic enriched by lush indoor and outdoor greenery that brings life into every space of the property. Clean architectural lines, expansive glass windows, and nature-inspired elements create a bright and refreshing environment with a luxurious contemporary feel.</p>
                                     </div>
                                 </div>
-                            </div>
-
-                            <!-- Details Tab Content -->
-                            <div id="detailsTab" class="tab-content">
-                                <!-- Property 1 - Maplewood Crest Details (shown by default) -->
-                                <div id="maplewood-details" class="property-details-section" style="display: block;">
-                                    <div class="property-details-container">
-                                        <div class="details-header">
-                                            <div class="details-image">
-                                                <img src="images/uno.png" alt="Maplewood Crest">
-                                            </div>
-                                            <div class="details-info">
-                                                <h1 class="details-title">Maplewood Crest</h1>
-                                                <p class="details-price">₱ 3,500,000</p>
-                                                <p class="details-location"><i class="fas fa-map-marker-alt"></i> 18 Alder Grove, Silverpine Heights Subdivision, Quezon City</p>
-                                                <p class="details-description">Embraces a calming contemporary design centered around rich wooden panels, ambient warm lighting, and soft earth-tone interiors that create a relaxing atmosphere throughout the home. The balance of natural textures and elegant finishes gives the property a cozy yet refined character perfect for peaceful everyday living.</p>
-                                            </div>
+                                
+                                <div class="details-features">
+                                    <h3>Full Details</h3>
+                                    <div class="full-details-layout">
+                                        <div class="details-paragraph">
+                                            <p>The home radiates sophistication through its airy interiors, minimalist detailing, and seamless connection between natural light and indoor spaces. The basement level adds versatility and exclusivity, making the property ideal for both relaxation and entertaining.</p>
                                         </div>
-                                        
-                                        <div class="details-features">
-                                            <h3>Full Details</h3>
-                                            <div class="full-details-layout">
-                                                <div class="details-paragraph">
-                                                    <p>This residence offers a warm and welcoming ambiance with open living spaces, large windows for natural light, and carefully crafted wood accents that enhance the home's sophisticated charm. Every corner is designed to feel comforting, intimate, and effortlessly stylish.</p>
-                                                </div>
-                                                <div class="details-bullets">
-                                                    <ul>
-                                                        <li>3 bedrooms with 2 designer bathrooms</li>
-                                                        <li>Modern kitchen with wood-grain cabinetry and marble countertops</li>
-                                                        <li>Cozy open-concept living and dining area with warm cove lighting</li>
-                                                        <li>Landscaped front lawn and private outdoor sitting space</li>
-                                                        <li>Premium hardwood-inspired finishes and ambient interior lighting</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="details-gallery">
-                                            <h3>Interior Gallery</h3>
-                                            <div class="gallery-grid">
-                                                <div class="gallery-item">
-                                                    <img src="images/LivingUno.jpg" alt="Living Room">
-                                                    <p>Living Area</p>
-                                                </div>
-                                                <div class="gallery-item">
-                                                    <img src="images/KitchenUno.jpg" alt="Kitchen">
-                                                    <p>Modern Kitchen</p>
-                                                </div>
-                                                <div class="gallery-item">
-                                                    <img src="images/BedUno.jpg" alt="Bedroom">
-                                                    <p>Master Bedroom</p>
-                                                </div>
-                                                <div class="gallery-item">
-                                                    <img src="images/BathUno.jpg" alt="Bathroom">
-                                                    <p>Luxury Bathroom</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="details-action">
-                                            <button class="schedule-viewing-btn" data-property="Maplewood Crest">Schedule Viewing</button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Property 2 - Villa Épure Details -->
-                                <div id="villa-details" class="property-details-section" style="display: none;">
-                                    <div class="property-details-container">
-                                        <div class="details-header">
-                                            <div class="details-image">
-                                                <img src="images/dos.png" alt="Villa Épure">
-                                            </div>
-                                            <div class="details-info">
-                                                <h1 class="details-title">Villa Épure</h1>
-                                                <p class="details-price">₱ 7,500,000</p>
-                                                <p class="details-location"><i class="fas fa-map-marker-alt"></i> 7 Verdant Lane, Jardin Royale Estates, Taguig City</p>
-                                                <p class="details-description">Presents a fresh modern aesthetic enriched by lush indoor and outdoor greenery that brings life into every space of the property. Clean architectural lines, expansive glass windows, and nature-inspired elements create a bright and refreshing environment with a luxurious contemporary feel.</p>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="details-features">
-                                            <h3>Full Details</h3>
-                                            <div class="full-details-layout">
-                                                <div class="details-paragraph">
-                                                    <p>The home radiates sophistication through its airy interiors, minimalist detailing, and seamless connection between natural light and indoor spaces. The basement level adds versatility and exclusivity, making the property ideal for both relaxation and entertaining.</p>
-                                                </div>
-                                                <div class="details-bullets">
-                                                    <ul>
-                                                        <li>4 bedrooms with 4 designer bathrooms</li>
-                                                        <li>Fully equipped modern kitchen with island counter and built-in storage</li>
-                                                        <li>Spacious living area surrounded by natural lighting and indoor plants</li>
-                                                        <li>Private basement lounge ideal for entertainment or workspace</li>
-                                                        <li>Garden-focused architecture with relaxing outdoor greenery</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="details-gallery">
-                                            <h3>Interior Gallery</h3>
-                                            <div class="gallery-grid">
-                                                <div class="gallery-item">
-                                                    <img src="images/LivingDos.jpg" alt="Living Room">
-                                                    <p>Living Area</p>
-                                                </div>
-                                                <div class="gallery-item">
-                                                    <img src="images/KitchenDos.jpg" alt="Kitchen">
-                                                    <p>Modern Kitchen</p>
-                                                </div>
-                                                <div class="gallery-item">
-                                                    <img src="images/BedDos.jpg" alt="Bedroom">
-                                                    <p>Master Bedroom</p>
-                                                </div>
-                                                <div class="gallery-item">
-                                                    <img src="images/BathDos.jpg" alt="Bathroom">
-                                                    <p>Luxury Bathroom</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="details-action">
-                                            <button class="schedule-viewing-btn" data-property="Villa Épure">Schedule Viewing</button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Property 3 - Blanc Étage Details -->
-                                <div id="blanc-details" class="property-details-section" style="display: none;">
-                                    <div class="property-details-container">
-                                        <div class="details-header">
-                                            <div class="details-image">
-                                                <img src="images/tres.png" alt="Blanc Étage">
-                                            </div>
-                                            <div class="details-info">
-                                                <h1 class="details-title">Blanc Étage</h1>
-                                                <p class="details-price">₱ 4,500,000</p>
-                                                <p class="details-location"><i class="fas fa-map-marker-alt"></i> 25 Ivory Heights Drive, Montclair Residences, Pasig City</p>
-                                                <p class="details-description">Features a simple yet classy modern design highlighted by clean white finishes, sleek textures, and balanced minimalist detailing. Its understated elegance creates a timeless atmosphere that feels sophisticated without being overwhelming.</p>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="details-features">
-                                            <h3>Full Details</h3>
-                                            <div class="full-details-layout">
-                                                <div class="details-paragraph">
-                                                    <p>Designed for refined urban living, the property combines modern functionality with subtle luxury through bright interiors, polished surfaces, and a seamless layout that maximizes comfort and openness.</p>
-                                                </div>
-                                                <div class="details-bullets">
-                                                    <ul>
-                                                        <li>2 stylish bedrooms with 2 premium bathrooms</li>
-                                                        <li>Contemporary kitchen with minimalist cabinetry and quartz surfaces</li>
-                                                        <li>Elegant living area with high ceilings and natural illumination</li>
-                                                        <li>2-car covered garage with modern exterior finish</li>
-                                                        <li>Smooth monochromatic interior palette with luxury accents</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="details-gallery">
-                                            <h3>Interior Gallery</h3>
-                                            <div class="gallery-grid">
-                                                <div class="gallery-item">
-                                                    <img src="images/LivingTres.jpg" alt="Living Room">
-                                                    <p>Living Area</p>
-                                                </div>
-                                                <div class="gallery-item">
-                                                    <img src="images/KitchenTres.jpg" alt="Kitchen">
-                                                    <p>Modern Kitchen</p>
-                                                </div>
-                                                <div class="gallery-item">
-                                                    <img src="images/BedTres.jpg" alt="Bedroom">
-                                                    <p>Master Bedroom</p>
-                                                </div>
-                                                <div class="gallery-item">
-                                                    <img src="images/BathTres.jpg" alt="Bathroom">
-                                                    <p>Luxury Bathroom</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="details-action">
-                                            <button class="schedule-viewing-btn" data-property="Blanc Étage">Schedule Viewing</button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Property 4 - Maison Velour Details -->
-                                <div id="maison-details" class="property-details-section" style="display: none;">
-                                    <div class="property-details-container">
-                                        <div class="details-header">
-                                            <div class="details-image">
-                                                <img src="images/cuatro.png" alt="Maison Velour">
-                                            </div>
-                                            <div class="details-info">
-                                                <h1 class="details-title">Maison Velour</h1>
-                                                <p class="details-price">₱ 10,000,000</p>
-                                                <p class="details-location"><i class="fas fa-map-marker-alt"></i> 3 Monarch Crest Avenue, La Belleza Estates, Makati City</p>
-                                                <p class="details-description">A grand three-storey residence designed with luxurious sophistication while preserving the intimate comfort of a peaceful private sanctuary. Rich textures, expansive interiors, and refined architectural details give the home an elite presence without sacrificing warmth and serenity.</p>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="details-features">
-                                            <h3>Full Details</h3>
-                                            <div class="full-details-layout">
-                                                <div class="details-paragraph">
-                                                    <p>Every level of the property reflects elegance through premium finishes, dramatic lighting, spacious entertainment areas, and hotel-inspired interiors crafted for elevated living. Despite its impressive scale, the home maintains a calm and exclusive atmosphere that feels deeply personal and inviting.</p>
-                                                </div>
-                                                <div class="details-bullets">
-                                                    <ul>
-                                                        <li>4 bedrooms with bathrooms</li>
-                                                        <li>Gourmet chef's kitchen with premium marble finishes and wine storage</li>
-                                                        <li>Expansive formal living and entertainment lounge with statement lighting</li>
-                                                        <li>Private balcony spaces, indoor lounge areas, and executive-style office nook</li>
-                                                        <li>Three-storey luxury layout with high-end architectural detailing throughout</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="details-gallery">
-                                            <h3>Interior Gallery</h3>
-                                            <div class="gallery-grid">
-                                                <div class="gallery-item">
-                                                    <img src="images/LivingCuatro.jpg" alt="Living Room">
-                                                    <p>Living Area</p>
-                                                </div>
-                                                <div class="gallery-item">
-                                                    <img src="images/KitchenCuatro.jpg" alt="Kitchen">
-                                                    <p>Modern Kitchen</p>
-                                                </div>
-                                                <div class="gallery-item">
-                                                    <img src="images/BedCuatro.jpg" alt="Bedroom">
-                                                    <p>Master Bedroom</p>
-                                                </div>
-                                                <div class="gallery-item">
-                                                    <img src="images/BathCuatro.jpg" alt="Bathroom">
-                                                    <p>Luxury Bathroom</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="details-action">
-                                            <button class="schedule-viewing-btn" data-property="Maison Velour">Schedule Viewing</button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Property 5 - Aurelia Ridge Details -->
-                                <div id="aurelia-details" class="property-details-section" style="display: none;">
-                                    <div class="property-details-container">
-                                        <div class="details-header">
-                                            <div class="details-image">
-                                                <img src="images/cinco.png" alt="Aurelia Ridge">
-                                            </div>
-                                            <div class="details-info">
-                                                <h1 class="details-title">Aurelia Ridge</h1>
-                                                <p class="details-price">₱ 2,600,000</p>
-                                                <p class="details-location"><i class="fas fa-map-marker-alt"></i> 14 Serenity Vale, Pinecrest Meadows, Antipolo City</p>
-                                                <p class="details-description">Showcases a modern minimalist aesthetic focused on simplicity, relaxation, and clean architectural harmony. Soft neutral tones, uncluttered spaces, and calming textures create a peaceful environment ideal for quiet and comfortable living.</p>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="details-features">
-                                            <h3>Full Details</h3>
-                                            <div class="full-details-layout">
-                                                <div class="details-paragraph">
-                                                    <p>The property emphasizes serenity through balanced layouts, natural ventilation, and elegant simplicity that makes every space feel light, breathable, and inviting. Its minimalist approach enhances both comfort and visual sophistication.</p>
-                                                </div>
-                                                <div class="details-bullets">
-                                                    <ul>
-                                                        <li>2 bedrooms with 2 sleek bathrooms</li>
-                                                        <li>Minimalist kitchen with clean finishes and functional storage</li>
-                                                        <li>Relaxing living area with soft lighting and airy atmosphere</li>
-                                                        <li>1-car garage with modern exterior detailing</li>
-                                                        <li>Nature-inspired interior design with calming neutral palettes</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="details-gallery">
-                                            <h3>Interior Gallery</h3>
-                                            <div class="gallery-grid">
-                                                <div class="gallery-item">
-                                                    <img src="images/LivingCinco.jpg" alt="Living Room">
-                                                    <p>Living Area</p>
-                                                </div>
-                                                <div class="gallery-item">
-                                                    <img src="images/KitchenCinco.jpg" alt="Kitchen">
-                                                    <p>Modern Kitchen</p>
-                                                </div>
-                                                <div class="gallery-item">
-                                                    <img src="images/BedCinco.jpg" alt="Bedroom">
-                                                    <p>Master Bedroom</p>
-                                                </div>
-                                                <div class="gallery-item">
-                                                    <img src="images/BathCinco.jpg" alt="Bathroom">
-                                                    <p>Luxury Bathroom</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="details-action">
-                                            <button class="schedule-viewing-btn" data-property="Aurelia Ridge">Schedule Viewing</button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Property 6 - Royale Élite Details -->
-                                <div id="royale-details" class="property-details-section" style="display: none;">
-                                    <div class="property-details-container">
-                                        <div class="details-header">
-                                            <div class="details-image">
-                                                <img src="images/sais.png" alt="Royale Élite">
-                                            </div>
-                                            <div class="details-info">
-                                                <h1 class="details-title">Royale Élite</h1>
-                                                <p class="details-price">₱ 4,750,000</p>
-                                                <p class="details-location"><i class="fas fa-map-marker-alt"></i> 9 Silver Birch Court, Ashen Grove Residences, Quezon City</p>
-                                                <p class="details-description">Combines modern minimalist architecture with sophisticated gray-toned finishes that give the property a sleek and upscale appearance. Warm ambient lighting and generous garden spaces soften the contemporary aesthetic, creating a luxurious yet welcoming atmosphere.</p>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="details-features">
-                                            <h3>Full Details</h3>
-                                            <div class="full-details-layout">
-                                                <div class="details-paragraph">
-                                                    <p>The home delivers a refined balance between elegance and comfort through its spacious outdoor areas, modern textures, and thoughtfully illuminated interiors. The gray palette enhances the residence's premium identity while maintaining a calm and relaxing mood.</p>
-                                                </div>
-                                                <div class="details-bullets">
-                                                    <ul>
-                                                        <li>3 refined bedrooms with 3 modern bathrooms</li>
-                                                        <li>Contemporary kitchen with matte gray cabinetry and premium counters</li>
-                                                        <li>Stylish living area enhanced by warm recessed lighting</li>
-                                                        <li>Expanded garden and landscaped outdoor relaxation spaces</li>
-                                                        <li>Elegant gray-themed architecture with minimalist luxury finishes</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="details-gallery">
-                                            <h3>Interior Gallery</h3>
-                                            <div class="gallery-grid">
-                                                <div class="gallery-item">
-                                                    <img src="images/LivingSais.jpg" alt="Living Room">
-                                                    <p>Living Area</p>
-                                                </div>
-                                                <div class="gallery-item">
-                                                    <img src="images/KitchenSais.jpg" alt="Kitchen">
-                                                    <p>Modern Kitchen</p>
-                                                </div>
-                                                <div class="gallery-item">
-                                                    <img src="images/BedSais.jpg" alt="Bedroom">
-                                                    <p>Master Bedroom</p>
-                                                </div>
-                                                <div class="gallery-item">
-                                                    <img src="images/BathSais.jpg" alt="Bathroom">
-                                                    <p>Luxury Bathroom</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="details-action">
-                                            <button class="schedule-viewing-btn" data-property="Royale Élite">Schedule Viewing</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Viewing Tab Content - Agents Table & Appointment Form -->
-                            <div id="viewingTab" class="tab-content">
-                                <!-- Agents Table Section -->
-                                <div class="agents-section">
-                                    <div class="agents-header">
-                                        <h2>Our Real Estate Agents</h2>
-                                        <p>Meet our team of professional agents ready to help you find your dream home</p>
-                                    </div>
-                                    
-                                    <div class="agents-table-container">
-                                        <table class="agents-table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Agent</th>
-                                                    <th>Contact Details</th>
-                                                    <th>Performance & Recognition</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <!-- Agent 1 - Claire De Guzman -->
-                                                <tr>
-                                                    <td class="agent-cell">
-                                                        <div class="agent-name">Claire De Guzman</div>
-                                                        <div class="agent-position">Senior Real Estate Agent</div>
-                                                        <div class="agent-license">License No: RE-2021-0042</div>
-                                                    </div>
-                                                    <td class="contact-cell">
-                                                        <div class="contact-phone"><i class="fas fa-phone-alt"></i> 0945-872-5049</div>
-                                                        <div class="contact-email"><i class="fas fa-envelope"></i> claire@horizonhomes.ph</div>
-                                                        <div class="contact-social">
-                                                            <i class="fas fa-link"></i>
-                                                            <a href="#">LinkedIn</a> | 
-                                                            <a href="#">Instagram</a>
-                                                        </div>
-                                                    </div>
-                                                    <td class="performance-cell">
-                                                        <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 5.0 (29 reviews)</div>
-                                                        <div class="current-listings">
-                                                            <div class="listings-title">Current Listings:</div>
-                                                            <ul>
-                                                                <li>Blanc Étage - ₱ 4,500,000</li>
-                                                                <li>Maison Velour - ₱ 10,000,000</li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="awards"><i class="fas fa-trophy"></i> Top Producer 2023, 2024</div>
-                                                     </div>
-                                                </tr>
-                                                
-                                                <!-- Agent 2 - Kimberly Jerusalem -->
-                                                <tr>
-                                                    <td class="agent-cell">
-                                                        <div class="agent-name">Kimberly Jerusalem</div>
-                                                        <div class="agent-position">Luxury Property Specialist</div>
-                                                        <div class="agent-license">License No: RE-2023-0031</div>
-                                                     </div>
-                                                    <td class="contact-cell">
-                                                        <div class="contact-phone"><i class="fas fa-phone-alt"></i> 0969-652-5037</div>
-                                                        <div class="contact-email"><i class="fas fa-envelope"></i> kimberly@horizonhomes.ph</div>
-                                                        <div class="contact-social">
-                                                            <i class="fas fa-link"></i>
-                                                            <a href="#">LinkedIn</a> | 
-                                                            <a href="#">Instagram</a>
-                                                        </div>
-                                                     </div>
-                                                    <td class="performance-cell">
-                                                        <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 5.0 (16 reviews)</div>
-                                                        <div class="current-listings">
-                                                            <div class="listings-title">Current Listings:</div>
-                                                            <ul>
-                                                                <li>Maplewood Crest - ₱ 3,500,000</li>
-                                                                <li>Villa Épure - ₱ 7,500,000</li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="awards"><i class="fas fa-trophy"></i> Luxury Market Expert 2024</div>
-                                                     </div>
-                                                </tr>
-                                                
-                                                <!-- Agent 3 - Carly Abordo -->
-                                                <tr>
-                                                    <td class="agent-cell">
-                                                        <div class="agent-name">Carly Abordo</div>
-                                                        <div class="agent-position">Real Estate Broker</div>
-                                                        <div class="agent-license">License No: RE-2024-0451</div>
-                                                     </div>
-                                                    <td class="contact-cell">
-                                                        <div class="contact-phone"><i class="fas fa-phone-alt"></i> 0906-719-6345</div>
-                                                        <div class="contact-email"><i class="fas fa-envelope"></i> carly@horizonhomes.ph</div>
-                                                        <div class="contact-social">
-                                                            <i class="fas fa-link"></i>
-                                                            <a href="#">LinkedIn</a> | 
-                                                            <a href="#">Instagram</a>
-                                                        </div>
-                                                     </div>
-                                                    <td class="performance-cell">
-                                                        <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 4.8 (9 reviews)</div>
-                                                        <div class="current-listings">
-                                                            <div class="listings-title">Current Listings:</div>
-                                                            <ul>
-                                                                <li>Royale Élite - ₱ 4,750,000</li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="awards"><i class="fas fa-trophy"></i> Best for First-Time Buyers 2024</div>
-                                                     </div>
-                                                </tr>
-                                                
-                                                <!-- Agent 4 - Patrick Jay -->
-                                                <tr>
-                                                    <td class="agent-cell">
-                                                        <div class="agent-name">Patrick Jay</div>
-                                                        <div class="agent-position">Leasing Consultant</div>
-                                                        <div class="agent-license">License No: RE-2023-0032</div>
-                                                     </div>
-                                                    <td class="contact-cell">
-                                                        <div class="contact-phone"><i class="fas fa-phone-alt"></i> 0956-418-5068</div>
-                                                        <div class="contact-email"><i class="fas fa-envelope"></i> patrick@horizonhomes.ph</div>
-                                                        <div class="contact-social">
-                                                            <i class="fas fa-link"></i>
-                                                            <a href="#">LinkedIn</a> | 
-                                                            <a href="#">Instagram</a>
-                                                        </div>
-                                                     </div>
-                                                    <td class="performance-cell">
-                                                        <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 4.8 (6 reviews)</div>
-                                                        <div class="current-listings">
-                                                            <div class="listings-title">Current Listings:</div>
-                                                            <ul>
-                                                                <li>Aurelia Ridge - ₱ 2,600,000</li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="awards"><i class="fas fa-trophy"></i> Commercial Deal of the Year 2024</div>
-                                                     </div>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-
-                                <!-- Appointment Scheduling Form Section -->
-                                <div class="appointment-section">
-                                    <div class="appointment-header">
-                                        <h2>Schedule a Property Viewing</h2>
-                                        <p>Fill out the form below to book an appointment with one of our agents</p>
-                                    </div>
-                                    
-                                    <div class="appointment-form-container">
-                                        <form id="appointmentForm" class="appointment-form">
-                                            <div class="form-group">
-                                                <label for="clientName"><i class="fas fa-user"></i> Full Name *</label>
-                                                <input type="text" id="clientName" name="clientName" required>
-                                            </div>
-                                            
-                                            <div class="form-group">
-                                                <label for="contactNumber"><i class="fas fa-phone-alt"></i> Contact Number *</label>
-                                                <input type="tel" id="contactNumber" name="contactNumber" required>
-                                            </div>
-                                            
-                                            <div class="form-group">
-                                                <label for="emailAddress"><i class="fas fa-envelope"></i> Email Address *</label>
-                                                <input type="email" id="emailAddress" name="emailAddress" required>
-                                            </div>
-                                            
-                                            <div class="form-group">
-                                                <label for="propertyName"><i class="fas fa-home"></i> Property Name *</label>
-                                                <select id="propertyName" name="propertyName" required>
-                                                    <option value="">Select a property</option>
-                                                    <option value="Maplewood Crest">Maplewood Crest</option>
-                                                    <option value="Villa Épure">Villa Épure</option>
-                                                    <option value="Blanc Étage">Blanc Étage</option>
-                                                    <option value="Maison Velour">Maison Velour</option>
-                                                    <option value="Aurelia Ridge">Aurelia Ridge</option>
-                                                    <option value="Royale Élite">Royale Élite</option>
-                                                </select>
-                                            </div>
-                                            
-                                            <div class="form-group">
-                                                <label for="agentName"><i class="fas fa-user-tie"></i> Preferred Agent *</label>
-                                                <select id="agentName" name="agentName" required>
-                                                    <option value="">Select an agent</option>
-                                                    <option value="Claire De Guzman">Claire De Guzman</option>
-                                                    <option value="Kimberly Jerusalem">Kimberly Jerusalem</option>
-                                                    <option value="Carly Abordo">Carly Abordo</option>
-                                                    <option value="Patrick Jay">Patrick Jay</option>
-                                                </select>
-                                            </div>
-                                            
-                                            <div class="form-group">
-                                                <label for="preferredDate"><i class="fas fa-calendar-alt"></i> Preferred Date *</label>
-                                                <input type="date" id="preferredDate" name="preferredDate" required>
-                                            </div>
-                                            
-                                            <div class="form-group">
-                                                <label for="timeSlot"><i class="fas fa-clock"></i> Preferred Time Slot *</label>
-                                                <select id="timeSlot" name="timeSlot" required>
-                                                    <option value="">Select a time slot</option>
-                                                    <option value="9:00 AM - 10:00 AM">9:00 AM - 10:00 AM</option>
-                                                    <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
-                                                    <option value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
-                                                    <option value="1:00 PM - 2:00 PM">1:00 PM - 2:00 PM</option>
-                                                    <option value="2:00 PM - 3:00 PM">2:00 PM - 3:00 PM</option>
-                                                    <option value="3:00 PM - 4:00 PM">3:00 PM - 4:00 PM</option>
-                                                    <option value="4:00 PM - 5:00 PM">4:00 PM - 5:00 PM</option>
-                                                </select>
-                                            </div>
-                                            
-                                            <div class="form-group">
-                                                <label for="specialRequest"><i class="fas fa-comment"></i> Special Requests (Optional)</label>
-                                                <textarea id="specialRequest" name="specialRequest" rows="3" placeholder="Any special requirements or questions?"></textarea>
-                                            </div>
-                                            
-                                            <div class="form-actions">
-                                                <button type="submit" class="submit-btn">Schedule Appointment</button>
-                                                <button type="reset" class="reset-btn">Clear Form</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- About Us Tab Content -->
-                            <div id="aboutTab" class="tab-content">
-                                <div class="about-us-section">
-                                    <div class="about-us-card">
-                                        <div class="about-quote">
-                                            <h2 class="about-title">About Us</h2>
-                                            <p class="quote-text">"Elevated Living Starts Here."</p>
-                                        </div>
-                                        
-                                        <div class="about-content">
-                                            <p>Welcome to Horizon Homes, a premier luxury real estate platform based in Bonifacio Global City, dedicated exclusively to showcasing exceptional luxury houses designed for refined and elevated living.</p>
-                                            
-                                            <p>At Horizon Homes, we believe that a home represents more than comfort — it reflects lifestyle, success, and sophistication. Our platform features carefully curated luxury residences that combine modern architecture, elegant interiors, and premium locations to provide an exceptional living experience.</p>
-                                            
-                                            <p>Driven by professionalism, discretion, and personalized service, we are committed to helping clients discover prestigious homes that match their vision and standards. Whether you are searching for a contemporary estate or a timeless luxury residence, Horizon Homes delivers a seamless and elevated property journey.</p>
-                                        </div>
-                                        
-                                        <div class="services-section">
-                                            <h3 class="section-title">Services</h3>
-                                            <ul class="services-list">
-                                                <li>Exclusive luxury homes located in prestigious and sought-after communities.</li>
-                                                <li>Professional guidance tailored to your lifestyle preferences and residential needs.</li>
-                                                <li>Exclusive scheduled tours designed to provide comfort, privacy, and convenience.</li>
-                                                <li>Dedicated premium support to ensure a smooth and refined real estate experience.</li>
+                                        <div class="details-bullets">
+                                            <ul>
+                                                <li>4 bedrooms with 4 designer bathrooms</li>
+                                                <li>Fully equipped modern kitchen with island counter and built-in storage</li>
+                                                <li>Spacious living area surrounded by natural lighting and indoor plants</li>
+                                                <li>Private basement lounge ideal for entertainment or workspace</li>
+                                                <li>Garden-focused architecture with relaxing outdoor greenery</li>
                                             </ul>
                                         </div>
-                                        
-                                        <div class="mission-vision-grid">
-                                            <div class="mission-box">
-                                                <h3 class="section-title">Mission</h3>
-                                                <p>To provide a refined luxury real estate experience by connecting clients with exceptional homes through professionalism, trust, and personalized service.</p>
-                                            </div>
-                                            <div class="vision-box">
-                                                <h3 class="section-title">Vision</h3>
-                                                <p>To become a leading luxury real estate platform recognized for excellence, exclusivity, and sophisticated living experiences.</p>
-                                            </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="details-gallery">
+                                    <h3>Interior Gallery</h3>
+                                    <div class="gallery-grid">
+                                        <div class="gallery-item">
+                                            <img src="images/LivingDos.jpg" alt="Living Room">
+                                            <p>Living Area</p>
                                         </div>
+                                        <div class="gallery-item">
+                                            <img src="images/KitchenDos.jpg" alt="Kitchen">
+                                            <p>Modern Kitchen</p>
+                                        </div>
+                                        <div class="gallery-item">
+                                            <img src="images/BedDos.jpg" alt="Bedroom">
+                                            <p>Master Bedroom</p>
+                                        </div>
+                                        <div class="gallery-item">
+                                            <img src="images/BathDos.jpg" alt="Bathroom">
+                                            <p>Luxury Bathroom</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="details-action">
+                                    <button class="schedule-viewing-btn" data-property="Villa Épure">Schedule Viewing</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property 3 - Blanc Étage Details -->
+                        <div id="blanc-details" class="property-details-section" style="display: none;">
+                            <div class="property-details-container">
+                                <div class="details-header">
+                                    <div class="details-image">
+                                        <img src="images/tres.png" alt="Blanc Étage">
+                                    </div>
+                                    <div class="details-info">
+                                        <h1 class="details-title">Blanc Étage</h1>
+                                        <p class="details-price">₱ 4,500,000</p>
+                                        <p class="details-location"><i class="fas fa-map-marker-alt"></i> 25 Ivory Heights Drive, Montclair Residences, Pasig City</p>
+                                        <p class="details-description">Features a simple yet classy modern design highlighted by clean white finishes, sleek textures, and balanced minimalist detailing. Its understated elegance creates a timeless atmosphere that feels sophisticated without being overwhelming.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="details-features">
+                                    <h3>Full Details</h3>
+                                    <div class="full-details-layout">
+                                        <div class="details-paragraph">
+                                            <p>Designed for refined urban living, the property combines modern functionality with subtle luxury through bright interiors, polished surfaces, and a seamless layout that maximizes comfort and openness.</p>
+                                        </div>
+                                        <div class="details-bullets">
+                                            <ul>
+                                                <li>2 stylish bedrooms with 2 premium bathrooms</li>
+                                                <li>Contemporary kitchen with minimalist cabinetry and quartz surfaces</li>
+                                                <li>Elegant living area with high ceilings and natural illumination</li>
+                                                <li>2-car covered garage with modern exterior finish</li>
+                                                <li>Smooth monochromatic interior palette with luxury accents</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="details-gallery">
+                                    <h3>Interior Gallery</h3>
+                                    <div class="gallery-grid">
+                                        <div class="gallery-item">
+                                            <img src="images/LivingTres.jpg" alt="Living Room">
+                                            <p>Living Area</p>
+                                        </div>
+                                        <div class="gallery-item">
+                                            <img src="images/KitchenTres.jpg" alt="Kitchen">
+                                            <p>Modern Kitchen</p>
+                                        </div>
+                                        <div class="gallery-item">
+                                            <img src="images/BedTres.jpg" alt="Bedroom">
+                                            <p>Master Bedroom</p>
+                                        </div>
+                                        <div class="gallery-item">
+                                            <img src="images/BathTres.jpg" alt="Bathroom">
+                                            <p>Luxury Bathroom</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="details-action">
+                                    <button class="schedule-viewing-btn" data-property="Blanc Étage">Schedule Viewing</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property 4 - Maison Velour Details -->
+                        <div id="maison-details" class="property-details-section" style="display: none;">
+                            <div class="property-details-container">
+                                <div class="details-header">
+                                    <div class="details-image">
+                                        <img src="images/cuatro.png" alt="Maison Velour">
+                                    </div>
+                                    <div class="details-info">
+                                        <h1 class="details-title">Maison Velour</h1>
+                                        <p class="details-price">₱ 10,000,000</p>
+                                        <p class="details-location"><i class="fas fa-map-marker-alt"></i> 3 Monarch Crest Avenue, La Belleza Estates, Makati City</p>
+                                        <p class="details-description">A grand three-storey residence designed with luxurious sophistication while preserving the intimate comfort of a peaceful private sanctuary. Rich textures, expansive interiors, and refined architectural details give the home an elite presence without sacrificing warmth and serenity.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="details-features">
+                                    <h3>Full Details</h3>
+                                    <div class="full-details-layout">
+                                        <div class="details-paragraph">
+                                            <p>Every level of the property reflects elegance through premium finishes, dramatic lighting, spacious entertainment areas, and hotel-inspired interiors crafted for elevated living. Despite its impressive scale, the home maintains a calm and exclusive atmosphere that feels deeply personal and inviting.</p>
+                                        </div>
+                                        <div class="details-bullets">
+                                            <ul>
+                                                <li>4 bedrooms with bathrooms</li>
+                                                <li>Gourmet chef's kitchen with premium marble finishes and wine storage</li>
+                                                <li>Expansive formal living and entertainment lounge with statement lighting</li>
+                                                <li>Private balcony spaces, indoor lounge areas, and executive-style office nook</li>
+                                                <li>Three-storey luxury layout with high-end architectural detailing throughout</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="details-gallery">
+                                    <h3>Interior Gallery</h3>
+                                    <div class="gallery-grid">
+                                        <div class="gallery-item">
+                                            <img src="images/LivingCuatro.jpg" alt="Living Room">
+                                            <p>Living Area</p>
+                                        </div>
+                                        <div class="gallery-item">
+                                            <img src="images/KitchenCuatro.jpg" alt="Kitchen">
+                                            <p>Modern Kitchen</p>
+                                        </div>
+                                        <div class="gallery-item">
+                                            <img src="images/BedCuatro.jpg" alt="Bedroom">
+                                            <p>Master Bedroom</p>
+                                        </div>
+                                        <div class="gallery-item">
+                                            <img src="images/BathCuatro.jpg" alt="Bathroom">
+                                            <p>Luxury Bathroom</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="details-action">
+                                    <button class="schedule-viewing-btn" data-property="Maison Velour">Schedule Viewing</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property 5 - Aurelia Ridge Details -->
+                        <div id="aurelia-details" class="property-details-section" style="display: none;">
+                            <div class="property-details-container">
+                                <div class="details-header">
+                                    <div class="details-image">
+                                        <img src="images/cinco.png" alt="Aurelia Ridge">
+                                    </div>
+                                    <div class="details-info">
+                                        <h1 class="details-title">Aurelia Ridge</h1>
+                                        <p class="details-price">₱ 2,600,000</p>
+                                        <p class="details-location"><i class="fas fa-map-marker-alt"></i> 14 Serenity Vale, Pinecrest Meadows, Antipolo City</p>
+                                        <p class="details-description">Showcases a modern minimalist aesthetic focused on simplicity, relaxation, and clean architectural harmony. Soft neutral tones, uncluttered spaces, and calming textures create a peaceful environment ideal for quiet and comfortable living.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="details-features">
+                                    <h3>Full Details</h3>
+                                    <div class="full-details-layout">
+                                        <div class="details-paragraph">
+                                            <p>The property emphasizes serenity through balanced layouts, natural ventilation, and elegant simplicity that makes every space feel light, breathable, and inviting. Its minimalist approach enhances both comfort and visual sophistication.</p>
+                                        </div>
+                                        <div class="details-bullets">
+                                            <ul>
+                                                <li>2 bedrooms with 2 sleek bathrooms</li>
+                                                <li>Minimalist kitchen with clean finishes and functional storage</li>
+                                                <li>Relaxing living area with soft lighting and airy atmosphere</li>
+                                                <li>1-car garage with modern exterior detailing</li>
+                                                <li>Nature-inspired interior design with calming neutral palettes</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="details-gallery">
+                                    <h3>Interior Gallery</h3>
+                                    <div class="gallery-grid">
+                                        <div class="gallery-item">
+                                            <img src="images/LivingCinco.jpg" alt="Living Room">
+                                            <p>Living Area</p>
+                                        </div>
+                                        <div class="gallery-item">
+                                            <img src="images/KitchenCinco.jpg" alt="Kitchen">
+                                            <p>Modern Kitchen</p>
+                                        </div>
+                                        <div class="gallery-item">
+                                            <img src="images/BedCinco.jpg" alt="Bedroom">
+                                            <p>Master Bedroom</p>
+                                        </div>
+                                        <div class="gallery-item">
+                                            <img src="images/BathCinco.jpg" alt="Bathroom">
+                                            <p>Luxury Bathroom</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="details-action">
+                                    <button class="schedule-viewing-btn" data-property="Aurelia Ridge">Schedule Viewing</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property 6 - Royale Élite Details -->
+                        <div id="royale-details" class="property-details-section" style="display: none;">
+                            <div class="property-details-container">
+                                <div class="details-header">
+                                    <div class="details-image">
+                                        <img src="images/sais.png" alt="Royale Élite">
+                                    </div>
+                                    <div class="details-info">
+                                        <h1 class="details-title">Royale Élite</h1>
+                                        <p class="details-price">₱ 4,750,000</p>
+                                        <p class="details-location"><i class="fas fa-map-marker-alt"></i> 9 Silver Birch Court, Ashen Grove Residences, Quezon City</p>
+                                        <p class="details-description">Combines modern minimalist architecture with sophisticated gray-toned finishes that give the property a sleek and upscale appearance. Warm ambient lighting and generous garden spaces soften the contemporary aesthetic, creating a luxurious yet welcoming atmosphere.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="details-features">
+                                    <h3>Full Details</h3>
+                                    <div class="full-details-layout">
+                                        <div class="details-paragraph">
+                                            <p>The home delivers a refined balance between elegance and comfort through its spacious outdoor areas, modern textures, and thoughtfully illuminated interiors. The gray palette enhances the residence's premium identity while maintaining a calm and relaxing mood.</p>
+                                        </div>
+                                        <div class="details-bullets">
+                                            <ul>
+                                                <li>3 refined bedrooms with 3 modern bathrooms</li>
+                                                <li>Contemporary kitchen with matte gray cabinetry and premium counters</li>
+                                                <li>Stylish living area enhanced by warm recessed lighting</li>
+                                                <li>Expanded garden and landscaped outdoor relaxation spaces</li>
+                                                <li>Elegant gray-themed architecture with minimalist luxury finishes</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="details-gallery">
+                                    <h3>Interior Gallery</h3>
+                                    <div class="gallery-grid">
+                                        <div class="gallery-item">
+                                            <img src="images/LivingSais.jpg" alt="Living Room">
+                                            <p>Living Area</p>
+                                        </div>
+                                        <div class="gallery-item">
+                                            <img src="images/KitchenSais.jpg" alt="Kitchen">
+                                            <p>Modern Kitchen</p>
+                                        </div>
+                                        <div class="gallery-item">
+                                            <img src="images/BedSais.jpg" alt="Bedroom">
+                                            <p>Master Bedroom</p>
+                                        </div>
+                                        <div class="gallery-item">
+                                            <img src="images/BathSais.jpg" alt="Bathroom">
+                                            <p>Luxury Bathroom</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="details-action">
+                                    <button class="schedule-viewing-btn" data-property="Royale Élite">Schedule Viewing</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ============================================ -->
+                    <!-- TAB 3: VIEWING SECTION -->
+                    <!-- ============================================ -->
+                    <div id="viewingTab" class="tab-content">
+                        <!-- Agents Table Section -->
+                        <div class="agents-section">
+                            <div class="agents-header">
+                                <h2>Our Real Estate Agents</h2>
+                                <p>Meet our team of professional agents ready to help you find your dream home</p>
+                            </div>
+                            
+                            <div class="agents-table-container">
+                                <table class="agents-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Agent</th>
+                                            <th>Contact Details</th>
+                                            <th>Performance & Recognition</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Agent 1 - Claire De Guzman -->
+                                        <tr>
+                                            <td class="agent-cell">
+                                                <div class="agent-name">Claire De Guzman</div>
+                                                <div class="agent-position">Senior Real Estate Agent</div>
+                                                <div class="agent-license">License No: RE-2021-0042</div>
+                                            </td>
+                                            <td class="contact-cell">
+                                                <div class="contact-phone"><i class="fas fa-phone-alt"></i> 0945-872-5049</div>
+                                                <div class="contact-email"><i class="fas fa-envelope"></i> claire@horizonhomes.ph</div>
+                                                <div class="contact-social">
+                                                    <i class="fas fa-link"></i>
+                                                    <a href="#">LinkedIn</a> | 
+                                                    <a href="#">Instagram</a>
+                                                </div>
+                                            </td>
+                                            <td class="performance-cell">
+                                                <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 5.0 (29 reviews)</div>
+                                                <div class="current-listings">
+                                                    <div class="listings-title">Current Listings:</div>
+                                                    <ul>
+                                                        <li>Blanc Étage - ₱ 4,500,000</li>
+                                                        <li>Maison Velour - ₱ 10,000,000</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="awards"><i class="fas fa-trophy"></i> Top Producer 2023, 2024</div>
+                                             </td>
+                                        </tr>
                                         
-                                        <div class="contact-section">
-                                            <h3 class="section-title">Contact Us</h3>
-                                            <div class="contact-details">
-                                                <div class="contact-info">
-                                                    <p><strong>Horizon Homes</strong></p>
-                                                    <p><i class="fas fa-map-marker-alt"></i> Bonifacio Global City, Taguig, Metro Manila, Philippines</p>
-                                                    <p><i class="fas fa-phone-alt"></i> +63 968 432 2092</p>
-                                                    <p><i class="fas fa-envelope"></i> info@horizonhomes.ph</p>
-                                                    <p><i class="fas fa-clock"></i> Monday – Saturday | 9:00 AM – 6:00 PM</p>
+                                        <!-- Agent 2 - Kimberly Jerusalem -->
+                                        <tr>
+                                            <td class="agent-cell">
+                                                <div class="agent-name">Kimberly Jerusalem</div>
+                                                <div class="agent-position">Luxury Property Specialist</div>
+                                                <div class="agent-license">License No: RE-2023-0031</div>
+                                             </td>
+                                            <td class="contact-cell">
+                                                <div class="contact-phone"><i class="fas fa-phone-alt"></i> 0969-652-5037</div>
+                                                <div class="contact-email"><i class="fas fa-envelope"></i> kimberly@horizonhomes.ph</div>
+                                                <div class="contact-social">
+                                                    <i class="fas fa-link"></i>
+                                                    <a href="#">LinkedIn</a> | 
+                                                    <a href="#">Instagram</a>
                                                 </div>
-                                                <div class="contact-note">
-                                                    <p><em>You may also schedule a property consultation or exclusive viewing appointment.</em></p>
+                                             </td>
+                                            <td class="performance-cell">
+                                                <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 5.0 (16 reviews)</div>
+                                                <div class="current-listings">
+                                                    <div class="listings-title">Current Listings:</div>
+                                                    <ul>
+                                                        <li>Maplewood Crest - ₱ 3,500,000</li>
+                                                        <li>Villa Épure - ₱ 7,500,000</li>
+                                                    </ul>
                                                 </div>
-                                            </div>
+                                                <div class="awards"><i class="fas fa-trophy"></i> Luxury Market Expert 2024</div>
+                                             </td>
+                                        </tr>
+                                        
+                                        <!-- Agent 3 - Carly Abordo -->
+                                        <tr>
+                                            <td class="agent-cell">
+                                                <div class="agent-name">Carly Abordo</div>
+                                                <div class="agent-position">Real Estate Broker</div>
+                                                <div class="agent-license">License No: RE-2024-0451</div>
+                                             </td>
+                                            <td class="contact-cell">
+                                                <div class="contact-phone"><i class="fas fa-phone-alt"></i> 0906-719-6345</div>
+                                                <div class="contact-email"><i class="fas fa-envelope"></i> carly@horizonhomes.ph</div>
+                                                <div class="contact-social">
+                                                    <i class="fas fa-link"></i>
+                                                    <a href="#">LinkedIn</a> | 
+                                                    <a href="#">Instagram</a>
+                                                </div>
+                                             </td>
+                                            <td class="performance-cell">
+                                                <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 4.8 (9 reviews)</div>
+                                                <div class="current-listings">
+                                                    <div class="listings-title">Current Listings:</div>
+                                                    <ul>
+                                                        <li>Royale Élite - ₱ 4,750,000</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="awards"><i class="fas fa-trophy"></i> Best for First-Time Buyers 2024</div>
+                                             </td>
+                                        </tr>
+                                        
+                                        <!-- Agent 4 - Patrick Jay -->
+                                        <tr>
+                                            <td class="agent-cell">
+                                                <div class="agent-name">Patrick Jay</div>
+                                                <div class="agent-position">Leasing Consultant</div>
+                                                <div class="agent-license">License No: RE-2023-0032</div>
+                                             </td>
+                                            <td class="contact-cell">
+                                                <div class="contact-phone"><i class="fas fa-phone-alt"></i> 0956-418-5068</div>
+                                                <div class="contact-email"><i class="fas fa-envelope"></i> patrick@horizonhomes.ph</div>
+                                                <div class="contact-social">
+                                                    <i class="fas fa-link"></i>
+                                                    <a href="#">LinkedIn</a> | 
+                                                    <a href="#">Instagram</a>
+                                                </div>
+                                             </td>
+                                            <td class="performance-cell">
+                                                <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 4.8 (6 reviews)</div>
+                                                <div class="current-listings">
+                                                    <div class="listings-title">Current Listings:</div>
+                                                    <ul>
+                                                        <li>Aurelia Ridge - ₱ 2,600,000</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="awards"><i class="fas fa-trophy"></i> Commercial Deal of the Year 2024</div>
+                                             </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Appointment Scheduling Form Section -->
+                        <div class="appointment-section">
+                            <div class="appointment-header">
+                                <h2>Schedule a Property Viewing</h2>
+                                <p>Fill out the form below to book an appointment with one of our agents</p>
+                            </div>
+                            
+                            <div class="appointment-form-container">
+                                <form id="appointmentForm" class="appointment-form">
+                                    <div class="form-group">
+                                        <label for="clientName"><i class="fas fa-user"></i> Full Name *</label>
+                                        <input type="text" id="clientName" name="clientName" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="contactNumber"><i class="fas fa-phone-alt"></i> Contact Number *</label>
+                                        <input type="tel" id="contactNumber" name="contactNumber" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="emailAddress"><i class="fas fa-envelope"></i> Email Address *</label>
+                                        <input type="email" id="emailAddress" name="emailAddress" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="propertyName"><i class="fas fa-home"></i> Property Name *</label>
+                                        <select id="propertyName" name="propertyName" required>
+                                            <option value="">Select a property</option>
+                                            <option value="Maplewood Crest">Maplewood Crest</option>
+                                            <option value="Villa Épure">Villa Épure</option>
+                                            <option value="Blanc Étage">Blanc Étage</option>
+                                            <option value="Maison Velour">Maison Velour</option>
+                                            <option value="Aurelia Ridge">Aurelia Ridge</option>
+                                            <option value="Royale Élite">Royale Élite</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="agentName"><i class="fas fa-user-tie"></i> Preferred Agent *</label>
+                                        <select id="agentName" name="agentName" required>
+                                            <option value="">Select an agent</option>
+                                            <option value="Claire De Guzman">Claire De Guzman</option>
+                                            <option value="Kimberly Jerusalem">Kimberly Jerusalem</option>
+                                            <option value="Carly Abordo">Carly Abordo</option>
+                                            <option value="Patrick Jay">Patrick Jay</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="preferredDate"><i class="fas fa-calendar-alt"></i> Preferred Date *</label>
+                                        <input type="date" id="preferredDate" name="preferredDate" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="timeSlot"><i class="fas fa-clock"></i> Preferred Time Slot *</label>
+                                        <select id="timeSlot" name="timeSlot" required>
+                                            <option value="">Select a time slot</option>
+                                            <option value="9:00 AM - 10:00 AM">9:00 AM - 10:00 AM</option>
+                                            <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+                                            <option value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
+                                            <option value="1:00 PM - 2:00 PM">1:00 PM - 2:00 PM</option>
+                                            <option value="2:00 PM - 3:00 PM">2:00 PM - 3:00 PM</option>
+                                            <option value="3:00 PM - 4:00 PM">3:00 PM - 4:00 PM</option>
+                                            <option value="4:00 PM - 5:00 PM">4:00 PM - 5:00 PM</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="specialRequest"><i class="fas fa-comment"></i> Special Requests (Optional)</label>
+                                        <textarea id="specialRequest" name="specialRequest" rows="3" placeholder="Any special requirements or questions?"></textarea>
+                                    </div>
+                                    
+                                    <div class="form-actions">
+                                        <button type="submit" class="submit-btn">Schedule Appointment</button>
+                                        <button type="reset" class="reset-btn">Clear Form</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ============================================ -->
+                    <!-- TAB 4: ABOUT US SECTION -->
+                    <!-- ============================================ -->
+                    <div id="aboutTab" class="tab-content">
+                        <div class="about-us-section">
+                            <div class="about-us-card">
+                                <div class="about-quote">
+                                    <h2 class="about-title">About Us</h2>
+                                    <p class="quote-text">"Elevated Living Starts Here."</p>
+                                </div>
+                                
+                                <div class="about-content">
+                                    <p>Welcome to Horizon Homes, a premier luxury real estate platform based in Bonifacio Global City, dedicated exclusively to showcasing exceptional luxury houses designed for refined and elevated living.</p>
+                                    
+                                    <p>At Horizon Homes, we believe that a home represents more than comfort — it reflects lifestyle, success, and sophistication. Our platform features carefully curated luxury residences that combine modern architecture, elegant interiors, and premium locations to provide an exceptional living experience.</p>
+                                    
+                                    <p>Driven by professionalism, discretion, and personalized service, we are committed to helping clients discover prestigious homes that match their vision and standards. Whether you are searching for a contemporary estate or a timeless luxury residence, Horizon Homes delivers a seamless and elevated property journey.</p>
+                                </div>
+                                
+                                <div class="services-section">
+                                    <h3 class="section-title">Services</h3>
+                                    <ul class="services-list">
+                                        <li>Exclusive luxury homes located in prestigious and sought-after communities.</li>
+                                        <li>Professional guidance tailored to your lifestyle preferences and residential needs.</li>
+                                        <li>Exclusive scheduled tours designed to provide comfort, privacy, and convenience.</li>
+                                        <li>Dedicated premium support to ensure a smooth and refined real estate experience.</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="mission-vision-grid">
+                                    <div class="mission-box">
+                                        <h3 class="section-title">Mission</h3>
+                                        <p>To provide a refined luxury real estate experience by connecting clients with exceptional homes through professionalism, trust, and personalized service.</p>
+                                    </div>
+                                    <div class="vision-box">
+                                        <h3 class="section-title">Vision</h3>
+                                        <p>To become a leading luxury real estate platform recognized for excellence, exclusivity, and sophisticated living experiences.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-section">
+                                    <h3 class="section-title">Contact Us</h3>
+                                    <div class="contact-details">
+                                        <div class="contact-info">
+                                            <p><strong>Horizon Homes</strong></p>
+                                            <p><i class="fas fa-map-marker-alt"></i> Bonifacio Global City, Taguig, Metro Manila, Philippines</p>
+                                            <p><i class="fas fa-phone-alt"></i> +63 968 432 2092</p>
+                                            <p><i class="fas fa-envelope"></i> info@horizonhomes.ph</p>
+                                            <p><i class="fas fa-clock"></i> Monday – Saturday | 9:00 AM – 6:00 PM</p>
+                                        </div>
+                                        <div class="contact-note">
+                                            <p><em>You may also schedule a property consultation or exclusive viewing appointment.</em></p>
                                         </div>
                                     </div>
                                 </div>
