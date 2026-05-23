@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Appointment Form Handler - Clear form on submit
+    // Appointment Form Handler - Submit only (Clear form button removed)
     const appointmentForm = document.getElementById('appointmentForm');
     
     if (appointmentForm) {
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
             successMessage.className = 'success-message';
             successMessage.innerHTML = `
                 <div class="success-icon">✓</div>
-                <h3>Appointment Request Submitted!</h3>
+                <h3>Appointment Confirmed!</h3>
                 <p>Your viewing appointment has been scheduled. One of our agents will contact you shortly to confirm.</p>
             `;
             
@@ -156,26 +156,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (restoredForm) {
                     // Re-attach submit event
                     restoredForm.addEventListener('submit', arguments.callee);
-                    // Re-attach reset button event
-                    const newResetBtn = restoredForm.querySelector('.reset-btn');
-                    if (newResetBtn) {
-                        newResetBtn.addEventListener('click', function(e) {
-                            e.preventDefault();
-                            restoredForm.reset();
-                        });
-                    }
                 }
             }, 3000);
         });
-        
-        // Add reset button functionality (clear all fields)
-        const resetBtn = document.querySelector('.reset-btn');
-        if (resetBtn) {
-            resetBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                appointmentForm.reset();
-            });
-        }
     }
     
     // Function to scroll to the top of the details section

@@ -976,35 +976,20 @@ body {
     flex-wrap: wrap;
 }
 
-.submit-btn,
-.reset-btn {
+/* Updated Submit Button - Now matches the clear button design */
+.submit-btn {
     padding: 12px 30px;
     font-size: 1rem;
     font-weight: 600;
     border-radius: 40px;
     cursor: pointer;
     transition: all 0.3s;
-}
-
-.submit-btn {
-    background: #2F2F2E;
-    border: 1px solid #9B8B77;
-    color: #F5EFE6;
-}
-
-.submit-btn:hover {
-    background: #3B2715;
-    border-color: #C6B69E;
-    transform: translateY(-2px);
-}
-
-.reset-btn {
     background: rgba(47, 47, 46, 0.6);
     border: 1px solid rgba(155, 139, 119, 0.4);
     color: #DCD3C6;
 }
 
-.reset-btn:hover {
+.submit-btn:hover {
     background: rgba(59, 39, 21, 0.5);
     border-color: #9B8B77;
     transform: translateY(-2px);
@@ -1116,8 +1101,61 @@ body {
     background: #C6B69E;
 }
 
-.services-section {
+/* SERVICES AND MISSION/VISION GRID - UPDATED FOR ABOUT US */
+.services-mission-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
     margin-bottom: 40px;
+}
+
+.mission-vision-combined {
+    width: 100%;
+}
+
+.combined-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(155, 139, 119, 0.2);
+    height: 100%;
+}
+
+.mission-vision-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mv-item h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #C6B69E;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.mv-item h4::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: #9B8B77;
+    border-radius: 2px;
+}
+
+.mv-item p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #DCD3C6;
+    margin: 0;
+}
+
+.services-section {
+    margin-bottom: 0;
 }
 
 .services-list {
@@ -1140,29 +1178,6 @@ body {
     left: 0;
     color: #9B8B77;
     font-weight: bold;
-}
-
-.mission-vision-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin-bottom: 40px;
-}
-
-.mission-box,
-.vision-box {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 25px;
-    border-radius: 12px;
-    border: 1px solid rgba(155, 139, 119, 0.2);
-}
-
-.mission-box p,
-.vision-box p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #DCD3C6;
-    margin: 0;
 }
 
 .contact-section {
@@ -1292,14 +1307,13 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
     
-    .mission-vision-grid {
+    .services-mission-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 25px;
     }
     
-    .contact-details {
-        flex-direction: column;
-        gap: 20px;
+    .combined-box {
+        height: auto;
     }
 }
 
@@ -1385,8 +1399,7 @@ body {
         flex-direction: column;
     }
     
-    .submit-btn,
-    .reset-btn {
+    .submit-btn {
         width: 100%;
     }
     
@@ -1516,10 +1529,17 @@ body {
     
     .about-content p,
     .services-list li,
-    .mission-box p,
-    .vision-box p,
+    .mv-item p,
     .contact-info p {
         font-size: 0.9rem;
+    }
+    
+    .mv-item h4 {
+        font-size: 1rem;
+    }
+    
+    .mv-item p {
+        font-size: 0.85rem;
     }
     
     .appointment-header h2,
