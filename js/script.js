@@ -1,16 +1,13 @@
-// Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Get elements
+    // LOGIN/LOGOUT FUNCTIONALITY
     const loginForm = document.getElementById('loginForm');
     const loginPage = document.getElementById('loginPage');
     const mainApp = document.getElementById('mainApp');
     const logoutBtnMain = document.getElementById('logoutBtnMain');
     
-    // Function to transition from login to main app
     function loginToMainApp() {
         loginPage.classList.add('fade-out-up');
-        
         setTimeout(function() {
             loginPage.style.display = 'none';
             loginPage.classList.remove('fade-out-up');
@@ -19,24 +16,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 600);
     }
     
-    // Function to transition from main app to login
     function mainAppToLogin() {
         mainApp.classList.add('fade-out-up');
-        
         setTimeout(function() {
             mainApp.style.display = 'none';
-            mainApp.classList.remove('fade-out-up');
-            mainApp.classList.remove('fade-in-up');
+            mainApp.classList.remove('fade-out-up', 'fade-in-up');
             loginPage.style.display = 'flex';
             loginPage.classList.add('fade-in-up');
-            
             setTimeout(function() {
                 loginPage.classList.remove('fade-in-up');
             }, 600);
         }, 600);
     }
     
-    // Handle login button click
     if (loginForm) {
         loginForm.addEventListener('submit', function(event) {
             event.preventDefault();
@@ -44,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Handle logout button click
     if (logoutBtnMain) {
         logoutBtnMain.addEventListener('click', function(event) {
             event.preventDefault();
@@ -52,18 +43,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Tab switching functionality
+    // TAB SWITCHING
     const menuLinks = document.querySelectorAll('.menu-link');
     let isTransitioning = false;
     
     function switchTab(tabName) {
         if (isTransitioning) return;
-        
         const targetTab = document.getElementById(`${tabName}Tab`);
         if (!targetTab) return;
-        
         const currentActiveTab = document.querySelector('.tab-content.active');
-        
         if (currentActiveTab === targetTab) return;
         
         isTransitioning = true;
@@ -71,21 +59,16 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currentActiveTab) {
             currentActiveTab.style.opacity = '0';
             currentActiveTab.style.transform = 'translateY(10px)';
-            
             setTimeout(() => {
                 currentActiveTab.classList.remove('active');
                 currentActiveTab.style.opacity = '';
                 currentActiveTab.style.transform = '';
-                
                 targetTab.classList.add('active');
                 targetTab.style.opacity = '0';
                 targetTab.style.transform = 'translateY(10px)';
-                
                 targetTab.offsetHeight;
-                
                 targetTab.style.opacity = '1';
                 targetTab.style.transform = 'translateY(0)';
-                
                 setTimeout(() => {
                     targetTab.style.opacity = '';
                     targetTab.style.transform = '';
@@ -101,120 +84,75 @@ document.addEventListener('DOMContentLoaded', function() {
     menuLinks.forEach(link => {
         link.addEventListener('click', function(event) {
             event.preventDefault();
-            
             if (this.classList.contains('active') || isTransitioning) return;
-            
             menuLinks.forEach(l => l.classList.remove('active'));
             this.classList.add('active');
-            
-            const tabName = this.getAttribute('data-tab');
-            switchTab(tabName);
+            switchTab(this.getAttribute('data-tab'));
         });
     });
     
-    // Appointment Form Handler
+    // APPOINTMENT FORM HANDLER
     const appointmentForm = document.getElementById('appointmentForm');
-    
     if (appointmentForm) {
         appointmentForm.addEventListener('submit', function(event) {
             event.preventDefault();
-            
             alert('Thank you! Your schedule has been confirmed. One of our agents will contact you shortly.');
-            
             appointmentForm.reset();
         });
     }
     
-    // Property Card Click Handler
+    // PROPERTY CARD CLICK HANDLER
     const propertyCards = document.querySelectorAll('.property-card');
-    const maplewoodDetails = document.getElementById('maplewood-details');
-    const villaDetails = document.getElementById('villa-details');
-    const blancDetails = document.getElementById('blanc-details');
-    const maisonDetails = document.getElementById('maison-details');
-    const aureliaDetails = document.getElementById('aurelia-details');
-    const royaleDetails = document.getElementById('royale-details');
+    const detailSections = {
+        maplewood: document.getElementById('maplewood-details'),
+        villa: document.getElementById('villa-details'),
+        blanc: document.getElementById('blanc-details'),
+        maison: document.getElementById('maison-details'),
+        aurelia: document.getElementById('aurelia-details'),
+        royale: document.getElementById('royale-details')
+    };
     
     function showPropertyDetails(propertyId) {
-        // Hide all property detail sections
-        if (maplewoodDetails) maplewoodDetails.style.display = 'none';
-        if (villaDetails) villaDetails.style.display = 'none';
-        if (blancDetails) blancDetails.style.display = 'none';
-        if (maisonDetails) maisonDetails.style.display = 'none';
-        if (aureliaDetails) aureliaDetails.style.display = 'none';
-        if (royaleDetails) royaleDetails.style.display = 'none';
-        
-        // Show the selected property details
-        switch(propertyId) {
-            case 'maplewood':
-                if (maplewoodDetails) maplewoodDetails.style.display = 'block';
-                break;
-            case 'villa':
-                if (villaDetails) villaDetails.style.display = 'block';
-                break;
-            case 'blanc':
-                if (blancDetails) blancDetails.style.display = 'block';
-                break;
-            case 'maison':
-                if (maisonDetails) maisonDetails.style.display = 'block';
-                break;
-            case 'aurelia':
-                if (aureliaDetails) aureliaDetails.style.display = 'block';
-                break;
-            case 'royale':
-                if (royaleDetails) royaleDetails.style.display = 'block';
-                break;
-            default:
-                if (maplewoodDetails) maplewoodDetails.style.display = 'block';
-        }
+        Object.values(detailSections).forEach(section => {
+            if (section) section.style.display = 'none';
+        });
+        const selectedSection = detailSections[propertyId];
+        if (selectedSection) selectedSection.style.display = 'block';
+        else if (detailSections.maplewood) detailSections.maplewood.style.display = 'block';
     }
     
     if (propertyCards.length > 0) {
         propertyCards.forEach(card => {
             card.addEventListener('click', function() {
                 const property = this.getAttribute('data-property');
-                
-                // Switch to details tab
                 const detailsTabLink = document.querySelector('.menu-link[data-tab="details"]');
                 if (detailsTabLink) {
                     menuLinks.forEach(l => l.classList.remove('active'));
                     detailsTabLink.classList.add('active');
                     switchTab('details');
                 }
-                
-                // Show the appropriate property details
                 showPropertyDetails(property);
             });
         });
     }
     
-    // Schedule Viewing Button Handler
+    // SCHEDULE VIEWING BUTTON HANDLER
     const scheduleButtons = document.querySelectorAll('.schedule-viewing-btn');
-    
     if (scheduleButtons.length > 0) {
         scheduleButtons.forEach(button => {
             button.addEventListener('click', function() {
                 const propertyName = this.getAttribute('data-property');
-                
-                // Switch to viewing tab
                 const viewingTabLink = document.querySelector('.menu-link[data-tab="viewing"]');
                 if (viewingTabLink) {
                     menuLinks.forEach(l => l.classList.remove('active'));
                     viewingTabLink.classList.add('active');
                     switchTab('viewing');
                 }
-                
-                // Pre-fill the property name in the form
                 setTimeout(() => {
                     const propertySelect = document.getElementById('propertyName');
-                    if (propertySelect && propertyName) {
-                        propertySelect.value = propertyName;
-                    }
-                    
-                    // Scroll to the appointment form
+                    if (propertySelect && propertyName) propertySelect.value = propertyName;
                     const appointmentSection = document.querySelector('.appointment-section');
-                    if (appointmentSection) {
-                        appointmentSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
+                    if (appointmentSection) appointmentSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }, 100);
             });
         });

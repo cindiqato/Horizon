@@ -39,29 +39,13 @@ body {
 }
 
 @keyframes fadeOutUp {
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-        visibility: visible;
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(-100px);
-        visibility: hidden;
-    }
+    0% { opacity: 1; transform: translateY(0); visibility: visible; }
+    100% { opacity: 0; transform: translateY(-100px); visibility: hidden; }
 }
 
 @keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(100px);
-        visibility: hidden;
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-        visibility: visible;
-    }
+    0% { opacity: 0; transform: translateY(100px); visibility: hidden; }
+    100% { opacity: 1; transform: translateY(0); visibility: visible; }
 }
 
 .login-container {
@@ -182,7 +166,6 @@ body {
     z-index: 1;
 }
 
-/* Gradient overlay as pseudo-element (like reference code) */
 .main-app::before {
     content: '';
     position: absolute;
@@ -190,12 +173,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, 
-        #0a0a0a 0%, 
-        #0a0a0a 60%, 
-        rgba(10, 10, 10, 0.5) 85%, 
-        rgba(10, 10, 10, 0.1) 100%
-    );
+    background: linear-gradient(to top, #0a0a0a 0%, #0a0a0a 60%, rgba(10, 10, 10, 0.5) 85%, rgba(10, 10, 10, 0.1) 100%);
     z-index: -1;
     pointer-events: none;
 }
@@ -209,7 +187,7 @@ body {
     animation: fadeOutUp 0.6s ease forwards;
 }
 
-/* SECTION 1: HERO SECTION */
+/* HERO SECTION */
 .hero-section {
     min-height: auto;
     padding: 0px 20px 40px 20px;
@@ -278,7 +256,7 @@ body {
     text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* SECTION 2: BOTTOM SECTION */
+/* BOTTOM SECTION */
 .bottom-section {
     min-height: 60vh;
     padding: 20px 20px 80px 20px;
@@ -292,7 +270,7 @@ body {
     padding: 0 20px;
 }
 
-/* MENU BOX STYLES - Lighter background for visible blur */
+/* MENU BOX */
 .menu-box {
     background: rgba(47, 47, 46, 0.35);
     backdrop-filter: blur(16px);
@@ -376,7 +354,7 @@ body {
     border-radius: 2px;
 }
 
-/* TAB CONTENT TRANSITION */
+/* TAB CONTENT */
 .tab-content-container {
     position: relative;
     min-height: 500px;
@@ -394,17 +372,11 @@ body {
 }
 
 @keyframes fadeInContent {
-    0% {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
-/* TAB 1: PROPERTIES SECTION */
+/* PROPERTIES TAB */
 .property-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -452,15 +424,7 @@ body {
     left: 0;
     right: 0;
     width: 100%;
-    background: linear-gradient(
-        to top,
-        rgba(47, 47, 46, 0.95) 0%,
-        rgba(47, 47, 46, 0.9) 15%,
-        rgba(47, 47, 46, 0.8) 30%,
-        rgba(47, 47, 46, 0.6) 50%,
-        rgba(47, 47, 46, 0.3) 75%,
-        rgba(47, 47, 46, 0) 100%
-    );
+    background: linear-gradient(to top, rgba(47, 47, 46, 0.95) 0%, rgba(47, 47, 46, 0.9) 15%, rgba(47, 47, 46, 0.8) 30%, rgba(47, 47, 46, 0.6) 50%, rgba(47, 47, 46, 0.3) 75%, rgba(47, 47, 46, 0) 100%);
     padding: 80px 20px 30px 20px;
     text-align: center;
     pointer-events: none;
@@ -486,7 +450,7 @@ body {
     margin: 0 auto;
 }
 
-/* TAB 2: DETAILS SECTION */
+/* DETAILS TAB */
 .property-details-section {
     margin-top: 20px;
     animation: fadeInContent 0.4s ease forwards;
@@ -670,7 +634,6 @@ body {
 
 .gallery-item {
     text-align: center;
-    cursor: pointer;
     transition: all 0.3s ease;
 }
 
@@ -721,7 +684,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* TAB 3: VIEWING SECTION */
+/* VIEWING TAB */
 .agents-section {
     margin-top: 20px;
     animation: fadeInContent 0.4s ease forwards;
@@ -859,7 +822,6 @@ body {
     font-style: italic;
 }
 
-/* Appointment Form */
 .appointment-section {
     margin-top: 50px;
     animation: fadeInContent 0.4s ease forwards;
@@ -982,7 +944,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* TAB 4: ABOUT US SECTION */
+/* ABOUT US TAB */
 .about-us-section {
     margin-top: 20px;
     animation: fadeInContent 0.4s ease forwards;
@@ -1167,307 +1129,81 @@ body {
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 1100px) {
-    .menu-box {
-        width: 85%;
-    }
-    
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    .menu-box { width: 85%; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 900px) {
-    .hero-title {
-        font-size: 2.2rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-    
-    .hero-navbar {
-        margin-bottom: 50px;
-    }
-    
-    .menu-box {
-        width: 95%;
-        flex-direction: column;
-        align-items: stretch;
-        padding: 20px 25px;
-        border-radius: 30px;
-    }
-    
-    .search-container {
-        min-width: auto;
-    }
-    
-    .menu-links {
-        justify-content: center;
-        gap: 30px;
-        flex-wrap: wrap;
-    }
-    
-    .property-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-    
-    .details-header {
-        flex-direction: column;
-        gap: 25px;
-    }
-    
-    .details-image {
-        min-width: auto;
-    }
-    
-    .details-image img {
-        height: 300px;
-    }
-    
-    .full-details-layout {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .services-mission-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-    
-    .combined-box {
-        height: auto;
-    }
+    .hero-title { font-size: 2.2rem; }
+    .hero-subtitle { font-size: 1rem; }
+    .hero-navbar { margin-bottom: 50px; }
+    .menu-box { width: 95%; flex-direction: column; align-items: stretch; padding: 20px 25px; border-radius: 30px; }
+    .search-container { min-width: auto; }
+    .menu-links { justify-content: center; gap: 30px; flex-wrap: wrap; }
+    .property-grid { grid-template-columns: 1fr; gap: 25px; }
+    .details-header { flex-direction: column; gap: 25px; }
+    .details-image { min-width: auto; }
+    .details-image img { height: 300px; }
+    .full-details-layout { flex-direction: column; gap: 20px; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .services-mission-grid { grid-template-columns: 1fr; gap: 25px; }
+    .combined-box { height: auto; }
 }
 
 @media (max-width: 768px) {
-    .hero-section {
-        padding: 0px 20px 40px 20px;
-    }
-    
-    .hero-navbar {
-        flex-direction: column;
-        gap: 20px;
-        margin-bottom: 40px;
-        padding-top: 20px;
-    }
-    
-    .logo {
-        font-size: 1.3rem;
-    }
-    
-    .nav-links {
-        gap: 25px;
-    }
-    
-    .nav-link {
-        font-size: 0.9rem;
-    }
-    
-    .hero-title {
-        font-size: 1.8rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 0.9rem;
-    }
-    
-    .bottom-section {
-        padding: 20px 15px 60px 15px;
-    }
-    
-    .menu-links {
-        gap: 20px;
-    }
-    
-    .menu-link {
-        font-size: 14px;
-    }
-    
-    .property-name {
-        font-size: 1.4rem;
-    }
-    
-    .property-description {
-        font-size: 0.8rem;
-    }
-    
-    .property-card {
-        height: 350px;
-    }
-    
-    .details-title {
-        font-size: 2rem;
-    }
-    
-    .details-price {
-        font-size: 1.5rem;
-    }
-    
-    .quote-text {
-        font-size: 1.3rem;
-    }
-    
-    .appointment-form-container {
-        padding: 25px;
-    }
-    
-    .form-actions {
-        flex-direction: column;
-    }
-    
-    .submit-btn {
-        width: 100%;
-    }
-    
-    .agents-table th,
-    .agents-table td {
-        padding: 12px 10px;
-    }
-    
-    .agent-cell .agent-name {
-        font-size: 1rem;
-    }
+    .hero-section { padding: 0px 20px 40px 20px; }
+    .hero-navbar { flex-direction: column; gap: 20px; margin-bottom: 40px; padding-top: 20px; }
+    .logo { font-size: 1.3rem; }
+    .nav-links { gap: 25px; }
+    .nav-link { font-size: 0.9rem; }
+    .hero-title { font-size: 1.8rem; }
+    .hero-subtitle { font-size: 0.9rem; }
+    .bottom-section { padding: 20px 15px 60px 15px; }
+    .menu-links { gap: 20px; }
+    .menu-link { font-size: 14px; }
+    .property-name { font-size: 1.4rem; }
+    .property-description { font-size: 0.8rem; }
+    .property-card { height: 350px; }
+    .details-title { font-size: 2rem; }
+    .details-price { font-size: 1.5rem; }
+    .quote-text { font-size: 1.3rem; }
+    .appointment-form-container { padding: 25px; }
+    .form-actions { flex-direction: column; }
+    .submit-btn { width: 100%; }
+    .agents-table th, .agents-table td { padding: 12px 10px; }
+    .agent-cell .agent-name { font-size: 1rem; }
 }
 
 @media (max-width: 550px) {
-    .login-box {
-        padding: 35px 25px;
-        margin: 0 15px;
-    }
-    
-    .hero-section {
-        padding: 0px 15px 30px 15px;
-    }
-    
-    .hero-navbar {
-        margin-bottom: 30px;
-        padding-top: 15px;
-    }
-    
-    .nav-links {
-        gap: 20px;
-    }
-    
-    .nav-link {
-        font-size: 0.85rem;
-    }
-    
-    .hero-title {
-        font-size: 1.5rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 0.85rem;
-    }
-    
-    .bottom-section {
-        padding: 20px 15px 50px 15px;
-    }
-    
-    .menu-box {
-        padding: 15px 18px;
-        border-radius: 25px;
-    }
-    
-    .menu-links {
-        gap: 15px;
-    }
-    
-    .menu-link {
-        font-size: 12px;
-    }
-    
-    .property-name {
-        font-size: 1.3rem;
-    }
-    
-    .property-description {
-        font-size: 0.75rem;
-    }
-    
-    .property-card {
-        height: 280px;
-    }
-    
-    .property-info {
-        padding: 60px 12px 20px 12px;
-    }
-    
-    .details-image img {
-        height: 220px;
-    }
-    
-    .details-title {
-        font-size: 1.6rem;
-    }
-    
-    .details-price {
-        font-size: 1.3rem;
-    }
-    
-    .details-location {
-        font-size: 0.9rem;
-    }
-    
-    .details-description {
-        font-size: 0.9rem;
-    }
-    
-    .details-features h3,
-    .details-gallery h3,
-    .section-title {
-        font-size: 1.4rem;
-    }
-    
-    .details-bullets li {
-        font-size: 0.85rem;
-        padding-left: 20px;
-    }
-    
-    .gallery-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    
-    .about-us-card {
-        padding: 25px 20px;
-    }
-    
-    .quote-text {
-        font-size: 1.1rem;
-    }
-    
-    .about-content p,
-    .services-list li,
-    .mv-item p,
-    .contact-info p {
-        font-size: 0.9rem;
-    }
-    
-    .mv-item h4 {
-        font-size: 1rem;
-    }
-    
-    .mv-item p {
-        font-size: 0.85rem;
-    }
-    
-    .appointment-header h2,
-    .agents-header h2 {
-        font-size: 1.5rem;
-    }
-    
-    .appointment-form-container {
-        padding: 20px;
-    }
-    
-    .schedule-viewing-btn {
-        width: 100%;
-        padding: 12px 20px;
-    }
+    .login-box { padding: 35px 25px; margin: 0 15px; }
+    .hero-section { padding: 0px 15px 30px 15px; }
+    .hero-navbar { margin-bottom: 30px; padding-top: 15px; }
+    .nav-links { gap: 20px; }
+    .nav-link { font-size: 0.85rem; }
+    .hero-title { font-size: 1.5rem; }
+    .hero-subtitle { font-size: 0.85rem; }
+    .bottom-section { padding: 20px 15px 50px 15px; }
+    .menu-box { padding: 15px 18px; border-radius: 25px; }
+    .menu-links { gap: 15px; }
+    .menu-link { font-size: 12px; }
+    .property-name { font-size: 1.3rem; }
+    .property-description { font-size: 0.75rem; }
+    .property-card { height: 280px; }
+    .property-info { padding: 60px 12px 20px 12px; }
+    .details-image img { height: 220px; }
+    .details-title { font-size: 1.6rem; }
+    .details-price { font-size: 1.3rem; }
+    .details-location { font-size: 0.9rem; }
+    .details-description { font-size: 0.9rem; }
+    .details-features h3, .details-gallery h3, .section-title { font-size: 1.4rem; }
+    .details-bullets li { font-size: 0.85rem; padding-left: 20px; }
+    .gallery-grid { grid-template-columns: 1fr; gap: 15px; }
+    .about-us-card { padding: 25px 20px; }
+    .quote-text { font-size: 1.1rem; }
+    .about-content p, .services-list li, .mv-item p, .contact-info p { font-size: 0.9rem; }
+    .mv-item h4 { font-size: 1rem; }
+    .mv-item p { font-size: 0.85rem; }
+    .appointment-header h2, .agents-header h2 { font-size: 1.5rem; }
+    .appointment-form-container { padding: 20px; }
+    .schedule-viewing-btn { width: 100%; padding: 12px 20px; }
 }
