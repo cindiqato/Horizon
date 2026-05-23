@@ -179,6 +179,25 @@ body {
     width: 100%;
     min-height: 100vh;
     display: none;
+    z-index: 1;
+}
+
+/* Gradient overlay as pseudo-element (like reference code) */
+.main-app::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, 
+        #0a0a0a 0%, 
+        #0a0a0a 60%, 
+        rgba(10, 10, 10, 0.5) 85%, 
+        rgba(10, 10, 10, 0.1) 100%
+    );
+    z-index: -1;
+    pointer-events: none;
 }
 
 .main-app.fade-in-up {
@@ -195,6 +214,8 @@ body {
     min-height: auto;
     padding: 0px 20px 40px 20px;
     background: transparent;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-content-wrapper {
@@ -259,16 +280,10 @@ body {
 
 /* SECTION 2: BOTTOM SECTION */
 .bottom-section {
-    background: linear-gradient(to top, 
-        #000000 0%, 
-        #000000 30%, 
-        rgba(0, 0, 0, 0.5) 60%, 
-        rgba(0, 0, 0, 0.15) 100%
-    );
     min-height: 60vh;
     padding: 20px 20px 80px 20px;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .bottom-content-wrapper {
@@ -277,9 +292,9 @@ body {
     padding: 0 20px;
 }
 
-/* MENU BOX STYLES */
+/* MENU BOX STYLES - Lighter background for visible blur */
 .menu-box {
-    background: rgba(47, 47, 46, 0.5);
+    background: rgba(47, 47, 46, 0.35);
     backdrop-filter: blur(16px);
     border: 1px solid rgba(155, 139, 119, 0.5);
     border-radius: 60px;
@@ -398,8 +413,8 @@ body {
 }
 
 .property-card {
-    background: rgba(47, 47, 46, 0.6);
-    backdrop-filter: blur(8px);
+    background: rgba(47, 47, 46, 0.45);
+    backdrop-filter: blur(12px);
     border: 1px solid rgba(155, 139, 119, 0.4);
     border-radius: 16px;
     overflow: hidden;
@@ -429,10 +444,6 @@ body {
     object-fit: cover;
     transform: translateY(-50%);
     object-position: center 50%;
-}
-
-.property-card:hover .property-image {
-    transform: translateY(-50%);
 }
 
 .property-info {
@@ -465,7 +476,6 @@ body {
     margin-bottom: 10px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     letter-spacing: 1px;
-    transform: translateY(-50px);
 }
 
 .property-description {
@@ -474,7 +484,6 @@ body {
     line-height: 1.4;
     max-width: 90%;
     margin: 0 auto;
-    transform: translateY(-40px);
 }
 
 /* TAB 2: DETAILS SECTION */
@@ -484,8 +493,8 @@ body {
 }
 
 .property-details-container {
-    background: rgba(47, 47, 46, 0.6);
-    backdrop-filter: blur(8px);
+    background: rgba(47, 47, 46, 0.45);
+    backdrop-filter: blur(12px);
     border: 1px solid rgba(155, 139, 119, 0.4);
     border-radius: 16px;
     padding: 40px;
@@ -737,8 +746,8 @@ body {
 }
 
 .agents-table-container {
-    background: rgba(47, 47, 46, 0.6);
-    backdrop-filter: blur(8px);
+    background: rgba(47, 47, 46, 0.45);
+    backdrop-filter: blur(12px);
     border-radius: 16px;
     overflow-x: auto;
     border: 1px solid rgba(155, 139, 119, 0.4);
@@ -800,21 +809,9 @@ body {
     color: #DCD3C6;
 }
 
-.contact-cell .contact-phone i,
-.contact-cell .contact-email i {
-    color: #9B8B77;
-    margin-right: 8px;
-    width: 16px;
-}
-
 .contact-cell .contact-social {
     margin-top: 8px;
     font-size: 0.85rem;
-}
-
-.contact-cell .contact-social i {
-    color: #9B8B77;
-    margin-right: 5px;
 }
 
 .contact-cell .contact-social a {
@@ -831,11 +828,6 @@ body {
     font-size: 0.9rem;
     margin-bottom: 12px;
     color: #DCD3C6;
-}
-
-.performance-cell .rating i {
-    color: #9B8B77;
-    margin-right: 2px;
 }
 
 .performance-cell .current-listings {
@@ -867,10 +859,6 @@ body {
     font-style: italic;
 }
 
-.performance-cell .awards i {
-    margin-right: 5px;
-}
-
 /* Appointment Form */
 .appointment-section {
     margin-top: 50px;
@@ -896,8 +884,8 @@ body {
 }
 
 .appointment-form-container {
-    background: rgba(47, 47, 46, 0.6);
-    backdrop-filter: blur(8px);
+    background: rgba(47, 47, 46, 0.45);
+    backdrop-filter: blur(12px);
     border-radius: 16px;
     border: 1px solid rgba(155, 139, 119, 0.4);
     padding: 40px;
@@ -1001,8 +989,8 @@ body {
 }
 
 .about-us-card {
-    background: rgba(47, 47, 46, 0.6);
-    backdrop-filter: blur(8px);
+    background: rgba(47, 47, 46, 0.45);
+    backdrop-filter: blur(12px);
     border: 1px solid rgba(155, 139, 119, 0.4);
     border-radius: 16px;
     padding: 50px;
@@ -1012,26 +1000,6 @@ body {
 .about-us-card:hover {
     transform: translateY(-5px);
     border-color: #9B8B77;
-}
-
-.about-title {
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    position: relative;
-    display: inline-block;
-    color: #F5EFE6;
-    letter-spacing: 2px;
-}
-
-.about-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 60px;
-    height: 2px;
-    background: #9B8B77;
 }
 
 .about-quote {
@@ -1079,7 +1047,6 @@ body {
     border-radius: 2px;
 }
 
-/* SERVICES AND MISSION/VISION GRID - UPDATED FOR ABOUT US */
 .services-mission-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1132,10 +1099,6 @@ body {
     margin: 0;
 }
 
-.services-section {
-    margin-bottom: 0;
-}
-
 .services-list {
     list-style: none;
     padding: 0;
@@ -1181,12 +1144,6 @@ body {
     font-size: 1rem;
     color: #DCD3C6;
     line-height: 1.6;
-}
-
-.contact-info i {
-    color: #9B8B77;
-    margin-right: 10px;
-    width: 20px;
 }
 
 .contact-info strong {
@@ -1253,14 +1210,6 @@ body {
     .property-grid {
         grid-template-columns: 1fr;
         gap: 25px;
-    }
-    
-    .property-name {
-        transform: translateY(-40px);
-    }
-    
-    .property-description {
-        transform: translateY(-30px);
     }
     
     .details-header {
@@ -1341,12 +1290,10 @@ body {
     
     .property-name {
         font-size: 1.4rem;
-        transform: translateY(-35px);
     }
     
     .property-description {
         font-size: 0.8rem;
-        transform: translateY(-25px);
     }
     
     .property-card {
@@ -1359,10 +1306,6 @@ body {
     
     .details-price {
         font-size: 1.5rem;
-    }
-    
-    .about-title {
-        font-size: 2rem;
     }
     
     .quote-text {
@@ -1441,12 +1384,10 @@ body {
     
     .property-name {
         font-size: 1.3rem;
-        transform: translateY(-25px);
     }
     
     .property-description {
         font-size: 0.75rem;
-        transform: translateY(-15px);
     }
     
     .property-card {
@@ -1495,10 +1436,6 @@ body {
     
     .about-us-card {
         padding: 25px 20px;
-    }
-    
-    .about-title {
-        font-size: 1.6rem;
     }
     
     .quote-text {

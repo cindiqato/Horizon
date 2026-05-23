@@ -52,9 +52,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Tab switching functionality with smooth crossfade
+    // Tab switching functionality
     const menuLinks = document.querySelectorAll('.menu-link');
-    const tabContents = document.querySelectorAll('.tab-content');
     let isTransitioning = false;
     
     function switchTab(tabName) {
@@ -113,47 +112,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Search bar handler
-    const searchBar = document.getElementById('searchBar');
-    if (searchBar) {
-        searchBar.addEventListener('input', function() {
-            console.log('Search:', this.value);
-        });
-    }
-    
-    // Appointment Form Handler - Simple alert confirmation
+    // Appointment Form Handler
     const appointmentForm = document.getElementById('appointmentForm');
     
     if (appointmentForm) {
         appointmentForm.addEventListener('submit', function(event) {
             event.preventDefault();
             
-            // Show simple alert confirmation
             alert('Thank you! Your schedule has been confirmed. One of our agents will contact you shortly.');
             
-            // Reset the form
             appointmentForm.reset();
         });
     }
     
-    // Function to scroll to the top of the details section
-    function scrollToDetailsTop() {
-        // Find the gradient section which contains the details
-        const gradientSection = document.querySelector('.gradient-section');
-        if (gradientSection) {
-            // Get the position of the gradient section
-            const gradientRect = gradientSection.getBoundingClientRect();
-            const absoluteGradientTop = gradientRect.top + window.pageYOffset;
-            
-            // Scroll to the gradient section with an offset to show the top
-            window.scrollTo({
-                top: absoluteGradientTop - 80,
-                behavior: 'smooth'
-            });
-        }
-    }
-    
-    // Property Card Click Handler - Show details in Details tab
+    // Property Card Click Handler
     const propertyCards = document.querySelectorAll('.property-card');
     const maplewoodDetails = document.getElementById('maplewood-details');
     const villaDetails = document.getElementById('villa-details');
@@ -192,12 +164,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (royaleDetails) royaleDetails.style.display = 'block';
                 break;
             default:
-                // Show first property (Maplewood Crest) by default
                 if (maplewoodDetails) maplewoodDetails.style.display = 'block';
         }
     }
     
-    if (propertyCards) {
+    if (propertyCards.length > 0) {
         propertyCards.forEach(card => {
             card.addEventListener('click', function() {
                 const property = this.getAttribute('data-property');
@@ -205,22 +176,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Switch to details tab
                 const detailsTabLink = document.querySelector('.menu-link[data-tab="details"]');
                 if (detailsTabLink) {
-                    // Remove active class from all menu links
                     menuLinks.forEach(l => l.classList.remove('active'));
                     detailsTabLink.classList.add('active');
-                    
-                    // Switch to details tab
                     switchTab('details');
                 }
                 
                 // Show the appropriate property details
                 showPropertyDetails(property);
-                
-                // Scroll to the top of the details section after a longer delay
-                // to ensure the tab content is fully rendered
-                setTimeout(() => {
-                    scrollToDetailsTop();
-                }, 500);
             });
         });
     }
@@ -228,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Schedule Viewing Button Handler
     const scheduleButtons = document.querySelectorAll('.schedule-viewing-btn');
     
-    if (scheduleButtons) {
+    if (scheduleButtons.length > 0) {
         scheduleButtons.forEach(button => {
             button.addEventListener('click', function() {
                 const propertyName = this.getAttribute('data-property');
@@ -236,11 +198,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Switch to viewing tab
                 const viewingTabLink = document.querySelector('.menu-link[data-tab="viewing"]');
                 if (viewingTabLink) {
-                    // Remove active class from all menu links
                     menuLinks.forEach(l => l.classList.remove('active'));
                     viewingTabLink.classList.add('active');
-                    
-                    // Switch to viewing tab
                     switchTab('viewing');
                 }
                 
