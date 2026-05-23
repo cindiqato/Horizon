@@ -11,8 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(function() {
             loginPage.style.display = 'none';
             loginPage.classList.remove('fade-out-up');
-            mainApp.classList.add('fade-in-up');
             mainApp.style.display = 'block';
+            mainApp.classList.add('fade-in-up');
+            setTimeout(function() {
+                mainApp.classList.remove('fade-in-up');
+            }, 600);
         }, 600);
     }
     
@@ -20,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         mainApp.classList.add('fade-out-up');
         setTimeout(function() {
             mainApp.style.display = 'none';
-            mainApp.classList.remove('fade-out-up', 'fade-in-up');
+            mainApp.classList.remove('fade-out-up');
             loginPage.style.display = 'flex';
             loginPage.classList.add('fade-in-up');
             setTimeout(function() {
@@ -117,8 +120,11 @@ document.addEventListener('DOMContentLoaded', function() {
             if (section) section.style.display = 'none';
         });
         const selectedSection = detailSections[propertyId];
-        if (selectedSection) selectedSection.style.display = 'block';
-        else if (detailSections.maplewood) detailSections.maplewood.style.display = 'block';
+        if (selectedSection) {
+            selectedSection.style.display = 'block';
+        } else if (detailSections.maplewood) {
+            detailSections.maplewood.style.display = 'block';
+        }
     }
     
     if (propertyCards.length > 0) {
@@ -136,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // SCHEDULE VIEWING BUTTON HANDLER
+    // SCHEDULE VIEWING BUTTON HANDLER (removed redundant setTimeout)
     const scheduleButtons = document.querySelectorAll('.schedule-viewing-btn');
     if (scheduleButtons.length > 0) {
         scheduleButtons.forEach(button => {
@@ -148,13 +154,22 @@ document.addEventListener('DOMContentLoaded', function() {
                     viewingTabLink.classList.add('active');
                     switchTab('viewing');
                 }
-                setTimeout(() => {
-                    const propertySelect = document.getElementById('propertyName');
-                    if (propertySelect && propertyName) propertySelect.value = propertyName;
-                    const appointmentSection = document.querySelector('.appointment-section');
-                    if (appointmentSection) appointmentSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 100);
+                const propertySelect = document.getElementById('propertyName');
+                if (propertySelect && propertyName) {
+                    propertySelect.value = propertyName;
+                }
+                const appointmentSection = document.querySelector('.appointment-section');
+                if (appointmentSection) {
+                    appointmentSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             });
         });
+    }
+    
+    // SEARCH BAR - Kept functional for typing (no filtering logic as requested)
+    const searchBar = document.getElementById('searchBar');
+    if (searchBar) {
+        // Search bar exists and is functional for typing
+        // No filtering logic per user request
     }
 });
