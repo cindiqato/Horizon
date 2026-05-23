@@ -121,43 +121,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Appointment Form Handler - Submit only (Clear form button removed)
+    // Appointment Form Handler - Simple alert confirmation
     const appointmentForm = document.getElementById('appointmentForm');
     
     if (appointmentForm) {
         appointmentForm.addEventListener('submit', function(event) {
             event.preventDefault();
             
-            // Store the form container reference
-            const formContainer = document.querySelector('.appointment-form-container');
-            const originalContent = formContainer.innerHTML;
+            // Show simple alert confirmation
+            alert('Thank you! Your schedule has been confirmed. One of our agents will contact you shortly.');
             
-            // Create success message
-            const successMessage = document.createElement('div');
-            successMessage.className = 'success-message';
-            successMessage.innerHTML = `
-                <div class="success-icon">✓</div>
-                <h3>Appointment Confirmed!</h3>
-                <p>Your viewing appointment has been scheduled. One of our agents will contact you shortly to confirm.</p>
-            `;
-            
-            // Replace form with success message
-            formContainer.innerHTML = '';
-            formContainer.appendChild(successMessage);
-            
-            // Reset the form fields
+            // Reset the form
             appointmentForm.reset();
-            
-            // Restore form after 3 seconds
-            setTimeout(() => {
-                formContainer.innerHTML = originalContent;
-                // Re-attach event listeners to the restored form
-                const restoredForm = document.getElementById('appointmentForm');
-                if (restoredForm) {
-                    // Re-attach submit event
-                    restoredForm.addEventListener('submit', arguments.callee);
-                }
-            }, 3000);
         });
     }
     

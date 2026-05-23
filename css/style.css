@@ -994,28 +994,6 @@ body {
     transform: translateY(-2px);
 }
 
-.success-message {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.success-icon {
-    font-size: 4rem;
-    color: #9B8B77;
-    margin-bottom: 20px;
-}
-
-.success-message h3 {
-    font-size: 1.5rem;
-    color: #F5EFE6;
-    margin-bottom: 10px;
-}
-
-.success-message p {
-    color: #DCD3C6;
-    font-size: 1rem;
-}
-
 /* TAB 4: ABOUT US SECTION */
 .about-us-section {
     margin-top: 20px;
