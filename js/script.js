@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // SCHEDULE VIEWING BUTTON HANDLER (removed redundant setTimeout)
+    // SCHEDULE VIEWING BUTTON HANDLER
     const scheduleButtons = document.querySelectorAll('.schedule-viewing-btn');
     if (scheduleButtons.length > 0) {
         scheduleButtons.forEach(button => {
@@ -166,10 +166,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // SEARCH BAR - Kept functional for typing (no filtering logic as requested)
+    // SEARCH BAR
     const searchBar = document.getElementById('searchBar');
     if (searchBar) {
-        // Search bar exists and is functional for typing
-        // No filtering logic per user request
     }
 });

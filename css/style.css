@@ -630,7 +630,6 @@ body {
     color: #DCD3C6;
 }
 
-/* Combined ::after pseudo-elements */
 .details-features h3::after,
 .details-gallery h3::after,
 .section-title::after {
